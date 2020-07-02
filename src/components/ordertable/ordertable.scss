@@ -1,0 +1,41 @@
+.orderTable {
+  width: 100%;
+  height: 1260px;
+  margin-bottom: 170px;
+
+  &__title {
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 30px;
+    background: url(../../img/tableshape.png) no-repeat center;
+    width: 515px;
+    height: 157px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 52px;
+    color: #f8f8f8;
+    margin-bottom: 130px;
+  }
+  &__main {
+    background: url(../../img/table.png) no-repeat center;
+    width: 1290px;
+    height: 960px;
+    position: relative;
+
+    &__table {
+      position: absolute;
+      bottom: 90px;
+      right: 155px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: #d34606;
+      text-align: center;
+
+      &__num {
+        color: white;
+        font-size: 52px;
+      }
+    }
+  }
+}
