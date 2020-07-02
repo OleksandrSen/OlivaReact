@@ -1,1 +1,22 @@
+.header {
+  background: url('../../img/header-bg.png') no-repeat center;
+  // background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  text-align: center;
+  position: relative;
 
+
+  &__title {
+    margin: 280px auto 0;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 76px;
+    line-height: 50px;
+  }
+
+}
