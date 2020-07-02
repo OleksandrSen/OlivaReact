@@ -22,7 +22,7 @@ function Social() {
       <li className="social__item">
         <a href="" className="social__link">
           <svg className="social__svg">
-            <use href={sprite + '#twiter'}></use>
+            <use href={sprite + '#twitter'}></use>
           </svg>
         </a>
       </li >
