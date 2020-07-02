@@ -2,6 +2,8 @@
   width: 100%;
   height: 1260px;
   margin-bottom: 170px;
+  position: relative;
+  text-align: center;
 
   &__title {
     text-align: center;
@@ -18,24 +20,188 @@
   }
   &__main {
     background: url(../../img/table.png) no-repeat center;
-    width: 1290px;
+    width: 100%;
     height: 960px;
     position: relative;
 
     &__table {
       position: absolute;
-      bottom: 90px;
-      right: 155px;
+      padding-top: 1px;
+      bottom: 80px;
+      right: 15px;
       width: 55px;
       height: 55px;
       border-radius: 50%;
       background-color: #d34606;
       text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: 0.3s;
+        border: solid 2px black;
+      }
 
       &__num {
         color: white;
-        font-size: 52px;
+        font-size: 46px;
       }
     }
   }
+}
+
+.table2 {
+  position: absolute;
+  bottom: 300px;
+  right: 15px;
+}
+
+.table3 {
+  position: absolute;
+  bottom: 80px;
+  right: 335px;
+}
+
+.table4 {
+  position: absolute;
+  bottom: 310px;
+  right: 335px;
+}
+
+.table5 {
+  position: absolute;
+  bottom: 490px;
+  right: 310px;
+}
+
+.table6 {
+  position: absolute;
+  bottom: 490px;
+  right: 40px;
+}
+
+.table7 {
+  position: absolute;
+  bottom: 625px;
+  right: 15px;
+}
+
+.table8 {
+  position: absolute;
+  bottom: 810px;
+  right: 15px;
+}
+
+.table9 {
+  position: absolute;
+  bottom: 120px;
+  right: 500px;
+}
+
+.table10 {
+  position: absolute;
+  bottom: 120px;
+  right: 600px;
+}
+
+.table11 {
+  position: absolute;
+  bottom: 120px;
+  right: 705px;
+}
+
+.table12 {
+  position: absolute;
+  bottom: 120px;
+  right: 855px;
+}
+
+.table13 {
+  position: absolute;
+  bottom: 120px;
+  right: 955px;
+}
+
+.table14 {
+  position: absolute;
+  bottom: 120px;
+  right: 1055px;
+}
+
+.table15 {
+  position: absolute;
+  bottom: 340px;
+  right: 1055px;
+}
+
+.table16 {
+  position: absolute;
+  bottom: 550px;
+  right: 1055px;
+}
+
+.table17 {
+  position: absolute;
+  bottom: 310px;
+  right: 545px;
+}
+
+.table18 {
+  position: absolute;
+  bottom: 310px;
+  right: 645px;
+}
+
+.table19 {
+  position: absolute;
+  bottom: 360px;
+  right: 745px;
+}
+
+.table20 {
+  position: absolute;
+  bottom: 310px;
+  right: 855px;
+}
+
+.table21 {
+  position: absolute;
+  bottom: 450px;
+  right: 855px;
+}
+
+.table22 {
+  position: absolute;
+  bottom: 590px;
+  right: 855px;
+}
+
+.table23 {
+  position: absolute;
+  bottom: 590px;
+  right: 730px;
+}
+
+.table24 {
+  position: absolute;
+  bottom: 590px;
+  right: 600px;
+}
+
+.table25 {
+  position: absolute;
+  bottom: 590px;
+  right: 500px;
+}
+
+.table26 {
+  position: absolute;
+  bottom: 450px;
+  right: 645px;
+}
+
+.table27 {
+  position: absolute;
+  bottom: 450px;
+  right: 545px;
 }
