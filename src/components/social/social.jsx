@@ -4,36 +4,36 @@ import './social.scss';
 
 function Social() {
   return (
-    <ul className="social">
-      <li className="social__item">
-        <a href="" className="social__link">
-          <svg className="social__svg">
+    <ul className='social'>
+      <li className='social__item'>
+        <a href='' className='social__link'>
+          <svg className='social__svg'>
             <use href={sprite + '#facebook'}></use>
           </svg>
         </a>
       </li>
-      <li className="social__item">
-        <a href="" className="social__link">
-          <svg className="social__svg">
+      <li className='social__item'>
+        <a href='' className='social__link'>
+          <svg className='social__svg'>
             <use href={sprite + '#instagram'}></use>
           </svg>
         </a>
       </li>
-      <li className="social__item">
-        <a href="" className="social__link">
-          <svg className="social__svg">
+      <li className='social__item'>
+        <a href='' className='social__link'>
+          <svg className='social__svg'>
             <use href={sprite + '#twiter'}></use>
           </svg>
         </a>
-      </li >
-      <li className="social__item">
-        <a href="" className="social__link">
-          <svg className="social__svg">
+      </li>
+      <li className='social__item'>
+        <a href='' className='social__link'>
+          <svg className='social__svg'>
             <use href={sprite + '#phone'}></use>
           </svg>
         </a>
-      </li >
-    </ul >
+      </li>
+    </ul>
   );
 }
 export default Social;
