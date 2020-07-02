@@ -1,0 +1,48 @@
+.arrow {
+  margin: 0 auto;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  right: 0;
+  left: 0;
+  bottom: 37px;
+
+  transition: .3s;
+  animation: scroll-arrow 1.5s ease-in-out infinite;
+  padding-bottom: 35px;
+
+  &__link {
+    text-decoration: none;
+
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    color: #2C2C11;
+
+  }
+
+  &__svg {
+    width: 25px;
+    height: 45px;
+    margin: 0 17px;
+    
+  }
+
+  // @keyframes scroll-arrow {
+  //   80%{
+  //       top: 0;
+  //   }
+  //   95%{
+  //       top: 15px;
+  //   }
+  
+  //   100%{
+  //       top: 0;
+  //   }
+  // }
+}
