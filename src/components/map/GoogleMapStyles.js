@@ -1,39 +1,39 @@
 export default {
   mapStyle: [
     {
-      "featureType": "administrative.land_parcel",
-      "elementType": "labels",
-      "stylers": [
+      featureType: 'administrative.land_parcel',
+      elementType: 'labels',
+      stylers: [
         {
-          "visibility": "off"
-        }
-      ]
+          visibility: 'off',
+        },
+      ],
     },
     {
-      "featureType": "poi.business",
-      "stylers": [
+      featureType: 'poi.business',
+      stylers: [
         {
-          "visibility": "off"
-        }
-      ]
+          visibility: 'off',
+        },
+      ],
     },
     {
-      "featureType": "poi.park",
-      "elementType": "labels.text",
-      "stylers": [
+      featureType: 'poi.park',
+      elementType: 'labels.text',
+      stylers: [
         {
-          "visibility": "off"
-        }
-      ]
+          visibility: 'off',
+        },
+      ],
     },
     {
-      "featureType": "road.local",
-      "elementType": "labels",
-      "stylers": [
+      featureType: 'road.local',
+      elementType: 'labels',
+      stylers: [
         {
-          "visibility": "off"
-        }
-      ]
-    }
-  ]
-}
+          visibility: 'off',
+        },
+      ],
+    },
+  ],
+};
