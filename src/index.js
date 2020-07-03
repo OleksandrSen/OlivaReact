@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'reset-css';
 
+import Nav from './components/nav/nav'
 import MainHeader from './components/main_header/main_header';
 import Main from './components/main/main';
 import Order from './components/ordertable/ordertable';
@@ -15,6 +16,7 @@ import Maps from './components/map/map'
 
 ReactDOM.render(
   <div>
+    <Nav />
     <MainHeader />
     <Main />
     <Order />
