@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.contacts {
+  font-family: Montserrat;
+  color: #2C2C11;
+  margin: 110px auto 100px;
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 110px;
+  }
+
+  &-block {
+
+    &__address {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &__city {
+      font-weight: 600;
+    }
+
+    &__numbers {
+      margin-top: 30px;
+    }
+
+    &__num {
+      padding: 8px 0;
+
+      &--link {
+        text-decoration: none;
+        color: #2C2C11;
+        font-size: 22px;
+      }
+    }
+  }
+}

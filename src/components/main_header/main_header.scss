@@ -43,7 +43,13 @@
     line-height: 27px;
     background: transparent;
     border: 2px solid #f8f8f8;
+    border-radius: 5px;
     padding: 3px 10px;
     cursor: pointer;
+
+    &:hover {
+      background: #F8F8F8;
+      color: #C4CCA8;
+   }
   }
 }
