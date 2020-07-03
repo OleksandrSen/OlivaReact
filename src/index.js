@@ -9,6 +9,7 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header'
 import News from './components/news/news'
 import Contacts from './components/contacts/contacts'
+import Maps from './components/map/map'
 
 
 
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Header />
     <News />
     <Contacts />
+    <Maps />
   </div>,
   document.getElementById('root')
 );
