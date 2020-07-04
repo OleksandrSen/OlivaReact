@@ -10,10 +10,12 @@
     "google-maps-react": "^2.0.6",
     "node": "^14.5.0",
     "react": "^16.13.1",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "reset-css": "^5.0.1",
-    "sass": "^1.26.9"
+    "sass": "^1.26.9",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
