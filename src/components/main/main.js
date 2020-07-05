@@ -4,7 +4,7 @@ import './main.scss';
 
 function Main() {
   return (
-    <main className='main__info'>
+    <main className='main__info' id='main'>
       <h1 className='main__info__title'>
         Ресторан "VIVA OLIVE" запрошує всіх бажаючих
         <br />
