@@ -2,6 +2,7 @@ import React from 'react';
 import sprite from '../../img/icons-sprite.svg';
 import logo from '../../img/logo.png';
 import './nav.scss';
+import Basket from '../basket/basket'
 
 function Nav() {
   return (
@@ -32,13 +33,7 @@ function Nav() {
             <img src={logo} alt='logo' className="logo__img" />
           </div>
 
-          <div className="basket col-1">
-            <a className="basket__link" href="">
-              <svg className="basket__svg">
-                <use href={sprite + '#basket'}></use>
-              </svg>
-            </a>
-          </div>
+          <Basket />
         </div>
       </div>
     </div >
