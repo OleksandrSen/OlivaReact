@@ -1,0 +1,99 @@
+.menu {
+  width: 100%;
+  height: 2000px;
+  margin-top: 50px;
+
+  &__title {
+    height: 157px;
+    background: url('../../img/MenuBgShape.png') no-repeat center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 52px;
+    color: #f8f8f8;
+    padding-top: 50px;
+  }
+
+  &__info {
+    background: url('../../img/MenuSideImage.png') no-repeat;
+    height: 1500px;
+
+    &__navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      &__item {
+        margin: 90px 0 35px 0;
+        font-size: 22px;
+        line-height: 30px;
+        position: relative;
+        overflow: hidden;
+        height: 70px;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 8px;
+          background: #d34606;
+          position: absolute;
+          top: 40px;
+          right: 200px;
+          border-radius: 15px;
+        }
+
+        &:hover {
+          text-shadow: 0 0 0.85px #333, 0 0 0.85px #333;
+          &::after {
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu__list {
+  width: 90%;
+  margin-left: 50px;
+}
+
+td,
+th {
+  padding: 3px;
+  width: 30px;
+  height: 120px;
+  vertical-align: middle;
+  text-align: center;
+}
+th {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.firstCol {
+  width: 400px;
+  text-align: left;
+}
+
+.secondCol,
+.thirdCol {
+  width: 130px;
+}
+
+td {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.food__name {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  text-transform: uppercase;
+}
