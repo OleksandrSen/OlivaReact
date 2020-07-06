@@ -18,13 +18,13 @@ ReactDOM.render(
     <Nav />
     <MainHeader />
     <Main />
+    <MainMenu />
     <Order />
     <Footer />
     <Header />
     <News />
     <Contacts />
     <Maps />
-    <MainMenu />
   </div>,
   document.getElementById('root')
 );

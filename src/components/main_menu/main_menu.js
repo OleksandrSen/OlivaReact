@@ -203,6 +203,14 @@ function MainMenu() {
           </table>
         </div>
       </div>
+      <div className='row'>
+        <button className='menu__button'>Додати до кошика</button>
+      </div>
+      <div className='row'>
+        <button className='menu__button'>
+          Сезонне меню <span className='triangle'>&#x025BE;</span>
+        </button>
+      </div>
     </section>
   );
 }
