@@ -3,6 +3,8 @@
   height: 315px;
   background: #c4ccab;
   padding: 110px 90px 0 75px;
+  display: flex;
+  justify-content: space-evenly;
 
   &__copyright,
   &__social__text {

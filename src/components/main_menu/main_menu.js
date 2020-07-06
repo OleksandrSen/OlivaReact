@@ -1,4 +1,5 @@
 import React from 'react';
+import sprite from '../../img/icons-sprite.svg';
 import './main_menu.scss';
 
 function MainMenu() {
@@ -32,7 +33,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>165 г</td>
                 <td className='thirdCol'>71 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -41,7 +50,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>120 г</td>
                 <td className='thirdCol'>119 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>1</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -50,7 +67,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>205 г</td>
                 <td className='thirdCol'>121 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -59,7 +84,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>110 г</td>
                 <td className='thirdCol'>99 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -68,7 +101,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>160 г</td>
                 <td className='thirdCol'>119 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -77,7 +118,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>390 г</td>
                 <td className='thirdCol'>248 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -88,7 +137,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>160 г</td>
                 <td className='thirdCol'>51 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -99,7 +156,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>140 г</td>
                 <td className='thirdCol'>61 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -107,7 +172,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>100 г</td>
                 <td className='thirdCol'>51 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>1</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>
@@ -116,7 +189,15 @@ function MainMenu() {
                 </td>
                 <td className='secondCol'>130 г</td>
                 <td className='thirdCol'>69 грн.</td>
-                <td className='fourthCol'></td>
+                <td className='fourthCol'>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#minus'}></use>
+                  </svg>
+                  <span className='orderCounter'>0</span>
+                  <svg className='orderIcon'>
+                    <use href={sprite + '#add'}></use>
+                  </svg>
+                </td>
               </tr>
             </tbody>
           </table>
