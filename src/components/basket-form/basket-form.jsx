@@ -11,8 +11,9 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false)
 
   return (
-    <div>
-      <Modal isOpen={BasketFormIsOpen} onRequestClose={() => setBasketFormIsOpen(false)}
+    <div className="basket-form__modal">
+      <Modal
+        isOpen={BasketFormIsOpen} onRequestClose={() => setBasketFormIsOpen(false)}
         style={
           {
             content: {

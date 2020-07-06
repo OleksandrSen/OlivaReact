@@ -6,6 +6,18 @@
   font-family: Montserrat;
   color: #2C2C11;
   position: relative;
+    // margin: 100px auto;
+
+
+  &__modal {
+    // margin: 100px auto;
+    // background: #f8f8f8;
+    // border: 1px solid #A2A88F;
+    // border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__caption {
     font-size: 36px;
