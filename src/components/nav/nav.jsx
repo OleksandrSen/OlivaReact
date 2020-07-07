@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import sprite from '../../img/icons-sprite.svg';
 import logo from '../../img/logo.png';
 import './nav.scss';
@@ -11,31 +12,31 @@ function Nav() {
         <div className='navigation__block row'>
           <ul className='manu manu--left col-5'>
             <li className='manu__item'>
-              <a href='#s' className='manu__link'>
+              <Link to="/main-header" className='manu__link'>
                 Головна
-              </a>
+              </Link>
             </li>
             <li className='manu__item'>
-              <a href='#s' className='manu__link'>
+              <Link to="/manu" className='manu__link'>
                 Меню
-              </a>
+              </Link>
             </li>
             <li className='manu__item'>
-              <a href='#s' className='manu__link'>
+              <Link to="/photo" className='manu__link'>
                 Фотогалерея
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className='manu manu--right offset-2 col-4'>
             <li className='manu__item'>
-              <a href='#s' className='manu__link'>
+              <Link to="/news" className='manu__link'>
                 Новини
-              </a>
+              </Link>
             </li>
             <li className='manu__item'>
-              <a href='#s' className='manu__link'>
+              <Link to="/contacts" className='manu__link'>
                 Контакти
-              </a>
+              </Link>
             </li>
           </ul>
 
