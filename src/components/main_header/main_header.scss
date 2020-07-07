@@ -47,6 +47,16 @@
     padding: 3px 10px;
     cursor: pointer;
 
+    &-link {
+      text-decoration: none;
+      color: #f8f8f8;
+
+      &:hover {
+        background: #F8F8F8;
+        color: #C4CCA8;
+    }
+  }
+
     &:hover {
       background: #F8F8F8;
       color: #C4CCA8;

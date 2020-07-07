@@ -4,7 +4,7 @@ import './main_menu.scss';
 
 function MainMenu() {
   return (
-    <section className='menu'>
+    <section className='menu' id="menu" >
       <div className='row'>
         <h1 className='offset-4 col-4 menu__title'>Меню</h1>
       </div>
