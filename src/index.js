@@ -14,6 +14,7 @@ import News from './components/news/news';
 import Contacts from './components/contacts/contacts';
 import Maps from './components/map/map';
 import MainMenu from './components/main_menu/main_menu';
+import Slider from './components/slider/slider';
 
 ReactDOM.render(
   <Router>
@@ -41,6 +42,7 @@ ReactDOM.render(
       <Route path="/manu" component={MainMenu} />
 
       <Route path="/photo" component={Header} />
+      <Route path="/photo" component={Slider} />
 
       <Route path="/news" component={Header} />
       <Route path="/news" component={News} />
@@ -50,11 +52,6 @@ ReactDOM.render(
       <Route path="/contacts" component={Maps} />
 
       <Footer />
-
-      {/* <Header />
-      <News />
-      <Contacts />
-      <Maps /> */}
     </div>
   </Router>,
   document.getElementById('root')
