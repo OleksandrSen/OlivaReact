@@ -12,6 +12,7 @@ import News from './components/news/news';
 import Contacts from './components/contacts/contacts';
 import Maps from './components/map/map';
 import MainMenu from './components/main_menu/main_menu';
+import Slider from './components/slider/slider';
 
 ReactDOM.render(
   <div>
@@ -25,6 +26,7 @@ ReactDOM.render(
     <News />
     <Contacts />
     <Maps />
+    <Slider />
   </div>,
   document.getElementById('root')
 );
