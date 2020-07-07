@@ -18,7 +18,8 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
           {
             content: {
               width: '940px',
-              height: '555px'
+              height: '555px',
+              margin: 'auto'
             }
           }
         }>

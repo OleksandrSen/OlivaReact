@@ -18,7 +18,8 @@ function Confirm({ ConfirmIsOpen, setConfirmIsOpen }) {
           {
             content: {
               width: '940px',
-              height: '100%'
+              // height: '100%',
+              margin: ' 10px auto'
             }
           }
         }>

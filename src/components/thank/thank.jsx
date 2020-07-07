@@ -15,7 +15,8 @@ function Thank({ ThankIsOpen, setThankIsOpen }) {
           {
             content: {
               width: '940px',
-              height: '390px'
+              height: '390px',
+              margin: 'auto'
             }
           }
         }>

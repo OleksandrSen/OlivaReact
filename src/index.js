@@ -10,6 +10,8 @@ import Order from './components/ordertable/ordertable';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import HeaderM from './components/headerM/headerM';
+import HeaderPhoto from './components/header_photo/header_photo';
+
 import News from './components/news/news';
 import Contacts from './components/contacts/contacts';
 import Maps from './components/map/map';
@@ -41,7 +43,7 @@ ReactDOM.render(
       <Route path="/manu" component={HeaderM} />
       <Route path="/manu" component={MainMenu} />
 
-      <Route path="/photo" component={Header} />
+      <Route path="/photo" component={HeaderPhoto} />
       <Route path="/photo" component={Slider} />
 
       <Route path="/news" component={Header} />
