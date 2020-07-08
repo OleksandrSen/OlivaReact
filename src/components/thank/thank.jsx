@@ -6,11 +6,15 @@ import meal from '../../img/meal.png';
 
 Modal.setAppElement('#root')
 
-function Thank({ ThankIsOpen, setThankIsOpen }) {
+function Thank({ ThankIsOpen, setThankIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
 
   return (
     <div>
-      <Modal isOpen={ThankIsOpen} onRequestClose={() => setThankIsOpen(false)}
+      <Modal isOpen={ThankIsOpen} onRequestClose={() => {
+        setThankIsOpen(false)
+        setConfirmIsOpen(false)
+        setBasketFormIsOpen(false)
+      }}
         style={
           {
             content: {
@@ -24,7 +28,11 @@ function Thank({ ThankIsOpen, setThankIsOpen }) {
           <img src={meal} alt="meal" class="thank__img" />
           <h1 className="thank__title">Дякуємо за замовлення!</h1>
           <h3 className="thank__subtitle">Очікуйте дзвінка від кур’єра</h3>
-          <svg class="thank__cross" onClick={() => setThankIsOpen(false)}>
+          <svg class="thank__cross" onClick={() => {
+            setThankIsOpen(false)
+            setConfirmIsOpen(false)
+            setBasketFormIsOpen(false)
+          }}>
             <use href={sprite + '#cross'}></use>
           </svg>
         </section>

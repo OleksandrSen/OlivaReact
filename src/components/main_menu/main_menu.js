@@ -1,6 +1,7 @@
 import React from 'react';
 import sprite from '../../img/icons-sprite.svg';
 import './main_menu.scss';
+import SeasonBtn from '../season_btn/season_btn'
 
 function MainMenu() {
   return (
@@ -206,12 +207,9 @@ function MainMenu() {
       <div className='row'>
         <button className='menu__button'>Додати до кошика</button>
       </div>
-      <div className='row'>
-        <button className='menu__button'>
-          Сезонне меню <span className='triangle'>&#x025BE;</span>
-        </button>
-      </div>
-    </section>
+
+      <SeasonBtn />
+    </section >
   );
 }
 

@@ -74,7 +74,10 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
             </svg>
           </div>
 
-          <Confirm ConfirmIsOpen={ConfirmIsOpen} setConfirmIsOpen={setConfirmIsOpen} />
+          <Confirm
+            ConfirmIsOpen={ConfirmIsOpen}
+            setConfirmIsOpen={setConfirmIsOpen}
+            setBasketFormIsOpen={setBasketFormIsOpen} />
         </section>
       </Modal>
     </div>

@@ -8,12 +8,15 @@ import sprite from '../../img/icons-sprite.svg';
 
 Modal.setAppElement('#root')
 
-function Confirm({ ConfirmIsOpen, setConfirmIsOpen }) {
+function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
   const [ThankIsOpen, setThankIsOpen] = useState(false)
 
   return (
     <div>
-      <Modal isOpen={ConfirmIsOpen} onRequestClose={() => setConfirmIsOpen(false)}
+      <Modal isOpen={ConfirmIsOpen} onRequestClose={() => {
+        setConfirmIsOpen(false)
+        setBasketFormIsOpen(false)
+      }}
         style={
           {
             content: {
@@ -112,11 +115,18 @@ function Confirm({ ConfirmIsOpen, setConfirmIsOpen }) {
             </div>
           </div>
 
-          <svg class="confirm__cross" onClick={() => setConfirmIsOpen(false)}>
+          <svg class="confirm__cross" onClick={() => {
+            setConfirmIsOpen(false)
+            setBasketFormIsOpen(false)
+          }}>
             <use href={sprite + '#cross'}></use>
           </svg>
 
-          <Thank ThankIsOpen={ThankIsOpen} setThankIsOpen={setThankIsOpen} />
+          <Thank
+            ThankIsOpen={ThankIsOpen}
+            setThankIsOpen={setThankIsOpen}
+            setConfirmIsOpen={setConfirmIsOpen}
+            setBasketFormIsOpen={setBasketFormIsOpen} />
         </section>
 
       </Modal >
