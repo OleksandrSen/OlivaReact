@@ -11,51 +11,27 @@ import './slider.scss';
 export default class SomeSlider extends Component {
   render() {
     const settings = {
-      className: 'center',
       centerMode: true,
+      centerPadding: '250px',
       infinite: true,
-      centerPadding: '50px',
       slidesToShow: 1,
-      speed: 500,
+      slidesToScroll: 1,
+      speed: 1000,
     };
     return (
       <div className='slider'>
         <Slider {...settings}>
           <div className='slider__block'>
-            <img
-              className='slider__item'
-              src={slider1}
-              alt='foto_slider'
-              width='720px'
-              height='540px'
-            />
+            <img className='slider__item' src={slider1} alt='foto_slider' />
           </div>
           <div>
-            <img
-              className='slider__item'
-              src={slider2}
-              alt='foto_slider'
-              width='720px'
-              height='540px'
-            />
+            <img className='slider__item' src={slider2} alt='foto_slider' />
           </div>
           <div>
-            <img
-              className='slider__item'
-              src={slider3}
-              alt='foto_slider'
-              width='720px'
-              height='540px'
-            />
+            <img className='slider__item' src={slider3} alt='foto_slider' />
           </div>
           <div>
-            <img
-              className='slider__item'
-              src={slider4}
-              alt='foto_slider'
-              width='720px'
-              height='540px'
-            />
+            <img className='slider__item' src={slider4} alt='foto_slider' />
           </div>
         </Slider>
       </div>

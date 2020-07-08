@@ -3,9 +3,12 @@
   height: 1000px;
   padding-top: 200px;
   margin: 0;
+  position: relative;
 
   &__item {
     margin: 0 auto;
+    width: 720px;
+    height: 540px;
   }
 }
 
@@ -33,4 +36,16 @@
   position: absolute;
   width: 59px;
   height: 117px;
+}
+
+.slick-slide .slider__item {
+  height: 400px;
+  margin-top: 70px;
+  filter: blur(3px) opacity(65%);
+}
+
+.slick-active .slider__item {
+  height: 100%;
+  margin-top: 0;
+  filter: none;
 }
