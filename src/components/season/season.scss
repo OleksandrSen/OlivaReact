@@ -4,8 +4,8 @@
   overflow: hidden;
   height: 1400px;
   width: 100%;
-  
-  
+  margin-top: -100px;
+
   &__main-img {
     margin: 180px auto;
     z-index: 2;
@@ -14,10 +14,10 @@
   &__ellipses {
     position: absolute;
   }
-  
+
   &__ellipses--top {
     top: -150px;
-    right: -215px;;
+    right: -215px;
   }
 
   &__ellipses--bottom {

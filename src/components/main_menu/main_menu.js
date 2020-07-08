@@ -1,11 +1,10 @@
 import React from 'react';
 import sprite from '../../img/icons-sprite.svg';
 import './main_menu.scss';
-import SeasonBtn from '../season_btn/season_btn'
 
 function MainMenu() {
   return (
-    <section className='menu' id="menu" >
+    <section className='menu' id='menu'>
       <div className='row'>
         <h1 className='offset-4 col-4 menu__title'>Меню</h1>
       </div>
@@ -207,9 +206,7 @@ function MainMenu() {
       <div className='row'>
         <button className='menu__button'>Додати до кошика</button>
       </div>
-
-      <SeasonBtn />
-    </section >
+    </section>
   );
 }
 
