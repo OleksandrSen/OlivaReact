@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'reset-css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './app.scss';
 
 import Nav from './components/nav/nav';
 import MainHeader from './components/main_header/main_header';
@@ -22,7 +23,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className='app'>
           <Nav />
           <Route path='/' component={MainHeader} exact />
           <Route path='/' component={Main} exact />
