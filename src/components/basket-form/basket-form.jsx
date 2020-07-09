@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal'
-// import './basket-form.scss'
+import './basket-form.scss'
 import Confirm from '../confirm/confirm'
 import sprite from '../../img/icons-sprite.svg';
 
@@ -26,7 +26,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
         <section className="basket-form container">
           <div className="row">
             <h3 className="basket-form__caption col-12">Кошик</h3>
-            <table className="table col-12">
+            <table className="basket-form__table col-12">
               <tbody>
                 <tr>
                   <th className="basket-form__title basket-form__title--meal">Страва</th>
