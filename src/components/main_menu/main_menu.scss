@@ -75,15 +75,22 @@
   bottom: 10px;
 }
 
-td,
-th {
+.firstCol,
+.secondCol,
+.thirdCol,
+.fourthCol {
   padding: 3px;
   width: 30px;
   height: 120px;
   vertical-align: middle;
   text-align: center;
+  font-size: 18px;
+  font-weight: 200;
 }
-th {
+.firstColH,
+.secondColH,
+.thirdColH,
+.fourthColH {
   font-weight: bold;
   font-size: 30px;
   line-height: 32px;
@@ -98,11 +105,6 @@ th {
 .thirdCol {
   width: 130px;
 }
-
-// td {
-//   font-size: 18px;
-//   font-weight: 200;
-// }
 
 .food__name {
   font-weight: 600;

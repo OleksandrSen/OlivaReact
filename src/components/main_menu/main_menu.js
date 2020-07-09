@@ -22,10 +22,10 @@ function MainMenu() {
           <table className='menu__list'>
             <tbody>
               <tr className='headerRow'>
-                <th className='firstCol'>Назва страви</th>
-                <th className='secondCol'>Вага</th>
-                <th className='thirdCol'>Ціна</th>
-                <th className='fourthCol'>Замовити</th>
+                <th className='firstCol firstColH'>Назва страви</th>
+                <th className='secondCol secondColH'>Вага</th>
+                <th className='thirdCol thirdColH'>Ціна</th>
+                <th className='fourthCol fourthColH'>Замовити</th>
               </tr>
               <tr className='listRow'>
                 <td className='firstCol'>

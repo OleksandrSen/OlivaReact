@@ -15,6 +15,7 @@ function Order() {
           <div className='col-12 orderTable__main'>
             <div className='orderTable__main__table'>
               <div className='orderTable__main__table__num'>1</div>
+              <div className='orderTable__main__table__fortwo'></div>
             </div>
             <div className='orderTable__main__table table2'>
               <div className='orderTable__main__table__num'>2</div>
