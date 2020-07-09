@@ -18,7 +18,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
           {
             content: {
               width: '940px',
-              height: '555px',
+              minHeight: '555px',
               margin: 'auto'
             }
           }
@@ -26,7 +26,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
         <section className="basket-form container">
           <div className="row">
             <h3 className="basket-form__caption col-12">Кошик</h3>
-            <table className="basket-form__table col-12">
+            <table className="basket-form__table col-10">
               <tbody>
                 <tr>
                   <th className="basket-form__title basket-form__title--meal">Страва</th>
@@ -34,27 +34,43 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
                   <th className="basket-form__title basket-form__title--cost">Ціна</th>
                   <td className="basket-form__title--delete"></td>
                 </tr>
-                <tr>
+                <tr className='basket-form__line'>
                   <td className="basket-form__meal">Італійські м'ясні делікатеси</td>
                   <td className="basket-form__amount">
-                    <button className="basket-form__btn">-</button>
-                    <div className="basket-form__number">1</div>
-                    <button className="basket-form__btn">+</button>
+                    <svg className='orderIcon'>
+                      <use href={sprite + '#minus'}></use>
+                    </svg>
+                    <span className="basket-form__number">1</span>
+                    <svg className='orderIcon'>
+                      <use href={sprite + '#add'}></use>
+                    </svg>
                   </td>
-                  <td>119 грн.</td>
-                  <td><button className="basket-form__btn-delete">x</button></td>
+                  <td className='basket-form__cost'>119 грн.</td>
+                  <td className="basket-form__btn-delete">
+                    <svg className="basket-form__cross-delete">
+                      <use href={sprite + '#cross'}></use>
+                    </svg>
+                  </td>
                 </tr>
-                <tr>
+                <tr className='basket-form__line'>
                   <td className="basket-form__meal">Брускети з в'яленими томатами</td>
                   <td className="basket-form__amount">
-                    <button className="basket-form__btn">-</button>
-                    <div className="basket-form__number">1</div>
-                    <button className="basket-form__btn">+</button>
+                    <svg className='orderIcon'>
+                      <use href={sprite + '#minus'}></use>
+                    </svg>
+                    <span className="basket-form__number">1</span>
+                    <svg className='orderIcon'>
+                      <use href={sprite + '#add'}></use>
+                    </svg>
                   </td>
-                  <td>51 грн.</td>
-                  <td><button className="basket-form__btn-delete">x</button></td>
+                  <td className='basket-form__cost'>51 грн.</td>
+                  <td className="basket-form__btn-delete">
+                    <svg className="basket-form__cross-delete">
+                      <use href={sprite + '#cross'}></use>
+                    </svg>
+                  </td>
                 </tr>
-                <tr>
+                <tr className='basket-form__bottom'>
                   <td colspan="2" className="basket-form__sum">
                     Сума замовлення:
 						<span className="basket-form__sum--bold">170грн</span>
