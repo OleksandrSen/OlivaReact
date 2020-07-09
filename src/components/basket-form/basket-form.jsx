@@ -3,6 +3,8 @@ import Modal from 'react-modal'
 import './basket-form.scss'
 import Confirm from '../confirm/confirm'
 import sprite from '../../img/icons-sprite.svg';
+import Cross from '../cross/cross'
+
 
 
 Modal.setAppElement('#root')
@@ -80,9 +82,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
                 </tr>
               </tbody>
             </table>
-            <svg className="basket-form__cross" onClick={() => setBasketFormIsOpen(false)}>
-              <use href={sprite + '#cross'}></use>
-            </svg>
+            <Cross onClick={() => setBasketFormIsOpen(false)} />
 
             <Confirm
               ConfirmIsOpen={ConfirmIsOpen}

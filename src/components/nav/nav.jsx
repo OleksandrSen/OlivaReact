@@ -5,7 +5,7 @@ import './nav.scss';
 import Basket from '../basket/basket';
 
 function Nav() {
-  const [ItemMainClicked, setItemMainClicked] = useState(true)
+  const [ItemMainClicked, setItemMainClicked] = useState(false)
   const [ItemMenuClicked, setItemMenuClicked] = useState(false)
   const [ItemPhotoClicked, setItemPhotoClicked] = useState(false)
   const [ItemNewsClicked, setItemNewsClicked] = useState(false)

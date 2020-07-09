@@ -3,8 +3,7 @@ import Modal from 'react-modal'
 import './confirm.scss'
 import 'reset-css'
 import Thank from '../thank/thank'
-import sprite from '../../img/icons-sprite.svg';
-
+import Cross from '../cross/cross'
 
 Modal.setAppElement('#root')
 
@@ -114,13 +113,10 @@ function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
                 onClick={() => setThankIsOpen(true)}>Підтвердити</button>
             </div>
           </div>
-
-          <svg class="confirm__cross" onClick={() => {
+          <Cross onClick={() => {
             setConfirmIsOpen(false)
             setBasketFormIsOpen(false)
-          }}>
-            <use href={sprite + '#cross'}></use>
-          </svg>
+          }} />
 
           <Thank
             ThankIsOpen={ThankIsOpen}
