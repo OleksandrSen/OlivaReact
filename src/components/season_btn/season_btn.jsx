@@ -11,7 +11,7 @@ function SeasonBtn() {
 
   return (
     <div className='row'>
-      <button className='menu__button' onClick={onClick}>
+      <button className='season__button' onClick={onClick}>
         Сезонне меню <span className='triangle'>&#x025BE;</span>
       </button>
       {showSeason ? <Season /> : null}
