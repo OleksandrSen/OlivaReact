@@ -1,0 +1,23 @@
+.thankorder {
+  width: 492px;
+  height: 295px;
+  border-radius: 15px;
+  margin: 10px auto;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  &__icon {
+    margin: 44px 0 19px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}

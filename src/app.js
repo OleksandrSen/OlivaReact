@@ -18,6 +18,8 @@ import Maps from './components/map/map';
 import MainMenu from './components/main_menu/main_menu';
 import Slider from './components/slider/slider';
 import SeasonBtn from './components/season_btn/season_btn';
+// import ThankOrder from './components/ordertable/thankorder/thankorder';
+// import TableForm from './components/ordertable/form/tableform';
 
 export default class App extends Component {
   render() {
@@ -52,6 +54,8 @@ export default class App extends Component {
           <Route path='/contacts' component={Maps} />
 
           <Footer />
+          {/* <ThankOrder />
+          <TableForm /> */}
         </div>
       </Router>
     );
