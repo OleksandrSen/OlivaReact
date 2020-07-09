@@ -23,11 +23,25 @@
 
   &__item {
     margin: 42px auto;
+    transition: .3s;
+
+    &:hover {
+      text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
   }
+
+    &--active {
+      margin: 42px auto;
+
+      .manu__link {
+        text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
+      }
+    }
+}
 
   &__link {
     color: #2c2c11;
     text-decoration: none;
+
   }
 }
 

@@ -5,5 +5,10 @@
     width: 35px;
     height: 40px;
     cursor: pointer;
+    fill: #747436;
+
+    &:hover {
+      fill:  #6d6d31;
+    }
   }
 }
