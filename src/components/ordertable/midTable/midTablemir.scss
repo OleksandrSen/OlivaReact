@@ -1,0 +1,27 @@
+.orderTable__main__table__middlemir {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  width: 292px;
+  height: 263px;
+  position: absolute;
+  bottom: 20px;
+  right: -220px;
+  background: url(../../../img/cloud2mir.svg);
+  z-index: 1;
+  transform: rotate(180deg);
+
+  &__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    margin: -40px 0 5px;
+  }
+
+  &__info {
+    font-size: 20px;
+    line-height: 27px;
+    color: #2c2c11;
+    margin: 0 auto 10px;
+  }
+}
