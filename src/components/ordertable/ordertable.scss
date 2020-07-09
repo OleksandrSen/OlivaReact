@@ -37,10 +37,37 @@
       text-align: center;
       cursor: pointer;
 
+      &__button {
+        width: 186px;
+        height: 42px;
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        color: #a2a88f;
+        background: transparent;
+        border: 2px solid #a2a88f;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          color: #f8f8f8;
+          background: #c4cca8;
+          border: none;
+        }
+      }
+
       &:hover {
         transform: scale(1.2);
         transition: 0.3s;
         border: solid 2px black;
+        z-index: 1;
+      }
+
+      &:hover :nth-child(2) {
+        display: flex;
+        z-index: 1;
+        transform: scale(0.8);
       }
 
       &__num {

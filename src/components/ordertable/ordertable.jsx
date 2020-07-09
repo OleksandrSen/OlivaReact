@@ -1,4 +1,6 @@
 import React from 'react';
+import TableForTwo from './tableForTwo/tableForTwo';
+import BigTable from './BigTable/BigTable';
 import './ordertable.scss';
 
 function Order() {
@@ -15,13 +17,14 @@ function Order() {
           <div className='col-12 orderTable__main'>
             <div className='orderTable__main__table'>
               <div className='orderTable__main__table__num'>1</div>
-              <div className='orderTable__main__table__fortwo'></div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table2'>
               <div className='orderTable__main__table__num'>2</div>
             </div>
             <div className='orderTable__main__table table3'>
               <div className='orderTable__main__table__num'>3</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table4'>
               <div className='orderTable__main__table__num'>4</div>
@@ -64,36 +67,47 @@ function Order() {
             </div>
             <div className='orderTable__main__table table17'>
               <div className='orderTable__main__table__num'>17</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table18'>
               <div className='orderTable__main__table__num'>18</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table19'>
               <div className='orderTable__main__table__num'>19</div>
+              <BigTable />
             </div>
             <div className='orderTable__main__table table20'>
               <div className='orderTable__main__table__num'>20</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table21'>
               <div className='orderTable__main__table__num'>21</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table22'>
               <div className='orderTable__main__table__num'>22</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table23'>
               <div className='orderTable__main__table__num'>23</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table24'>
               <div className='orderTable__main__table__num'>24</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table25'>
               <div className='orderTable__main__table__num'>25</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table26'>
               <div className='orderTable__main__table__num'>26</div>
+              <TableForTwo />
             </div>
             <div className='orderTable__main__table table27'>
               <div className='orderTable__main__table__num'>27</div>
+              <TableForTwo />
             </div>
           </div>
         </div>
