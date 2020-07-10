@@ -39,9 +39,9 @@ export default class App extends Component {
           <Route path='/main-header' component={SeasonBtn} />
           <Route path='/main-header' component={Order} />
 
-          <Route path='/manu' component={HeaderM} />
-          <Route path='/manu' component={MainMenu} />
-          <Route path='/manu' component={SeasonBtn} />
+          <Route path='/menu' component={HeaderM} />
+          <Route path='/menu' component={MainMenu} />
+          <Route path='/menu' component={SeasonBtn} />
 
           <Route path='/photo' component={HeaderPhoto} />
           <Route path='/photo' component={Slider} />

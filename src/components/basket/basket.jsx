@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import sprite from '../../img/icons-sprite.svg';
 import './basket.scss';
-import BasketForm from '../basket-form/basket-form'
+import BasketForm from './basket-form/basket-form'
 
 
 function Basket() {

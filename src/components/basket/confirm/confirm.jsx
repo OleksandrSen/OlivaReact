@@ -3,7 +3,7 @@ import Modal from 'react-modal'
 import './confirm.scss'
 import 'reset-css'
 import Thank from '../thank/thank'
-import Cross from '../cross/cross'
+import Cross from '../../cross/cross'
 
 Modal.setAppElement('#root')
 

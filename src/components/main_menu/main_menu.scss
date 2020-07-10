@@ -1,6 +1,7 @@
 .menu {
   width: 100%;
   height: 1800px;
+  // height: 100%;
   margin-top: 50px;
 
   &__title {
@@ -12,48 +13,6 @@
     line-height: 52px;
     color: #f8f8f8;
     padding-top: 50px;
-  }
-
-  &__info {
-    background: url('../../img/MenuSideImage.png') no-repeat;
-    height: 1500px;
-
-    &__navigation {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-
-      &__item {
-        margin: 90px 0 35px 0;
-        font-size: 22px;
-        line-height: 30px;
-        position: relative;
-        overflow: hidden;
-        height: 70px;
-        cursor: pointer;
-
-        &::after {
-          content: '';
-          width: 100%;
-          height: 8px;
-          background: #d34606;
-          position: absolute;
-          top: 40px;
-          right: 200px;
-          border-radius: 15px;
-        }
-
-        &:hover {
-          text-shadow: 0 0 0.85px #333, 0 0 0.85px #333;
-          &::after {
-            position: absolute;
-            top: 40px;
-            right: 0px;
-            transition: 0.5s;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -75,6 +34,10 @@
   bottom: 10px;
 }
 
+.listRow {
+  width: 100%;
+}
+
 .firstCol,
 .secondCol,
 .thirdCol,
@@ -87,14 +50,7 @@
   font-size: 18px;
   font-weight: 200;
 }
-.firstColH,
-.secondColH,
-.thirdColH,
-.fourthColH {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 32px;
-}
+
 
 .firstCol {
   width: 400px;

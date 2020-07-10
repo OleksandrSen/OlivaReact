@@ -17,7 +17,7 @@ function Nav() {
               </NavLink>
             </li>
             <li className='manu__item'>
-              <NavLink activeClassName='manu__link--active' className='manu__link' to='/manu' >
+              <NavLink activeClassName='manu__link--active' className='manu__link' to='/menu' >
                 Меню
               </NavLink>
             </li>

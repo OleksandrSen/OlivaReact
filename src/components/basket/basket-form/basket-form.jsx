@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './basket-form.scss';
 import Confirm from '../confirm/confirm';
-import sprite from '../../img/icons-sprite.svg';
-import Cross from '../cross/cross';
+import sprite from '../../../img/icons-sprite.svg';
+import Cross from '../../cross/cross';
 
 Modal.setAppElement('#root');
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import './thank.scss';
-import meal from '../../img/meal.png';
-import Cross from '../cross/cross';
+import meal from '../../../img/meal.png';
+import Cross from '../../cross/cross';
 
 Modal.setAppElement('#root');
 
