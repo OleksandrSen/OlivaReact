@@ -10,6 +10,8 @@
   color: #2c2c11;
 }
 
+
+
 .manu {
   display: flex;
 
@@ -28,20 +30,15 @@
     &:hover {
       text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
   }
-
-    &--active {
-      margin: 42px auto;
-
-      .manu__link {
-        text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
-      }
-    }
 }
 
   &__link {
     color: #2c2c11;
     text-decoration: none;
 
+    &--active {
+      text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
+    }
   }
 }
 
@@ -67,4 +64,8 @@
     width: 35px;
     height: 40px;
   }
+}
+
+.active {
+  color: tomato;
 }
