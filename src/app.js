@@ -42,30 +42,32 @@ export default class App extends Component {
           <Nav />
 
           {/* <MainRouter /> */}
-          <FirstPage />
+          {/* <FirstPage />
           <Home />
           <Menu />
           <Photo />
           <New />
-          <Contact />
+          <Contact /> */}
 
 
-          {/* <Route path='/' component={MainHeader} exact />
+          <Route path='/' component={MainHeader} exact />
           <Route path='/' component={Main} exact />
           <Route path='/' component={MainMenu} exact />
           <Route path='/' component={SeasonBtn} exact />
-          <Route path='/' component={Order} exact /> 
+          <Route path='/' component={Order} exact />
 
-          <Route path='/main-header' component={MainHeader} />
+          {/* <Route path='/main-header' component={MainHeader} />
           <Route path='/main-header' component={Main} />
           <Route path='/main-header' component={MainMenu} />
           <Route path='/main-header' component={SeasonBtn} />
-          <Route path='/main-header' component={Order} />
+          <Route path='/main-header' component={Order} /> */}
 
+          <Home />
+          <Menu />
 
-          <Route path='/menu' component={HeaderM} />
+          {/* <Route path='/menu' component={HeaderM} />
           <Route path='/menu' component={MainMenu} />
-          <Route path='/menu' component={SeasonBtn} />
+          <Route path='/menu' component={SeasonBtn} /> */}
 
           <Route path='/photo' component={HeaderPhoto} />
           <Route path='/photo' component={Slider} />
@@ -75,11 +77,9 @@ export default class App extends Component {
 
           <Route path='/contacts' component={Header} />
           <Route path='/contacts' component={Contacts} />
-          <Route path='/contacts' component={Maps} /> */}
+          <Route path='/contacts' component={Maps} />
 
           <Footer />
-          {/* <ThankOrder />
-          <TableForm /> */}
         </div>
       </Router>
     );

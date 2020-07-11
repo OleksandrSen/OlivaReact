@@ -1,9 +1,10 @@
-import React from 'react';
-import OrderBtn from '../button';
+import React, { useState } from 'react';
+import TableForm from '../form/tableform';
 
 import './midTable.scss';
 
 function MidTable() {
+  const [TableFormIsOpen, setTableFormIsOpen] = useState(false);
   return (
     <div className='orderTable__main__table__middle'>
       <h5 className='orderTable__main__table__middle__title'>
@@ -14,7 +15,16 @@ function MidTable() {
         Ідеальний для обіду в
         <br /> колі друзів та рідних
       </p>
-      <OrderBtn />
+      <button
+        className='orderTable__main__table__button'
+        onClick={() => setTableFormIsOpen(true)}
+      >
+        Замовити
+      </button>
+      <TableForm
+        TableFormIsOpen={TableFormIsOpen}
+        setTableFormIsOpen={setTableFormIsOpen}
+      />
     </div>
   );
 }

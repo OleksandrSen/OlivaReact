@@ -1,9 +1,10 @@
-import React from 'react';
-import OrderBtn from '../button';
+import React, { useState } from 'react';
+import TableForm from '../form/tableform';
 
 import './tableForTwo.scss';
 
 function TableForTwo() {
+  const [TableFormIsOpen, setTableFormIsOpen] = useState(false);
   return (
     <div className='orderTable__main__table__fortwo'>
       <h5 className='orderTable__main__table__fortwo__title'>
@@ -13,7 +14,16 @@ function TableForTwo() {
         Ідеальний для
         <br /> романтичної вечері
       </p>
-      <OrderBtn />
+      <button
+        className='orderTable__main__table__button'
+        onClick={() => setTableFormIsOpen(true)}
+      >
+        Замовити
+      </button>
+      <TableForm
+        TableFormIsOpen={TableFormIsOpen}
+        setTableFormIsOpen={setTableFormIsOpen}
+      />
     </div>
   );
 }
