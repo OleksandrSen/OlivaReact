@@ -6,24 +6,8 @@ import './app.scss';
 import Nav from './components/nav/nav';
 import Footer from './components/footer/footer';
 
-import MainHeader from './components/main_header/main_header';
-import Main from './components/main/main';
-import Order from './components/ordertable/ordertable';
-import Header from './components/header/header';
-import HeaderM from './components/headerM/headerM';
-import HeaderPhoto from './components/header_photo/header_photo';
-import News from './components/news/news';
-import Contacts from './components/contacts/contacts';
-import Maps from './components/map/map';
-import MainMenu from './components/main_menu/main_menu';
-import Slider from './components/slider/slider';
-import SeasonBtn from './components/season_btn/season_btn';
-
 // import ThankOrder from './components/ordertable/thankorder/thankorder';
 // import TableForm from './components/ordertable/form/tableform';
-
-
-import MainRouter from './components/router/router'
 
 import Home from './components/router/home'
 import Menu from './components/router/menu'
