@@ -11,12 +11,12 @@ import { BrowserRouter as Route } from 'react-router-dom';
 
 export default function FirstPage() {
   return (
-    <Route path='/' exact>
+    <div>
       <MainHeader />
       <Main />
       <MainMenu />
       <SeasonBtn />
       <Order />
-    </Route>
+    </div>
   )
 }

@@ -11,13 +11,13 @@ import { BrowserRouter as Route } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <Route path='/main-header' exact>
+    <div>
       <MainHeader />
       <Main />
       <MainMenu />
       <SeasonBtn />
       <Order />
-    </Route>
+    </div>
   )
 }
 

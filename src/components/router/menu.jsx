@@ -9,10 +9,10 @@ import { BrowserRouter as Route } from 'react-router-dom';
 
 export default function Menu() {
   return (
-    <Route path='/menu' exact>
+    <div>
       <HeaderM />
       <MainMenu />
       <SeasonBtn />
-    </Route>
+    </div>
   )
 }

@@ -8,9 +8,9 @@ import { BrowserRouter as Route } from 'react-router-dom';
 
 export default function New() {
   return (
-    <Route path='/news' exact>
+    <div>
       <Header />
       <News />
-    </Route>
+    </div>
   )
 }

@@ -8,10 +8,10 @@ import { BrowserRouter as Route } from 'react-router-dom';
 
 export default function Contact() {
   return (
-    <Route path='/contacts' exact>
+    <div>
       <Header />
       <Contacts />
       <Maps />
-    </Route>
+    </div>
   )
 }

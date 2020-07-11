@@ -41,43 +41,29 @@ export default class App extends Component {
         <div className='app'>
           <Nav />
 
-          {/* <MainRouter /> */}
-          {/* <FirstPage />
-          <Home />
-          <Menu />
-          <Photo />
-          <New />
-          <Contact /> */}
+          <Route path='/main-header' exact>
+            <Home />
+          </Route>
 
+          <Route path='/menu' exact>
+            <Menu />
+          </Route>
 
-          <Route path='/' component={MainHeader} exact />
-          <Route path='/' component={Main} exact />
-          <Route path='/' component={MainMenu} exact />
-          <Route path='/' component={SeasonBtn} exact />
-          <Route path='/' component={Order} exact />
+          <Route path='/photo' exact>
+            <Photo />
+          </Route>
 
-          {/* <Route path='/main-header' component={MainHeader} />
-          <Route path='/main-header' component={Main} />
-          <Route path='/main-header' component={MainMenu} />
-          <Route path='/main-header' component={SeasonBtn} />
-          <Route path='/main-header' component={Order} /> */}
+          <Route path='/news' exact>
+            <New />
+          </Route>
 
-          <Home />
-          <Menu />
+          <Route path='/contacts' exact>
+            <Contact />
+          </Route>
 
-          {/* <Route path='/menu' component={HeaderM} />
-          <Route path='/menu' component={MainMenu} />
-          <Route path='/menu' component={SeasonBtn} /> */}
-
-          <Route path='/photo' component={HeaderPhoto} />
-          <Route path='/photo' component={Slider} />
-
-          <Route path='/news' component={Header} />
-          <Route path='/news' component={News} />
-
-          <Route path='/contacts' component={Header} />
-          <Route path='/contacts' component={Contacts} />
-          <Route path='/contacts' component={Maps} />
+          <Route path='/' exact>
+            <FirstPage />
+          </Route>
 
           <Footer />
         </div>
