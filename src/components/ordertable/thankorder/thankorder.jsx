@@ -19,7 +19,7 @@ function ThankOrder({ ThankIsOpen, setThankIsOpen, setTableFormIsOpen }) {
           content: {
             width: '550px',
             height: '350px',
-            margin: '0 auto',
+            margin: 'auto',
             borderRadius: '15px',
             overflow: 'hidden',
           },
