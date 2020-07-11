@@ -177,10 +177,10 @@ function MainMenu() {
             <Route path="/" salad={salad} exact>
               <Salad salad={salad} />
             </Route>
-            <Route path="/main-header/a" component={Appetizer}>
+            <Route path="/main-header/appetizer" component={Appetizer}>
               <Appetizer appetizer={appetizer} />
             </Route>
-            <Route path="/main-header/s" salad={salad}>
+            <Route path="/main-header/salad" salad={salad}>
               <Salad salad={salad} />
             </Route>
 

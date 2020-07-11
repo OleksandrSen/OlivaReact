@@ -7,6 +7,7 @@ function SeasonBtn() {
 
   const onClick = () => {
     setShowSeason(!showSeason);
+
   };
 
   return (

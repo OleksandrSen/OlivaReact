@@ -4,40 +4,64 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './app.scss';
 
 import Nav from './components/nav/nav';
+import Footer from './components/footer/footer';
+
 import MainHeader from './components/main_header/main_header';
 import Main from './components/main/main';
 import Order from './components/ordertable/ordertable';
-import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import HeaderM from './components/headerM/headerM';
 import HeaderPhoto from './components/header_photo/header_photo';
-
 import News from './components/news/news';
 import Contacts from './components/contacts/contacts';
 import Maps from './components/map/map';
 import MainMenu from './components/main_menu/main_menu';
 import Slider from './components/slider/slider';
 import SeasonBtn from './components/season_btn/season_btn';
+
 // import ThankOrder from './components/ordertable/thankorder/thankorder';
 // import TableForm from './components/ordertable/form/tableform';
+
+
+import MainRouter from './components/router/router'
+
+import Home from './components/router/home'
+import Menu from './components/router/menu'
+import Photo from './components/router/photo'
+import New from './components/router/new'
+import Contact from './components/router/contact'
+import FirstPage from './components/router/firstPage'
+
 
 export default class App extends Component {
   render() {
     return (
       <Router>
+
         <div className='app'>
           <Nav />
-          <Route path='/' component={MainHeader} exact />
+
+          {/* <MainRouter /> */}
+          <FirstPage />
+          <Home />
+          <Menu />
+          <Photo />
+          <New />
+          <Contact />
+
+
+          {/* <Route path='/' component={MainHeader} exact />
           <Route path='/' component={Main} exact />
           <Route path='/' component={MainMenu} exact />
           <Route path='/' component={SeasonBtn} exact />
-          <Route path='/' component={Order} exact />
+          <Route path='/' component={Order} exact /> 
 
           <Route path='/main-header' component={MainHeader} />
           <Route path='/main-header' component={Main} />
           <Route path='/main-header' component={MainMenu} />
           <Route path='/main-header' component={SeasonBtn} />
           <Route path='/main-header' component={Order} />
+
 
           <Route path='/menu' component={HeaderM} />
           <Route path='/menu' component={MainMenu} />
@@ -51,7 +75,7 @@ export default class App extends Component {
 
           <Route path='/contacts' component={Header} />
           <Route path='/contacts' component={Contacts} />
-          <Route path='/contacts' component={Maps} />
+          <Route path='/contacts' component={Maps} /> */}
 
           <Footer />
           {/* <ThankOrder />
