@@ -9,6 +9,7 @@ export default function MenuNav() {
     <ul className='menu__info__navigation'>
       <li className='menu__info__navigation__item'>
         <NavLink
+          activeClassName='menu__info__navigation__link--active'
           className='menu__info__navigation__link'
           to='/main-header/appetizer'
         >
@@ -17,6 +18,7 @@ export default function MenuNav() {
       </li>
       <li className='menu__info__navigation__item'>
         <NavLink
+          activeClassName='menu__info__navigation__link--active'
           className='menu__info__navigation__link'
           to='/main-header/salad'
         >

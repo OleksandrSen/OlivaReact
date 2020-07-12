@@ -186,12 +186,12 @@ function MainMenu() {
               <Route path='/menu' component={Appetizer} exact>
                 <Appetizer appetizer={appetizer} />
               </Route>
-              <Route path='/menu/a' component={Appetizer}>
+              {/* <Route path='/menu/a' component={Appetizer}>
                 <Appetizer appetizer={appetizer} />
               </Route>
               <Route path='/menu/s' salad={salad}>
                 <Salad salad={salad} />
-              </Route>
+              </Route> */}
             </table>
           </div>
         </div>
