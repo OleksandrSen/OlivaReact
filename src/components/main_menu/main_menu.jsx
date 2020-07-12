@@ -27,6 +27,27 @@ function MainMenu() {
     setShowAppetizer('first');
   };
 
+  const openPaste = () => {
+    setShowFood(true);
+    setShowAppetizer('paste');
+  };
+
+  const openRavioli = () => {
+    setShowFood(true);
+    setShowAppetizer('ravioli');
+  };
+
+  const openPizza = () => {
+    setShowFood(true);
+    setShowAppetizer('pizza');
+  };
+
+
+  const openDessert = () => {
+    setShowFood(true);
+    setShowAppetizer('dessert');
+  };
+
   const food = [
     {
       meal: 'Прошутто крудо з грушею',
@@ -201,6 +222,274 @@ function MainMenu() {
       type: 'first',
       qty: 1,
     },
+    {
+      meal: 'Андалузький гаспачо з овечою фетою',
+      desk: '',
+      weight: 300,
+      cost: 139,
+      type: 'first',
+      qty: 0,
+    },
+    {
+      meal: 'Окрошка',
+      desk: '(з телятиною та шинкою на квасі зі сметаною та гірчицею)',
+      weight: 250,
+      cost: 130,
+      type: 'first',
+      qty: 0,
+    },
+    {
+      meal: 'Том Ка Гай',
+      desk: '(з курочкою)',
+      weight: 300,
+      cost: 190,
+      type: 'first',
+      qty: 0,
+    },
+    {
+      meal: 'Том Ка Гай',
+      desk: '(з креветками)',
+      weight: 300,
+      cost: 240,
+      type: 'first',
+      qty: 1,
+    },
+    {
+      meal: 'Борщ український',
+      desk: '(з реберцем та пампушками)',
+      weight: 330,
+      cost: 99,
+      type: 'first',
+      qty: 1,
+    },
+    // paste
+    {
+      meal: 'Тальятелле с телятиной',
+      desk: '(в соусе Демиглас, томатами и базиликом)',
+      weight: 300,
+      cost: 158,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: "Паста Четыре сыра",
+      desk: '',
+      weight: 350,
+      cost: 168,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: 'Спагетти с соусом Карбонара',
+      desk: '',
+      weight: 220,
+      cost: 98,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: 'Спагетти с креветками',
+      desk: '',
+      weight: 280,
+      cost: 168,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: 'Тальятелле с телятиной',
+      desk: '(в соусе Демиглас, томатами и базиликом)',
+      weight: 300,
+      cost: 158,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: "Паста Четыре сыра",
+      desk: '',
+      weight: 350,
+      cost: 168,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: 'Спагетти с соусом Карбонара',
+      desk: '',
+      weight: 220,
+      cost: 98,
+      type: 'paste',
+      qty: 0,
+    },
+    {
+      meal: 'Спагетти с креветками',
+      desk: '',
+      weight: 280,
+      cost: 168,
+      type: 'paste',
+      qty: 0,
+    },
+    // ravioli
+    {
+      meal: 'Равиоли с кроликом',
+      desk: '',
+      weight: 250,
+      cost: 128,
+      type: 'ravioli',
+      qty: 0,
+    },
+    {
+      meal: 'Равиоли с рикоттой',
+      desk: "",
+      weight: 250,
+      cost: 123,
+      type: 'ravioli',
+      qty: 0,
+    },
+    {
+      meal: 'Равиоли з соусом із консервованого тунця',
+      desk: '(подаються з овочами)',
+      weight: 160,
+      cost: 51,
+      type: 'ravioli',
+      qty: 0,
+    },
+    {
+      meal: 'Равиоли з паштетом з гусячої печінки',
+      desk: '(під вишневим соусом)',
+      weight: 140,
+      cost: 61,
+      type: 'ravioli',
+      qty: 0,
+    },
+    {
+      meal: "Равиоли з в'яленими томатами",
+      desk: '',
+      weight: 100,
+      cost: 51,
+      type: 'ravioli',
+      qty: 0,
+    },
+    {
+      meal: 'Вітелло тоннато',
+      desk: '(тонко нарізана телятина під соусом із тунця)',
+      weight: 130,
+      cost: 69,
+      type: 'ravioli',
+      qty: 0,
+    },
+    // pizza
+    {
+      meal: 'Піца "Мисливська"',
+      desk: '',
+      weight: 480,
+      cost: 125,
+      type: 'pizza',
+      qty: 0,
+    },
+    {
+      meal: 'Піца "Барбекю" ',
+      desk: "",
+      weight: 480,
+      cost: 125,
+      type: 'pizza',
+      qty: 0,
+    },
+    {
+      meal: 'Піца "Мексиканська"',
+      desk: '',
+      weight: 520,
+      cost: 125,
+      type: 'pizza',
+      qty: 0,
+    },
+    {
+      meal: 'Піца "Street Food"',
+      desk: '',
+      weight: 520,
+      cost: 125,
+      type: 'pizza',
+      qty: 0,
+    },
+    {
+      meal: 'Піца "4 м`яса"',
+      desk: '',
+      weight: 480,
+      cost: 125,
+      type: 'pizza',
+      qty: 0,
+    },
+    // dessert
+    {
+      meal: 'Вареники з вишнею ',
+      desk: '',
+      weight: 220,
+      cost: 120,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: "Торт на гречаному меду із трюфельним кремом та соусом сабайон",
+      desk: '',
+      weight: 145,
+      cost: 125,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Сирна палітра',
+      desk: '(сир Пармезан, сир Брі, сир Горгонзола, сир Скаморція)',
+      weight: 205,
+      cost: 121,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Ромова баба з кремом Шантілі ',
+      desk: '',
+      weight: 150,
+      cost: 95,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Штрудель із вишнею, волоськими горіхами та ванільним морозивом ',
+      desk: '',
+      weight: 170,
+      cost: 125,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Ягідний тірамісу ',
+      desk: "(італійські м'ясні та сирні делікатеси)",
+      weight: 150,
+      cost: 125,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Сорбети власного виробництва ',
+      desk: '(подаються з овочами)',
+      weight: 50,
+      cost: 60,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: 'Сирники',
+      desk: '(з в’яленим виноградом і морозивом сабайон на основі домашньої сметани)',
+      weight: 150,
+      cost: 98,
+      type: 'dessert',
+      qty: 0,
+    },
+    {
+      meal: "Джелато власного виробництва",
+      desk: 'Трюфельне/ Ванільне/ Сабайон',
+      weight: 50,
+      cost: 69,
+      type: 'dessert',
+      qty: 0,
+    },
   ];
 
   const Food = ({ food }) => (
@@ -241,17 +530,17 @@ function MainMenu() {
       <div className='row menu__info'>
         <div className='offset-4 col-8'>
           <MenuNav
-            openSalad={openSalad}
             showFood={showFood}
             openAppetizer={openAppetizer}
+            openSalad={openSalad}
             openFirst={openFirst}
+            openPaste={openPaste}
+            openRavioli={openRavioli}
+            openPizza={openPizza}
+            openDessert={openDessert}
           />
           <table className='menu__list'>
             <MenuHeaderRow />
-
-            {/* {showAppetizer ? <Appetizer appetizer={appetizer} /> : null}
-            {showSalad ? <Salad salad={salad} /> : null} */}
-
             {showFood ? <Food food={food} /> : null}
           </table>
         </div>
@@ -264,51 +553,3 @@ function MainMenu() {
 }
 
 export default MainMenu;
-
-// const Appetizer = ({ appetizer }) => (
-//   <tbody className='tbody__menu'>
-//     {appetizer.map((item) => (
-//       <tr className='listRow' key={item.appetizer}>
-//         <td className='firstCol'>
-//           <h4 className='food__name'>{item.meal}</h4>
-//           {item.desk}
-//         </td>
-//         <td className='secondCol'>{item.weight} г</td>
-//         <td className='thirdCol'>{item.cost} грн.</td>
-//         <td className='fourthCol'>
-//           <svg className='orderIcon'>
-//             <use href={sprite + '#minus'}></use>
-//           </svg>
-//           <span className='orderCounter'>0</span>
-//           <svg className='orderIcon'>
-//             <use href={sprite + '#add'}></use>
-//           </svg>
-//         </td>
-//       </tr>
-//     ))}
-//   </tbody>
-// );
-
-// const Salad = ({ salad }) => (
-//   <tbody className='tbody__menu'>
-//     {salad.map((item) => (
-//       <tr className='listRow' key={item.salad}>
-//         <td className='firstCol'>
-//           <h4 className='food__name'>{item.meal}</h4>
-//           {item.desk}
-//         </td>
-//         <td className='secondCol'>{item.weight} г</td>
-//         <td className='thirdCol'>{item.cost} грн.</td>
-//         <td className='fourthCol'>
-//           <svg className='orderIcon'>
-//             <use href={sprite + '#minus'}></use>
-//           </svg>
-//           <span className='orderCounter'>0</span>
-//           <svg className='orderIcon'>
-//             <use href={sprite + '#add'}></use>
-//           </svg>
-//         </td>
-//       </tr>
-//     ))}
-//   </tbody>
-// );

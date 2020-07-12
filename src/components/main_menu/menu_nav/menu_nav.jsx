@@ -3,31 +3,35 @@ import './menu_nav.scss';
 
 
 export default function MenuNav({ openAppetizer, showAppetizer, openSalad, showSalad,
-  showFood, openFood, openFirst }) {
+  showFood, openFood, openFirst, openPaste, openRavioli, openPizza, openDessert }) {
   return (
     <ul className='menu__info__navigation'>
-      <li className={showAppetizer ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+      <li className={openAppetizer ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
         onClick={openAppetizer}>
         Закуски
       </li>
-      <li className={showSalad ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+      <li className={openSalad ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
         onClick={openSalad}>
         Салати
       </li>
-      <li className={showSalad ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+      <li className={openFirst ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
         onClick={openFirst}>
         Перші страви
       </li>
-      <li className='menu__info__navigation__item'>
+      <li className={openPaste ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openPaste}>
         Паста
       </li>
-      <li className='menu__info__navigation__item'>
+      <li className={openRavioli ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openRavioli}>
         Равіолі
       </li>
-      <li className='menu__info__navigation__item'>
+      <li className={openPizza ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openPizza}>
         Піца
       </li>
-      <li className='menu__info__navigation__item'>
+      <li className={openDessert ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openDessert}>
         Десерти
       </li>
     </ul >
