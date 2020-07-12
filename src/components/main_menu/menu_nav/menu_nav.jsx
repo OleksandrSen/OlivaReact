@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './menu_nav.scss';
 
 
-export default function MenuNav({ openAppetizer, showAppetizer, openSalad, showSalad }) {
+export default function MenuNav({ openAppetizer, showAppetizer, openSalad, showSalad,
+  showFood, openFood, openFirst }) {
   return (
     <ul className='menu__info__navigation'>
       <li className={showAppetizer ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
@@ -14,7 +14,8 @@ export default function MenuNav({ openAppetizer, showAppetizer, openSalad, showS
         onClick={openSalad}>
         Салати
       </li>
-      <li className='menu__info__navigation__item'>
+      <li className={showSalad ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openFirst}>
         Перші страви
       </li>
       <li className='menu__info__navigation__item'>

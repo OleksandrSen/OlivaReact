@@ -9,6 +9,25 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function MainMenu() {
 
+  const [showFood, setShowFood] = useState(false);
+
+  const [showAppetizer, setShowAppetizer] = useState('');
+
+  const openAppetizer = () => {
+    setShowFood(true);
+    setShowAppetizer('appetizer')
+  }
+
+  const openSalad = () => {
+    setShowFood(true);
+    setShowAppetizer('salad')
+  }
+
+  const openFirst = () => {
+    setShowFood(true);
+    setShowAppetizer('first')
+  }
+
   const food = [
     {
       meal: 'Прошутто крудо з грушею',
@@ -164,15 +183,15 @@ function MainMenu() {
     }
   ]
 
+
+
   const Food = ({ food }) => (
     <tbody className='tbody__menu'>
       {food.filter((elem) => {
-        if (elem.type === 'appetizer') {
+        if (elem.type === showAppetizer) {
           return elem
         }
-        if (elem.type === 'salad') {
-          return elem
-        }
+
       }).map((item) => (
         <tr className='listRow' key={item.appetizer}>
           <td className='firstCol'>
@@ -197,20 +216,6 @@ function MainMenu() {
   );
 
 
-  const [showAppetizer, setShowAppetizer] = useState(true);
-  const [showSalad, setShowSalad] = useState(false);
-
-
-  const openAppetizer = () => {
-    setShowAppetizer(true);
-    setShowSalad(false);
-  }
-
-  const openSalad = () => {
-    setShowSalad(true);
-    setShowAppetizer(false);
-  }
-
   return (
     <section className='menu' id='menu'>
       <div className='row'>
@@ -219,17 +224,18 @@ function MainMenu() {
       <div className='row menu__info'>
         <div className='offset-4 col-8'>
           <MenuNav
-            openAppetizer={openAppetizer}
-            showAppetizer={showAppetizer}
             openSalad={openSalad}
-            showSalad={showSalad} />
+            showFood={showFood}
+            openAppetizer={openAppetizer}
+            openFirst={openFirst}
+          />
           <table className='menu__list'>
             <MenuHeaderRow />
 
             {/* {showAppetizer ? <Appetizer appetizer={appetizer} /> : null}
             {showSalad ? <Salad salad={salad} /> : null} */}
 
-            {showAppetizer ? <Food food={food} /> : null}
+            {showFood ? <Food food={food} /> : null}
 
           </table>
         </div>
