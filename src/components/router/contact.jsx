@@ -4,8 +4,6 @@ import Header from '../header/header';
 import Contacts from '../contacts/contacts';
 import Maps from '../map/map';
 
-import { BrowserRouter as Route } from 'react-router-dom';
-
 export default function Contact() {
   return (
     <div>
@@ -13,5 +11,5 @@ export default function Contact() {
       <Contacts />
       <Maps />
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import './menu_header-row.scss'
+import React from 'react';
+import './menu_header-row.scss';
 
 export default function MenuHeaderRow() {
   return (
@@ -9,5 +9,5 @@ export default function MenuHeaderRow() {
       <th className='thirdCol thirdColH'>Ціна</th>
       <th className='fourthCol fourthColH'>Замовити</th>
     </tr>
-  )
+  );
 }

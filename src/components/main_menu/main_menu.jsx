@@ -113,8 +113,7 @@ function MainMenu() {
   ];
 
   const Appetizer = ({ appetizer }) => (
-    <tbody>
-      <MenuHeaderRow />
+    <tbody className='tbody__menu'>
       {appetizer.map((item) => (
         <tr className='listRow' key={item.appetizer}>
           <td className='firstCol'>
@@ -138,8 +137,7 @@ function MainMenu() {
   );
 
   const Salad = ({ salad }) => (
-    <tbody>
-      <MenuHeaderRow />
+    <tbody className='tbody__menu'>
       {salad.map((item) => (
         <tr className='listRow' key={item.salad}>
           <td className='firstCol'>
@@ -163,42 +161,45 @@ function MainMenu() {
   );
 
   return (
-    <section className='menu' id='menu'>
-      <div className='row'>
-        <h1 className='offset-4 col-4 menu__title'>Меню</h1>
-      </div>
-      <div className='row menu__info'>
-        <div className='offset-4 col-8'>
-          <MenuNav />
-          <table className='menu__list'>
-            <Route path='/' component={Appetizer} exact>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            <Route path='/' salad={salad} exact>
-              <Salad salad={salad} />
-            </Route>
-            <Route path="/main-header/appetizer" component={Appetizer}>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            <Route path="/main-header/salad" salad={salad}>
-              <Salad salad={salad} />
-            </Route>
-
-            <Route path='/menu/a' component={Appetizer}>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            <Route path='/menu/s' salad={salad}>
-              <Salad salad={salad} />
-            </Route>
-
-            {/* <Salad salad={salad} /> */}
-          </table>
+    <Router>
+      <section className='menu' id='menu'>
+        <div className='row'>
+          <h1 className='offset-4 col-4 menu__title'>Меню</h1>
         </div>
-      </div>
-      <div className='row'>
-        <button className='menu__button'>Додати до кошика</button>
-      </div>
-    </section>
+        <div className='row menu__info'>
+          <div className='offset-4 col-8'>
+            <MenuNav />
+            <table className='menu__list'>
+              <MenuHeaderRow />
+              <Route path='/' component={Appetizer} exact>
+                <Appetizer appetizer={appetizer} />
+              </Route>
+              <Route path='/main-header' component={Appetizer} exact>
+                <Appetizer appetizer={appetizer} />
+              </Route>
+              <Route path='/main-header/appetizer' component={Appetizer}>
+                <Appetizer appetizer={appetizer} />
+              </Route>
+              <Route path='/main-header/salad' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+              <Route path='/menu' component={Appetizer} exact>
+                <Appetizer appetizer={appetizer} />
+              </Route>
+              <Route path='/menu/a' component={Appetizer}>
+                <Appetizer appetizer={appetizer} />
+              </Route>
+              <Route path='/menu/s' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+            </table>
+          </div>
+        </div>
+        <div className='row'>
+          <button className='menu__button'>Додати до кошика</button>
+        </div>
+      </section>
+    </Router>
   );
 }
 

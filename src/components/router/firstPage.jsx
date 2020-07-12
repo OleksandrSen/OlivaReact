@@ -6,9 +6,6 @@ import Order from '../ordertable/ordertable';
 import MainMenu from '../main_menu/main_menu';
 import SeasonBtn from '../season_btn/season_btn';
 
-import { BrowserRouter as Route } from 'react-router-dom';
-
-
 export default function FirstPage() {
   return (
     <div>
@@ -18,5 +15,5 @@ export default function FirstPage() {
       <SeasonBtn />
       <Order />
     </div>
-  )
+  );
 }
