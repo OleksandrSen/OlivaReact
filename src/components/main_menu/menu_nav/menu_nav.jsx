@@ -2,35 +2,33 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './menu_nav.scss';
 
-import { BrowserRouter as Router } from 'react-router-dom';
 
-
-export default function MenuNav() {
+export default function MenuNav({ openAppetizer, showAppetizer, openSalad, showSalad }) {
   return (
-    <Router>
-      <ul className='menu__info__navigation'>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/main-header/appetizer'>Закуски</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to="/salad">Салати</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/'>Перші страви</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/'>Паста</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/'>Равіолі</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/'>Піца</NavLink>
-        </li>
-        <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to='/'>Десерти</NavLink>
-        </li>
-      </ul>
-    </Router>
-  )
+    <ul className='menu__info__navigation'>
+      <li className={showAppetizer ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openAppetizer}>
+        Закуски
+      </li>
+      <li className={showSalad ? 'menu__info__navigation__item--active' : 'menu__info__navigation__item'}
+        onClick={openSalad}>
+        Салати
+      </li>
+      <li className='menu__info__navigation__item'>
+        Перші страви
+      </li>
+      <li className='menu__info__navigation__item'>
+        Паста
+      </li>
+      <li className='menu__info__navigation__item'>
+        Равіолі
+      </li>
+      <li className='menu__info__navigation__item'>
+        Піца
+      </li>
+      <li className='menu__info__navigation__item'>
+        Десерти
+      </li>
+    </ul >
+  );
 }

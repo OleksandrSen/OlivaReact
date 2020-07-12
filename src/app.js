@@ -5,24 +5,18 @@ import './app.scss';
 
 import Nav from './components/nav/nav';
 import Footer from './components/footer/footer';
-
-// import ThankOrder from './components/ordertable/thankorder/thankorder';
-// import TableForm from './components/ordertable/form/tableform';
-
-import Home from './components/router/home'
-import Menu from './components/router/menu'
-import Photo from './components/router/photo'
-import New from './components/router/new'
-import Contact from './components/router/contact'
-import FirstPage from './components/router/firstPage'
-
+import Home from './components/router/home';
+import Menu from './components/router/menu';
+import Photo from './components/router/photo';
+import New from './components/router/new';
+import Contact from './components/router/contact';
+import FirstPage from './components/router/firstPage';
 
 export default class App extends Component {
 
   render() {
     return (
       <Router>
-
         <div className='app'>
           <Nav />
 

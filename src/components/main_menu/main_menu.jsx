@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import sprite from '../../img/icons-sprite.svg';
 import './main_menu.scss';
 import MenuNav from './menu_nav/menu_nav';
 import MenuHeaderRow from './menu_header-row/menu_header-row';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { on } from 'cluster';
 
 function MainMenu() {
   const appetizer = [
@@ -13,60 +14,70 @@ function MainMenu() {
       desk: '',
       weight: 165,
       cost: 71,
+      type: 'appetizer'
     },
     {
       meal: "Італійські м'ясні делікатеси",
       desk: '(прошутто крудо, брезаола, салямі, салямі гостра)',
       weight: 120,
       cost: 119,
+      type: 'appetizer'
     },
     {
       meal: 'Сирна палітра',
       desk: '(сир Пармезан, сир Брі, сир Горгонзола, сир Скаморція)',
       weight: 205,
       cost: 121,
+      type: 'appetizer'
     },
     {
       meal: 'Карпаччо із лосося',
       desk: '(з грінками)',
       weight: 110,
       cost: 99,
+      type: 'appetizer'
     },
     {
       meal: 'Тартар із лосося',
       desk: '(з грінками)',
       weight: 160,
       cost: 119,
+      type: 'appetizer'
     },
     {
       meal: 'Антіпасті на двох',
       desk: "(італійські м'ясні та сирні делікатеси)",
       weight: 390,
       cost: 248,
+      type: 'appetizer'
     },
     {
       meal: 'Брускети з соусом із консервованого тунця',
       desk: '(подаються з овочами)',
       weight: 160,
       cost: 51,
+      type: 'appetizer'
     },
     {
       meal: 'Брускети з паштетом з гусячої печінки',
       desk: '(під вишневим соусом)',
       weight: 140,
       cost: 61,
+      type: 'appetizer'
     },
     {
       meal: "Брускети з в'яленими томатами",
       desk: '',
       weight: 100,
       cost: 51,
+      type: 'appetizer'
     },
     {
       meal: 'Вітелло тоннато',
       desk: '(тонко нарізана телятина під соусом із тунця)',
       weight: 130,
       cost: 69,
+      type: 'appetizer'
     },
   ];
 
@@ -76,12 +87,14 @@ function MainMenu() {
       desk: '',
       weight: 250,
       cost: 145,
+      type: 'salad'
     },
     {
       meal: "Салат Романо Houston's",
       desk: '(з домашнім курчам-гриль і арахісовим соусом)',
       weight: 300,
       cost: 165,
+      type: 'salad'
     },
     {
       meal:
@@ -89,6 +102,7 @@ function MainMenu() {
       desk: '',
       weight: 200,
       cost: 115,
+      type: 'salad'
     },
     {
       meal: 'Цуккіні',
@@ -96,12 +110,14 @@ function MainMenu() {
         '(карпачо з базиліком, рікотою, гарбузовим насінням та соусом горгонзола)',
       weight: 160,
       cost: 115,
+      type: 'salad'
     },
     {
       meal: 'Ризото з лисичками та пармезаном ',
       desk: '',
       weight: 250,
       cost: 250,
+      type: 'salad'
     },
     {
       meal: 'Зелений салат',
@@ -109,12 +125,50 @@ function MainMenu() {
         '(із молодим шпинатом, руколою, свіжою м’ятою, грейпфрутом і креветками під чилі- соусом. )',
       weight: 200,
       cost: 265,
+      type: 'salad'
     },
   ];
 
+  const first = [
+    {
+      meal: 'Андалузький гаспачо з овечою фетою',
+      desk: '',
+      weight: 300,
+      cost: 139,
+      type: 'first'
+    },
+    {
+      meal: "Окрошка",
+      desk: '(з телятиною та шинкою на квасі зі сметаною та гірчицею)',
+      weight: 250,
+      cost: 130,
+      type: 'first'
+    },
+    {
+      meal: 'Том Ка Гай',
+      desk: '(з курочкою)',
+      weight: 300,
+      cost: 190,
+      type: 'first'
+    },
+    {
+      meal: 'Том Ка Гай',
+      desk: '(з креветками)',
+      weight: 300,
+      cost: 240,
+      type: 'first'
+    },
+    {
+      meal: 'Борщ український',
+      desk: '(з реберцем та пампушками)',
+      weight: 330,
+      cost: 99,
+      type: 'first'
+    }
+  ];
+
   const Appetizer = ({ appetizer }) => (
-    <tbody>
-      <MenuHeaderRow />
+    <tbody className='tbody__menu'>
       {appetizer.map((item) => (
         <tr className='listRow' key={item.appetizer}>
           <td className='firstCol'>
@@ -138,8 +192,7 @@ function MainMenu() {
   );
 
   const Salad = ({ salad }) => (
-    <tbody>
-      <MenuHeaderRow />
+    <tbody className='tbody__menu'>
       {salad.map((item) => (
         <tr className='listRow' key={item.salad}>
           <td className='firstCol'>
@@ -162,6 +215,20 @@ function MainMenu() {
     </tbody>
   );
 
+  const [showAppetizer, setShowAppetizer] = useState(true);
+  const [showSalad, setShowSalad] = useState(false);
+
+
+  const openAppetizer = () => {
+    setShowAppetizer(true);
+    setShowSalad(false);
+  }
+
+  const openSalad = () => {
+    setShowSalad(true);
+    setShowAppetizer(false);
+  }
+
   return (
     <section className='menu' id='menu'>
       <div className='row'>
@@ -169,30 +236,17 @@ function MainMenu() {
       </div>
       <div className='row menu__info'>
         <div className='offset-4 col-8'>
-          <MenuNav />
+          <MenuNav
+            openAppetizer={openAppetizer}
+            showAppetizer={showAppetizer}
+            openSalad={openSalad}
+            showSalad={showSalad} />
           <table className='menu__list'>
-            <Route path='/' component={Appetizer} exact>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            {/* <Route path='/' salad={salad} exact>
-              <Salad salad={salad} />
-            </Route> */}
+            <MenuHeaderRow />
 
-            <Route path="/main-header/appetizer" component={Appetizer}>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            <Route path="/salad" component={Salad}>
-              <Salad salad={salad} />
-            </Route>
+            {showAppetizer ? <Appetizer appetizer={appetizer} /> : null}
+            {showSalad ? <Salad salad={salad} /> : null}
 
-            {/* <Route path='/menu/a' component={Appetizer}>
-              <Appetizer appetizer={appetizer} />
-            </Route>
-            <Route path='/menu/s' salad={salad}>
-              <Salad salad={salad} />
-            </Route> */}
-
-            {/* <Salad salad={salad} /> */}
           </table>
         </div>
       </div>
