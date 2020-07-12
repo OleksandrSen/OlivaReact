@@ -13,7 +13,7 @@ export default function MenuNav() {
           <NavLink className='menu__info__navigation__link' to='/main-header/appetizer'>Закуски</NavLink>
         </li>
         <li className='menu__info__navigation__item'>
-          <NavLink className='menu__info__navigation__link' to="/main-header/salad">Салати</NavLink>
+          <NavLink className='menu__info__navigation__link' to="/salad">Салати</NavLink>
         </li>
         <li className='menu__info__navigation__item'>
           <NavLink className='menu__info__navigation__link' to='/'>Перші страви</NavLink>

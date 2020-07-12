@@ -18,6 +18,7 @@ import FirstPage from './components/router/firstPage'
 
 
 export default class App extends Component {
+
   render() {
     return (
       <Router>
