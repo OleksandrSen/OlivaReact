@@ -183,6 +183,21 @@ function MainMenu() {
               <Route path='/main-header/salad' salad={salad}>
                 <Salad salad={salad} />
               </Route>
+              <Route path='/main-header/firstmeal' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+              <Route path='/main-header/paste' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+              <Route path='/main-header/ravioli' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+              <Route path='/main-header/pizza' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
+              <Route path='/main-header/dessert' salad={salad}>
+                <Salad salad={salad} />
+              </Route>
               <Route path='/menu' component={Appetizer} exact>
                 <Appetizer appetizer={appetizer} />
               </Route>

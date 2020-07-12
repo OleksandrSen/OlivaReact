@@ -26,27 +26,47 @@ export default function MenuNav() {
         </NavLink>
       </li>
       <li className='menu__info__navigation__item'>
-        <NavLink className='menu__info__navigation__link' to='/'>
+        <NavLink
+          activeClassName='menu__info__navigation__link--active'
+          className='menu__info__navigation__link'
+          to='/main-header/firstmeal'
+        >
           Перші страви
         </NavLink>
       </li>
       <li className='menu__info__navigation__item'>
-        <NavLink className='menu__info__navigation__link' to='/'>
+        <NavLink
+          activeClassName='menu__info__navigation__link--active'
+          className='menu__info__navigation__link'
+          to='/main-header/paste'
+        >
           Паста
         </NavLink>
       </li>
       <li className='menu__info__navigation__item'>
-        <NavLink className='menu__info__navigation__link' to='/'>
+        <NavLink
+          activeClassName='menu__info__navigation__link--active'
+          className='menu__info__navigation__link'
+          to='/main-header/ravioli'
+        >
           Равіолі
         </NavLink>
       </li>
       <li className='menu__info__navigation__item'>
-        <NavLink className='menu__info__navigation__link' to='/'>
+        <NavLink
+          activeClassName='menu__info__navigation__link--active'
+          className='menu__info__navigation__link'
+          to='/main-header/pizza'
+        >
           Піца
         </NavLink>
       </li>
       <li className='menu__info__navigation__item'>
-        <NavLink className='menu__info__navigation__link' to='/'>
+        <NavLink
+          activeClassName='menu__info__navigation__link--active'
+          className='menu__info__navigation__link'
+          to='/main-header/dessert'
+        >
           Десерти
         </NavLink>
       </li>
