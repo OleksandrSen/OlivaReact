@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { on } from 'cluster';
 
 function MainMenu() {
-  const appetizer = [
+
+  const food = [
     {
       meal: 'Прошутто крудо з грушею',
       desk: '',
@@ -79,9 +80,7 @@ function MainMenu() {
       cost: 69,
       type: 'appetizer'
     },
-  ];
-
-  const salad = [
+    // salad
     {
       meal: 'Олів’є з курятиною, шинкою та молодим горошком',
       desk: '',
@@ -127,9 +126,7 @@ function MainMenu() {
       cost: 265,
       type: 'salad'
     },
-  ];
-
-  const first = [
+    // first
     {
       meal: 'Андалузький гаспачо з овечою фетою',
       desk: '',
@@ -165,11 +162,18 @@ function MainMenu() {
       cost: 99,
       type: 'first'
     }
-  ];
+  ]
 
-  const Appetizer = ({ appetizer }) => (
+  const Food = ({ food }) => (
     <tbody className='tbody__menu'>
-      {appetizer.map((item) => (
+      {food.filter((elem) => {
+        if (elem.type === 'appetizer') {
+          return elem
+        }
+        if (elem.type === 'salad') {
+          return elem
+        }
+      }).map((item) => (
         <tr className='listRow' key={item.appetizer}>
           <td className='firstCol'>
             <h4 className='food__name'>{item.meal}</h4>
@@ -187,33 +191,11 @@ function MainMenu() {
             </svg>
           </td>
         </tr>
-      ))}
+      ))
+      }
     </tbody>
   );
 
-  const Salad = ({ salad }) => (
-    <tbody className='tbody__menu'>
-      {salad.map((item) => (
-        <tr className='listRow' key={item.salad}>
-          <td className='firstCol'>
-            <h4 className='food__name'>{item.meal}</h4>
-            {item.desk}
-          </td>
-          <td className='secondCol'>{item.weight} г</td>
-          <td className='thirdCol'>{item.cost} грн.</td>
-          <td className='fourthCol'>
-            <svg className='orderIcon'>
-              <use href={sprite + '#minus'}></use>
-            </svg>
-            <span className='orderCounter'>0</span>
-            <svg className='orderIcon'>
-              <use href={sprite + '#add'}></use>
-            </svg>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  );
 
   const [showAppetizer, setShowAppetizer] = useState(true);
   const [showSalad, setShowSalad] = useState(false);
@@ -244,8 +226,10 @@ function MainMenu() {
           <table className='menu__list'>
             <MenuHeaderRow />
 
-            {showAppetizer ? <Appetizer appetizer={appetizer} /> : null}
-            {showSalad ? <Salad salad={salad} /> : null}
+            {/* {showAppetizer ? <Appetizer appetizer={appetizer} /> : null}
+            {showSalad ? <Salad salad={salad} /> : null} */}
+
+            {showAppetizer ? <Food food={food} /> : null}
 
           </table>
         </div>
@@ -258,3 +242,53 @@ function MainMenu() {
 }
 
 export default MainMenu;
+
+
+
+  // const Appetizer = ({ appetizer }) => (
+  //   <tbody className='tbody__menu'>
+  //     {appetizer.map((item) => (
+  //       <tr className='listRow' key={item.appetizer}>
+  //         <td className='firstCol'>
+  //           <h4 className='food__name'>{item.meal}</h4>
+  //           {item.desk}
+  //         </td>
+  //         <td className='secondCol'>{item.weight} г</td>
+  //         <td className='thirdCol'>{item.cost} грн.</td>
+  //         <td className='fourthCol'>
+  //           <svg className='orderIcon'>
+  //             <use href={sprite + '#minus'}></use>
+  //           </svg>
+  //           <span className='orderCounter'>0</span>
+  //           <svg className='orderIcon'>
+  //             <use href={sprite + '#add'}></use>
+  //           </svg>
+  //         </td>
+  //       </tr>
+  //     ))}
+  //   </tbody>
+  // );
+
+  // const Salad = ({ salad }) => (
+  //   <tbody className='tbody__menu'>
+  //     {salad.map((item) => (
+  //       <tr className='listRow' key={item.salad}>
+  //         <td className='firstCol'>
+  //           <h4 className='food__name'>{item.meal}</h4>
+  //           {item.desk}
+  //         </td>
+  //         <td className='secondCol'>{item.weight} г</td>
+  //         <td className='thirdCol'>{item.cost} грн.</td>
+  //         <td className='fourthCol'>
+  //           <svg className='orderIcon'>
+  //             <use href={sprite + '#minus'}></use>
+  //           </svg>
+  //           <span className='orderCounter'>0</span>
+  //           <svg className='orderIcon'>
+  //             <use href={sprite + '#add'}></use>
+  //           </svg>
+  //         </td>
+  //       </tr>
+  //     ))}
+  //   </tbody>
+  // );
