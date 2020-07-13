@@ -1,5 +1,5 @@
 import React from 'react';
-import sprite from '../../img/icons-sprite.svg';
+import sprite from '../../../img/icons-sprite.svg';
 import './social.scss';
 
 function Social() {

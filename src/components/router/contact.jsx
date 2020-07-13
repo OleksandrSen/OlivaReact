@@ -7,7 +7,7 @@ import Maps from '../map/map';
 export default function Contact() {
   return (
     <div>
-      <Header />
+      <Header title={'Контакти'} />
       <Contacts />
       <Maps />
     </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import HeaderPhoto from '../header_photo/header_photo';
+import Header from '../header/header';
 import Slider from '../slider/slider';
 
 export default function Photo() {
   return (
     <div>
-      <HeaderPhoto />
+      <Header title={'Галерея'} />
       <Slider />
     </div>
   );

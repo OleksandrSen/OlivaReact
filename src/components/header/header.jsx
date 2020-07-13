@@ -1,12 +1,13 @@
 import React from 'react';
 import './header.scss';
-import Social from '../social/social'
 
-function Header() {
+import Social from './social/social'
+
+function Header({ title }) {
   return (
-    <header className="header">
+    <header className={title === 'Меню' ? 'headerM' : "header"}>
       <div className="container">
-        <h1 className="header__title">Новини</h1>
+        <h1 className="header__title">{title}</h1>
       </div>
       <Social />
     </header >

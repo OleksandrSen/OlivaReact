@@ -6,7 +6,7 @@ import News from '../news/news';
 export default function New() {
   return (
     <div>
-      <Header />
+      <Header title={'Новини'} />
       <News />
     </div>
   );
