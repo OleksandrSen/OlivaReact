@@ -4,15 +4,29 @@
   font-family: Montserrat;
   color: #2C2C11;
   margin: 110px auto 100px;
+  
 
   &__title {
     text-align: center;
     font-size: 36px;
     line-height: 38px;
     margin-bottom: 110px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
 
   &-block {
+    
+    @media (max-width: 768px) {
+      margin-left: 15%;
+      margin-bottom: 10%;
+    }
+
+    @media (max-width: 425px) {
+      margin-left: 7%;
+    }
 
     &__address {
       font-size: 22px;

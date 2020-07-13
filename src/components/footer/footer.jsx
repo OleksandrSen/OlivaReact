@@ -8,7 +8,7 @@ function Footer() {
     <footer className='footer'>
       <div className='container'>
         <div className='row'>
-          <div className='col-4 footer__copyright'>
+          <div className='col-9 order-2 order-md-1 col-md-4 footer__copyright'>
             При використанні матеріалів
             <br /> з сайту посилання на ресурс
             <br />
@@ -17,16 +17,16 @@ function Footer() {
               www.viv-live.com.ua
             </a>
           </div>
-          <div className='col-4 footer__logo'>
+          <div className='col-3 order-1 order-md-2 col-md-4 footer__logo'>
             <img src={logo} alt='logo' className='footer__logo__img' />
           </div>
-          <div className='col-4 footer__social'>
-            <div className='row footer__social__text'>
-              Також нас можна знайти в<br />
+          <div className='col-9 order-3 order-md-3 col-md-4 footer__social__text'>
+            Також нас можна знайти в<br />
               соціальних мережах,
               <br />
               приєднуйтесь до нас:
             </div>
+          <div className='col-12 order-4 order-md-4 offset-md-8 col-md-4 footer__social'>
             <div className='row footer__social__icons'>
               <div className='svgBg'>
                 <svg className='socialIcon'>

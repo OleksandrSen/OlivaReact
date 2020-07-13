@@ -492,6 +492,12 @@ function MainMenu() {
     },
   ];
 
+  // let add = () => {
+  //   console.log('add' + item)
+  // }
+
+  const basketList = []
+
   const Food = ({ food }) => (
     <tbody className='tbody__menu'>
       {food
@@ -501,7 +507,7 @@ function MainMenu() {
           }
         })
         .map((item) => (
-          <tr className='listRow' key={item.appetizer}>
+          <tr className='listRow' key={item.meal}>
             <td className='firstCol'>
               <h4 className='food__name'>{item.meal}</h4>
               {item.desk}
@@ -509,11 +515,25 @@ function MainMenu() {
             <td className='secondCol'>{item.weight} г</td>
             <td className='thirdCol'>{item.cost} грн.</td>
             <td className='fourthCol'>
-              <svg className='orderIcon'>
+              <svg className='orderIcon'
+                onClick={() => {
+                  console.log('add' + item.meal)
+                  basketList.splice(item)
+                  item.qty--
+                  console.log(basketList)
+
+                }}>
                 <use href={sprite + '#minus'}></use>
               </svg>
               <span className='orderCounter'>{item.qty}</span>
-              <svg className='orderIcon'>
+              <svg className='orderIcon'
+                onClick={() => {
+                  console.log('add' + item.meal)
+                  basketList.push(item)
+                  item.qty++
+                  console.log(basketList)
+
+                }}>
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
@@ -521,6 +541,9 @@ function MainMenu() {
         ))}
     </tbody>
   );
+
+
+  console.log(basketList)
 
   return (
     <section className='menu' id='menu'>
@@ -538,6 +561,7 @@ function MainMenu() {
             openRavioli={openRavioli}
             openPizza={openPizza}
             openDessert={openDessert}
+            ShowAppetizer={showAppetizer}
           />
           <table className='menu__list'>
             <MenuHeaderRow />
@@ -550,6 +574,7 @@ function MainMenu() {
       </div>
     </section>
   );
+
 }
 
 export default MainMenu;

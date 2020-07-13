@@ -21,13 +21,24 @@
   &__social__icons {
     display: flex;
     justify-content: center;
-    margin: 54px 0 0 15px;
+    // margin: 54px 0 0 15px;
   }
 
   &__logo {
     margin: -45px auto 0;
     display: flex;
     justify-content: center;
+    // max-width: 250px;
+
+    &__img {
+      // width: 100%;
+
+      // @media (max-width: 1015px){
+      //   max-width: 100px;
+      // }
+    }
+
+    
   }
 }
 
