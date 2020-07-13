@@ -7,8 +7,10 @@ import Cross from '../../cross/cross';
 
 Modal.setAppElement('#root');
 
-function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen }) {
+function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
+
+  console.log(basketList)
 
   return (
     <div className='basket-form__modal'>

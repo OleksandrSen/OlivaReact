@@ -518,9 +518,8 @@ function MainMenu() {
               <svg className='orderIcon'
                 onClick={() => {
                   console.log('add' + item.meal)
-                  basketList.splice(item)
+                  basketList.push(item)
                   item.qty--
-                  console.log(basketList)
 
                 }}>
                 <use href={sprite + '#minus'}></use>
@@ -531,7 +530,6 @@ function MainMenu() {
                   console.log('add' + item.meal)
                   basketList.push(item)
                   item.qty++
-                  console.log(basketList)
 
                 }}>
                 <use href={sprite + '#add'}></use>
