@@ -45,7 +45,6 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
           <td className='basket-form__title--delete'></td>
         </tr>
 
-
         {newBasketList.map((item) => (
           <tr className='basket-form__line'>
             <td className='basket-form__meal'>
@@ -70,7 +69,6 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
         ))
         }
 
-
         < tr className='basket-form__bottom' >
           <td colspan='2' className='basket-form__sum'>
             Сума замовлення:
@@ -87,9 +85,11 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
         </ tr>
       </tbody>
     </table >
-
   )
 
+  const NoMeal = () => (
+    <div className="noMeal">На жаль, ви ще нічого не замовили.</div>
+  )
 
   return (
     <div className='basket-form__modal'>
@@ -108,7 +108,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
           <div className='row'>
             <h3 className='basket-form__caption col-12'>Кошик</h3>
 
-            {newBasketList.length < 1 ? null : <ShowMeals newBasketList={newBasketList} />}
+            {newBasketList.length < 1 ? <NoMeal /> : <ShowMeals newBasketList={newBasketList} />}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 
@@ -139,26 +139,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketForm)
-
-
-
-  // < tr className='basket-form__line' >
-  //   <td className='basket-form__meal'>
-  //     Брускети з в'яленими томатами
-  //                 </td>
-  //   <td className='basket-form__amount'>
-  //     <svg className='orderIcon'>
-  //       <use href={sprite + '#minus'}></use>
-  //     </svg>
-  //     <span className='basket-form__number'>1</span>
-  //     <svg className='orderIcon'>
-  //       <use href={sprite + '#add'}></use>
-  //     </svg>
-  //   </td>
-  //   <td className='basket-form__cost'>51 грн.</td>
-  //   <td className='basket-form__btn-delete'>
-  //     <svg className='basket-form__cross-delete'>
-  //       <use href={sprite + '#cross'}></use>
-  //     </svg>
-  //   </td>
-  //               </ >
