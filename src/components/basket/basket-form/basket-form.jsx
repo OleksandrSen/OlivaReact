@@ -19,8 +19,77 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
   console.log(basketList)
 
   const newBasketList = basketList
+  // .filter((elem) => {
+  //   if (elem === null) {
+  //     return null;
+  //   }
+  // })
 
-  console.log(newBasketList)
+  console.log({ newBasketList })
+
+
+
+  const ShowMeals = ({ newBasketList }) => (
+    <table className='basket-form__table col-10'>
+      <tbody>
+        <tr>
+          <th className='basket-form__title basket-form__title--meal'>
+            Страва
+                  </th>
+          <th className='basket-form__title basket-form__title--amount'>
+            Кількість
+                  </th>
+          <th className='basket-form__title basket-form__title--cost'>
+            Ціна
+                  </th>
+          <td className='basket-form__title--delete'></td>
+        </tr>
+
+
+        {newBasketList.map((item) => (
+          <tr className='basket-form__line'>
+            <td className='basket-form__meal'>
+              {item.meal}
+            </td>
+            <td className='basket-form__amount'>
+              <svg className='orderIcon'>
+                <use href={sprite + '#minus'}></use>
+              </svg>
+              <span className='basket-form__number'>1</span>
+              <svg className='orderIcon'>
+                <use href={sprite + '#add'}></use>
+              </svg>
+            </td>
+            <td className='basket-form__cost'>119 грн.</td>
+            <td className='basket-form__btn-delete'>
+              <svg className='basket-form__cross-delete'>
+                <use href={sprite + '#cross'}></use>
+              </svg>
+            </td>
+          </tr>
+        ))
+        }
+
+
+        < tr className='basket-form__bottom' >
+          <td colspan='2' className='basket-form__sum'>
+            Сума замовлення:
+                    <span className='basket-form__sum--bold'>170грн</span>
+          </td>
+          <td colspan='2'>
+            <button
+              className='basket-form__button'
+              onClick={() => setConfirmIsOpen(true)}
+            >
+              Замовити
+                    </button>
+          </td>
+        </ tr>
+      </tbody>
+    </table >
+
+  )
+
 
   return (
     <div className='basket-form__modal'>
@@ -38,77 +107,9 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
         <section className='basket-form container'>
           <div className='row'>
             <h3 className='basket-form__caption col-12'>Кошик</h3>
-            <table className='basket-form__table col-10'>
-              <tbody>
-                <tr>
-                  <th className='basket-form__title basket-form__title--meal'>
-                    Страва
-                  </th>
-                  <th className='basket-form__title basket-form__title--amount'>
-                    Кількість
-                  </th>
-                  <th className='basket-form__title basket-form__title--cost'>
-                    Ціна
-                  </th>
-                  <td className='basket-form__title--delete'></td>
-                </tr>
-                <tr className='basket-form__line'>
-                  <td className='basket-form__meal'>
-                    {/* Італійські м'ясні делікатеси */}
-                    {newBasketList}
-                  </td>
-                  <td className='basket-form__amount'>
-                    <svg className='orderIcon'>
-                      <use href={sprite + '#minus'}></use>
-                    </svg>
-                    <span className='basket-form__number'>1</span>
-                    <svg className='orderIcon'>
-                      <use href={sprite + '#add'}></use>
-                    </svg>
-                  </td>
-                  <td className='basket-form__cost'>119 грн.</td>
-                  <td className='basket-form__btn-delete'>
-                    <svg className='basket-form__cross-delete'>
-                      <use href={sprite + '#cross'}></use>
-                    </svg>
-                  </td>
-                </tr>
-                <tr className='basket-form__line'>
-                  <td className='basket-form__meal'>
-                    Брускети з в'яленими томатами
-                  </td>
-                  <td className='basket-form__amount'>
-                    <svg className='orderIcon'>
-                      <use href={sprite + '#minus'}></use>
-                    </svg>
-                    <span className='basket-form__number'>1</span>
-                    <svg className='orderIcon'>
-                      <use href={sprite + '#add'}></use>
-                    </svg>
-                  </td>
-                  <td className='basket-form__cost'>51 грн.</td>
-                  <td className='basket-form__btn-delete'>
-                    <svg className='basket-form__cross-delete'>
-                      <use href={sprite + '#cross'}></use>
-                    </svg>
-                  </td>
-                </tr>
-                <tr className='basket-form__bottom'>
-                  <td colspan='2' className='basket-form__sum'>
-                    Сума замовлення:
-                    <span className='basket-form__sum--bold'>170грн</span>
-                  </td>
-                  <td colspan='2'>
-                    <button
-                      className='basket-form__button'
-                      onClick={() => setConfirmIsOpen(true)}
-                    >
-                      Замовити
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+            {newBasketList.length < 1 ? null : <ShowMeals newBasketList={newBasketList} />}
+
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 
             <Confirm
@@ -138,3 +139,26 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketForm)
+
+
+
+  // < tr className='basket-form__line' >
+  //   <td className='basket-form__meal'>
+  //     Брускети з в'яленими томатами
+  //                 </td>
+  //   <td className='basket-form__amount'>
+  //     <svg className='orderIcon'>
+  //       <use href={sprite + '#minus'}></use>
+  //     </svg>
+  //     <span className='basket-form__number'>1</span>
+  //     <svg className='orderIcon'>
+  //       <use href={sprite + '#add'}></use>
+  //     </svg>
+  //   </td>
+  //   <td className='basket-form__cost'>51 грн.</td>
+  //   <td className='basket-form__btn-delete'>
+  //     <svg className='basket-form__cross-delete'>
+  //       <use href={sprite + '#cross'}></use>
+  //     </svg>
+  //   </td>
+  //               </ >
