@@ -7,11 +7,10 @@ import MenuHeaderRow from './menu_header-row/menu_header-row';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { on } from 'cluster';
 
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-import * as actions from '../../reducer/actions'
-
+import * as actions from '../../reducer/actions';
 
 function MainMenu({ basketList, pushMeal }) {
   const [showFood, setShowFood] = useState(false);
@@ -47,7 +46,6 @@ function MainMenu({ basketList, pushMeal }) {
     setShowFood(true);
     setShowAppetizer('pizza');
   };
-
 
   const openDessert = () => {
     setShowFood(true);
@@ -278,7 +276,7 @@ function MainMenu({ basketList, pushMeal }) {
       qty: 0,
     },
     {
-      meal: "Паста Четыре сыра",
+      meal: 'Паста Четыре сыра',
       desk: '',
       weight: 350,
       cost: 168,
@@ -310,7 +308,7 @@ function MainMenu({ basketList, pushMeal }) {
       qty: 0,
     },
     {
-      meal: "Паста Четыре сыра",
+      meal: 'Паста Четыре сыра',
       desk: '',
       weight: 350,
       cost: 168,
@@ -344,7 +342,7 @@ function MainMenu({ basketList, pushMeal }) {
     },
     {
       meal: 'Равиоли с рикоттой',
-      desk: "",
+      desk: '',
       weight: 250,
       cost: 123,
       type: 'ravioli',
@@ -393,7 +391,7 @@ function MainMenu({ basketList, pushMeal }) {
     },
     {
       meal: 'Піца "Барбекю" ',
-      desk: "",
+      desk: '',
       weight: 480,
       cost: 125,
       type: 'pizza',
@@ -433,7 +431,7 @@ function MainMenu({ basketList, pushMeal }) {
       qty: 0,
     },
     {
-      meal: "Торт на гречаному меду із трюфельним кремом та соусом сабайон",
+      meal: 'Торт на гречаному меду із трюфельним кремом та соусом сабайон',
       desk: '',
       weight: 145,
       cost: 125,
@@ -482,14 +480,15 @@ function MainMenu({ basketList, pushMeal }) {
     },
     {
       meal: 'Сирники',
-      desk: '(з в’яленим виноградом і морозивом сабайон на основі домашньої сметани)',
+      desk:
+        '(з в’яленим виноградом і морозивом сабайон на основі домашньої сметани)',
       weight: 150,
       cost: 98,
       type: 'dessert',
       qty: 0,
     },
     {
-      meal: "Джелато власного виробництва",
+      meal: 'Джелато власного виробництва',
       desk: 'Трюфельне/ Ванільне/ Сабайон',
       weight: 50,
       cost: 69,
@@ -521,23 +520,25 @@ function MainMenu({ basketList, pushMeal }) {
             <td className='secondCol'>{item.weight} г</td>
             <td className='thirdCol'>{item.cost} грн.</td>
             <td className='fourthCol'>
-              <svg className='orderIcon'
+              <svg
+                className='orderIcon'
                 onClick={() => {
-                  console.log('add' + item.meal)
-                  basketList.push(item)
-                  item.qty--
-
-                }}>
+                  console.log('add' + item.meal);
+                  basketList.push(item);
+                  item.qty--;
+                }}
+              >
                 <use href={sprite + '#minus'}></use>
               </svg>
               <span className='orderCounter'>{item.qty}</span>
-              <svg className='orderIcon'
+              <svg
+                className='orderIcon'
                 onClick={() => {
-                  console.log('add' + item.meal)
-                  basketList.push(item)
-                  item.qty++
-
-                }}>
+                  console.log('add' + item.meal);
+                  basketList.push(item);
+                  item.qty++;
+                }}
+              >
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
@@ -546,54 +547,52 @@ function MainMenu({ basketList, pushMeal }) {
     </tbody>
   );
 
-
-  console.log(basketList)
+  console.log(basketList);
 
   return (
     <section className='menu' id='menu'>
-      <div className='row'>
-        <h1 className='offset-4 col-4 menu__title'>Меню</h1>
-      </div>
-      <div className='row menu__info'>
-        <div className='offset-4 col-8'>
-          <MenuNav
-            showFood={showFood}
-            openAppetizer={openAppetizer}
-            openSalad={openSalad}
-            openFirst={openFirst}
-            openPaste={openPaste}
-            openRavioli={openRavioli}
-            openPizza={openPizza}
-            openDessert={openDessert}
-            ShowAppetizer={showAppetizer}
-          />
-          <table className='menu__list'>
-            <MenuHeaderRow />
-            {showFood ? <Food food={food} /> : null}
-          </table>
+      <div className='container'>
+        <div className='row'>
+          <h1 className='offset-4 col-4 menu__title'>Меню</h1>
         </div>
-      </div>
-      <div className='row'>
-        <button className='menu__button'>Додати до кошика</button>
+        <div className='row menu__info'>
+          <div className='offset-5 col-8'>
+            <MenuNav
+              showFood={showFood}
+              openAppetizer={openAppetizer}
+              openSalad={openSalad}
+              openFirst={openFirst}
+              openPaste={openPaste}
+              openRavioli={openRavioli}
+              openPizza={openPizza}
+              openDessert={openDessert}
+              ShowAppetizer={showAppetizer}
+            />
+            <table className='menu__list'>
+              <MenuHeaderRow />
+              {showFood ? <Food food={food} /> : null}
+            </table>
+          </div>
+        </div>
+        <div className='row'>
+          <button className='menu__button'>Додати до кошика</button>
+        </div>
       </div>
     </section>
   );
-
 }
-
 
 const mapStateToProps = (state) => {
   return {
-    basketList: state.basketList
-  }
-}
+    basketList: state.basketList,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
-
-  const { pushMeal } = bindActionCreators(actions, dispatch)
+  const { pushMeal } = bindActionCreators(actions, dispatch);
   return {
-    pushMeal
-  }
-}
+    pushMeal,
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainMenu)
+export default connect(mapStateToProps, mapDispatchToProps)(MainMenu);
