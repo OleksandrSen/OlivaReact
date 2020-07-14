@@ -26,7 +26,7 @@ function Footer() {
               <br />
               приєднуйтесь до нас:
             </div>
-          <div className='col-12 order-4 order-md-4 offset-md-8 col-md-4 footer__social'>
+          <div className='col-12 order-4 order-md-4 offset-md-3 col-md-6 footer__social'>
             <div className='row footer__social__icons'>
               <div className='svgBg'>
                 <svg className='socialIcon'>
