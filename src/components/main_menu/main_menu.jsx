@@ -7,7 +7,13 @@ import MenuHeaderRow from './menu_header-row/menu_header-row';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { on } from 'cluster';
 
-function MainMenu() {
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import * as actions from '../../reducer/actions'
+
+
+function MainMenu({ basketList, pushMeal }) {
   const [showFood, setShowFood] = useState(false);
 
   const [showAppetizer, setShowAppetizer] = useState('');
@@ -496,7 +502,7 @@ function MainMenu() {
   //   console.log('add' + item)
   // }
 
-  const basketList = []
+  // const basketList = []
 
   const Food = ({ food }) => (
     <tbody className='tbody__menu'>
@@ -575,4 +581,19 @@ function MainMenu() {
 
 }
 
-export default MainMenu;
+
+const mapStateToProps = (state) => {
+  return {
+    basketList: state.basketList
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+  const { pushMeal } = bindActionCreators(actions, dispatch)
+  return {
+    pushMeal
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainMenu)

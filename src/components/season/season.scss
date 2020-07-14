@@ -9,10 +9,35 @@
   &__main-img {
     margin: 180px auto;
     z-index: 2;
+    overflow: hidden;
+
+    &--small {
+      display: none;
+    }
+
+    @media (max-width: 870px) {
+      margin: 150px auto 90px;
+    }
+
+    // @media (max-width: 730px) {
+    //   display: none;
+      
+    //   &--small {
+    //     display: block;
+    //   }
+    // }
+
+    @media (max-width: 425px) {
+      // height: 420px;
+    }
   }
 
   &__ellipses {
     position: absolute;
+
+    @media (max-width: 870px) {
+      display: none;
+    }
   }
 
   &__ellipses--top {

@@ -5,12 +5,22 @@ import Confirm from '../confirm/confirm';
 import sprite from '../../../img/icons-sprite.svg';
 import Cross from '../../cross/cross';
 
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import * as actions from '../../../reducer/actions'
+
 Modal.setAppElement('#root');
+
 
 function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
   console.log(basketList)
+
+  const newBasketList = basketList
+
+  console.log(newBasketList)
 
   return (
     <div className='basket-form__modal'>
@@ -44,7 +54,8 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
                 </tr>
                 <tr className='basket-form__line'>
                   <td className='basket-form__meal'>
-                    Італійські м'ясні делікатеси
+                    {/* Італійські м'ясні делікатеси */}
+                    {newBasketList}
                   </td>
                   <td className='basket-form__amount'>
                     <svg className='orderIcon'>
@@ -112,4 +123,18 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
   );
 }
 
-export default BasketForm;
+const mapStateToProps = (state) => {
+  return {
+    basketList: state.basketList
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+  const { pushMeal } = bindActionCreators(actions, dispatch)
+  return {
+    pushMeal
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BasketForm)
