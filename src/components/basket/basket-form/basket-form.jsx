@@ -45,23 +45,26 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
           <td className='basket-form__title--delete'></td>
         </tr>
 
-        {newBasketList.map((item) => (
-          <tr className='basket-form__line'>
+        {newBasketList.map((item, index) => (
+          <tr className='basket-form__line' key={item.id}>
             <td className='basket-form__meal'>
               {item.meal}
             </td>
             <td className='basket-form__amount'>
-              <svg className='orderIcon'>
+              <svg className='orderIcon'
+                onClick={() => item.qty--}>
                 <use href={sprite + '#minus'}></use>
               </svg>
               <span className='basket-form__number'>{item.qty}</span>
-              <svg className='orderIcon'>
+              <svg className='orderIcon'
+                onClick={() => item.qty++}>
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
             <td className='basket-form__cost'>{item.cost} грн.</td>
             <td className='basket-form__btn-delete'>
-              <svg className='basket-form__cross-delete'>
+              <svg className='basket-form__cross-delete'
+                onClick={() => newBasketList.splice(index)}>
                 <use href={sprite + '#cross'}></use>
               </svg>
             </td>
@@ -83,7 +86,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
                     </button>
           </td>
         </ tr>
-      </tbody>
+      </tbody >
     </table >
   )
 

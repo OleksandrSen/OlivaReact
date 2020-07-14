@@ -583,13 +583,26 @@ function MainMenu({ basketList, pushMeal }) {
                 className='orderIcon'
                 onClick={() => {
                   console.log('add' + item.meal);
-                  for (let i = 0; i <= basketList.lenght; i++) {
-                    if (i.id !== item.id) {
-                      basketList.push(item);
-                    } else {
-                      item.qty++;
-                    }
-                  }
+                  basketList.push(item);
+                  item.qty++;
+
+
+                  // for (let i = 0; i <= basketList.lenght; i++) {
+                  //   if (basketList[i].id !== item.id) {
+                  //     basketList.push(item);
+                  //   } else {
+                  //     item.qty++;
+                  //   }
+                  // }
+
+                  // for (const element of basketList) {
+                  //   console.log(basketList)
+                  //   if (element.id !== item.id) {
+                  //     basketList.push(item);
+                  //   } else {
+                  //     item.qty++;
+                  //   }
+                  // }
                 }}
               >
                 <use href={sprite + '#add'}></use>
