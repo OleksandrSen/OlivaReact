@@ -60,6 +60,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 71,
       type: 'appetizer',
       qty: 0,
+      id: 0
     },
     {
       meal: "Італійські м'ясні делікатеси",
@@ -68,6 +69,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 119,
       type: 'appetizer',
       qty: 0,
+      id: 1
     },
     {
       meal: 'Сирна палітра',
@@ -76,6 +78,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 121,
       type: 'appetizer',
       qty: 0,
+      id: 2
     },
     {
       meal: 'Карпаччо із лосося',
@@ -84,6 +87,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 99,
       type: 'appetizer',
       qty: 0,
+      id: 3
     },
     {
       meal: 'Тартар із лосося',
@@ -92,6 +96,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 119,
       type: 'appetizer',
       qty: 0,
+      id: 4
     },
     {
       meal: 'Антіпасті на двох',
@@ -100,6 +105,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 248,
       type: 'appetizer',
       qty: 0,
+      id: 5
     },
     {
       meal: 'Брускети з соусом із консервованого тунця',
@@ -108,6 +114,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 51,
       type: 'appetizer',
       qty: 0,
+      id: 6
     },
     {
       meal: 'Брускети з паштетом з гусячої печінки',
@@ -116,6 +123,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 61,
       type: 'appetizer',
       qty: 0,
+      id: 7
     },
     {
       meal: "Брускети з в'яленими томатами",
@@ -124,6 +132,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 51,
       type: 'appetizer',
       qty: 0,
+      id: 8
     },
     {
       meal: 'Вітелло тоннато',
@@ -132,6 +141,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 69,
       type: 'appetizer',
       qty: 0,
+      id: 9
     },
     // salad
     {
@@ -141,6 +151,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 145,
       type: 'salad',
       qty: 0,
+      id: 10
     },
     {
       meal: "Салат Романо Houston's",
@@ -149,6 +160,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 165,
       type: 'salad',
       qty: 0,
+      id: 11
     },
     {
       meal:
@@ -158,6 +170,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 115,
       type: 'salad',
       qty: 0,
+      id: 12
     },
     {
       meal: 'Цуккіні',
@@ -167,6 +180,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 115,
       type: 'salad',
       qty: 0,
+      id: 13
     },
     {
       meal: 'Ризото з лисичками та пармезаном ',
@@ -175,6 +189,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 250,
       type: 'salad',
       qty: 0,
+      id: 14
     },
     {
       meal: 'Зелений салат',
@@ -184,6 +199,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 265,
       type: 'salad',
       qty: 0,
+      id: 15
     },
     // first
     {
@@ -193,6 +209,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 139,
       type: 'first',
       qty: 0,
+      id: 16
     },
     {
       meal: 'Окрошка',
@@ -201,6 +218,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 130,
       type: 'first',
       qty: 0,
+      id: 17
     },
     {
       meal: 'Том Ка Гай',
@@ -209,6 +227,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 190,
       type: 'first',
       qty: 0,
+      id: 18
     },
     {
       meal: 'Том Ка Гай',
@@ -216,7 +235,8 @@ function MainMenu({ basketList, pushMeal }) {
       weight: 300,
       cost: 240,
       type: 'first',
-      qty: 1,
+      qty: 0,
+      id: 19
     },
     {
       meal: 'Борщ український',
@@ -224,7 +244,8 @@ function MainMenu({ basketList, pushMeal }) {
       weight: 330,
       cost: 99,
       type: 'first',
-      qty: 1,
+      qty: 0,
+      id: 20
     },
     {
       meal: 'Андалузький гаспачо з овечою фетою',
@@ -233,6 +254,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 139,
       type: 'first',
       qty: 0,
+      id: 21
     },
     {
       meal: 'Окрошка',
@@ -241,6 +263,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 130,
       type: 'first',
       qty: 0,
+      id: 22
     },
     {
       meal: 'Том Ка Гай',
@@ -249,6 +272,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 190,
       type: 'first',
       qty: 0,
+      id: 23
     },
     {
       meal: 'Том Ка Гай',
@@ -256,7 +280,8 @@ function MainMenu({ basketList, pushMeal }) {
       weight: 300,
       cost: 240,
       type: 'first',
-      qty: 1,
+      qty: 0,
+      id: 24
     },
     {
       meal: 'Борщ український',
@@ -265,6 +290,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 99,
       type: 'first',
       qty: 1,
+      id: 25
     },
     // paste
     {
@@ -274,6 +300,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 158,
       type: 'paste',
       qty: 0,
+      id: 26
     },
     {
       meal: 'Паста Четыре сыра',
@@ -282,6 +309,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 168,
       type: 'paste',
       qty: 0,
+      id: 27
     },
     {
       meal: 'Спагетти с соусом Карбонара',
@@ -290,6 +318,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 98,
       type: 'paste',
       qty: 0,
+      id: 28
     },
     {
       meal: 'Спагетти с креветками',
@@ -298,6 +327,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 168,
       type: 'paste',
       qty: 0,
+      id: 29
     },
     {
       meal: 'Тальятелле с телятиной',
@@ -306,6 +336,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 158,
       type: 'paste',
       qty: 0,
+      id: 30
     },
     {
       meal: 'Паста Четыре сыра',
@@ -314,6 +345,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 168,
       type: 'paste',
       qty: 0,
+      id: 31
     },
     {
       meal: 'Спагетти с соусом Карбонара',
@@ -322,6 +354,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 98,
       type: 'paste',
       qty: 0,
+      id: 32
     },
     {
       meal: 'Спагетти с креветками',
@@ -330,6 +363,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 168,
       type: 'paste',
       qty: 0,
+      id: 33
     },
     // ravioli
     {
@@ -339,6 +373,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 128,
       type: 'ravioli',
       qty: 0,
+      id: 34
     },
     {
       meal: 'Равиоли с рикоттой',
@@ -347,6 +382,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 123,
       type: 'ravioli',
       qty: 0,
+      id: 35
     },
     {
       meal: 'Равиоли з соусом із консервованого тунця',
@@ -355,6 +391,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 51,
       type: 'ravioli',
       qty: 0,
+      id: 36
     },
     {
       meal: 'Равиоли з паштетом з гусячої печінки',
@@ -363,6 +400,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 61,
       type: 'ravioli',
       qty: 0,
+      id: 37
     },
     {
       meal: "Равиоли з в'яленими томатами",
@@ -371,6 +409,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 51,
       type: 'ravioli',
       qty: 0,
+      id: 38
     },
     {
       meal: 'Вітелло тоннато',
@@ -379,6 +418,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 69,
       type: 'ravioli',
       qty: 0,
+      id: 39
     },
     // pizza
     {
@@ -388,6 +428,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'pizza',
       qty: 0,
+      id: 40
     },
     {
       meal: 'Піца "Барбекю" ',
@@ -396,6 +437,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'pizza',
       qty: 0,
+      id: 41
     },
     {
       meal: 'Піца "Мексиканська"',
@@ -404,6 +446,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'pizza',
       qty: 0,
+      id: 42
     },
     {
       meal: 'Піца "Street Food"',
@@ -412,6 +455,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'pizza',
       qty: 0,
+      id: 43
     },
     {
       meal: 'Піца "4 м`яса"',
@@ -420,6 +464,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'pizza',
       qty: 0,
+      id: 44
     },
     // dessert
     {
@@ -429,6 +474,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 120,
       type: 'dessert',
       qty: 0,
+      id: 45
     },
     {
       meal: 'Торт на гречаному меду із трюфельним кремом та соусом сабайон',
@@ -437,6 +483,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'dessert',
       qty: 0,
+      id: 46
     },
     {
       meal: 'Сирна палітра',
@@ -445,6 +492,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 121,
       type: 'dessert',
       qty: 0,
+      id: 47
     },
     {
       meal: 'Ромова баба з кремом Шантілі ',
@@ -453,6 +501,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 95,
       type: 'dessert',
       qty: 0,
+      id: 48
     },
     {
       meal: 'Штрудель із вишнею, волоськими горіхами та ванільним морозивом ',
@@ -461,6 +510,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'dessert',
       qty: 0,
+      id: 49
     },
     {
       meal: 'Ягідний тірамісу ',
@@ -469,6 +519,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 125,
       type: 'dessert',
       qty: 0,
+      id: 50
     },
     {
       meal: 'Сорбети власного виробництва ',
@@ -477,6 +528,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 60,
       type: 'dessert',
       qty: 0,
+      id: 51
     },
     {
       meal: 'Сирники',
@@ -486,6 +538,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 98,
       type: 'dessert',
       qty: 0,
+      id: 52
     },
     {
       meal: 'Джелато власного виробництва',
@@ -494,14 +547,9 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 69,
       type: 'dessert',
       qty: 0,
+      id: 53
     },
   ];
-
-  // let add = () => {
-  //   console.log('add' + item)
-  // }
-
-  // const basketList = []
 
   const Food = ({ food }) => (
     <tbody className='tbody__menu'>
@@ -512,7 +560,7 @@ function MainMenu({ basketList, pushMeal }) {
           }
         })
         .map((item) => (
-          <tr className='listRow' key={item.meal}>
+          <tr className='listRow' key={item.id}>
             <td className='firstCol'>
               <h4 className='food__name'>{item.meal}</h4>
               {item.desk}
@@ -535,16 +583,22 @@ function MainMenu({ basketList, pushMeal }) {
                 className='orderIcon'
                 onClick={() => {
                   console.log('add' + item.meal);
-                  basketList.push(item);
-                  item.qty++;
+                  for (let i = 0; i <= basketList.lenght; i++) {
+                    if (i.id !== item.id) {
+                      basketList.push(item);
+                    } else {
+                      item.qty++;
+                    }
+                  }
                 }}
               >
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
           </tr>
-        ))}
-    </tbody>
+        ))
+      }
+    </tbody >
   );
 
   console.log(basketList);
