@@ -54,12 +54,12 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
               <svg className='orderIcon'>
                 <use href={sprite + '#minus'}></use>
               </svg>
-              <span className='basket-form__number'>1</span>
+              <span className='basket-form__number'>{item.qty}</span>
               <svg className='orderIcon'>
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
-            <td className='basket-form__cost'>119 грн.</td>
+            <td className='basket-form__cost'>{item.cost} грн.</td>
             <td className='basket-form__btn-delete'>
               <svg className='basket-form__cross-delete'>
                 <use href={sprite + '#cross'}></use>
