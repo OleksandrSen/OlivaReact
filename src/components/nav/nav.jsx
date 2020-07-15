@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../img/logo.png';
 import './nav.scss';
 import Basket from '../basket/basket';
 
 function Nav() {
+
+  const [active, setActive] = useState(false);
 
   return (
     <div className='navigation'>
@@ -39,6 +41,11 @@ function Nav() {
               </NavLink>
             </li>
           </ul>
+
+          <div className={active ? 'active' : "manu__burger"}
+            onClick={setActive}>
+            <span className="manu__burger-span"></span>
+          </div>
 
           <div className='logo'>
             <img src={logo} alt='logo' className='logo__img' />

@@ -40,6 +40,82 @@
       text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
     }
   }
+
+// burger
+
+&__burger {
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 993px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: auto 0;
+  }
+
+  &-span {
+    background: #2C2C11;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all .3s ease 0s;
+  }
+
+  &::before, &::after {
+    content: '';
+    background: #2C2C11;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all .3s ease 0s;
+
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  &.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  &.active .navigation__burger-span {
+    transform: scale(0);
+  }
+}
+
+&.active {
+  top: 0;
+  justify-content: center;
+  align-items: center;
+
+  .nav-manu__item {
+    padding: 10px;
+  }
+
+  .nav-manu__item::before {
+    display: none;
+  }
+}
+
+
+
+
 }
 
 .logo {
@@ -64,8 +140,4 @@
     width: 35px;
     height: 40px;
   }
-}
-
-.active {
-  color: tomato;
 }

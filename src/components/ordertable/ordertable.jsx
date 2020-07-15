@@ -10,7 +10,7 @@ function Order() {
     <section className='orderTable'>
       <div className='container'>
         <div className='row'>
-          <h1 className='offset-3 col-6 orderTable__title'>
+          <h1 className='col-12 orderTable__title'>
             Забронювати
             <br /> столик
           </h1>

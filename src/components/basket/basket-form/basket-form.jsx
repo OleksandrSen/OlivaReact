@@ -13,7 +13,7 @@ import * as actions from '../../../reducer/actions'
 Modal.setAppElement('#root');
 
 
-function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
+function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
   console.log(basketList)
@@ -52,12 +52,12 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
             </td>
             <td className='basket-form__amount'>
               <svg className='orderIcon'
-                onClick={() => item.qty--}>
+                onClick={() => changeCount(item.id, -1)}>
                 <use href={sprite + '#minus'}></use>
               </svg>
               <span className='basket-form__number'>{item.qty}</span>
               <svg className='orderIcon'
-                onClick={() => item.qty++}>
+                onClick={() => changeCount(item.id, 1)}>
                 <use href={sprite + '#add'}></use>
               </svg>
             </td>
@@ -101,9 +101,10 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
         onRequestClose={() => setBasketFormIsOpen(false)}
         style={{
           content: {
-            width: '940px',
+            maxWidth: '940px',
             minHeight: '555px',
             margin: 'auto',
+
           },
         }}
       >
@@ -123,7 +124,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList }) {
           </div>
         </section>
       </Modal>
-    </div>
+    </div >
   );
 }
 
@@ -135,9 +136,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 
-  const { pushMeal } = bindActionCreators(actions, dispatch)
+  const { pushMeal, changeCount } = bindActionCreators(actions, dispatch)
   return {
-    pushMeal
+    pushMeal,
+    changeCount
   }
 }
 

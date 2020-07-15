@@ -12,44 +12,53 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../reducer/actions';
 
-function MainMenu({ basketList, pushMeal }) {
+function MainMenu({ basketList, pushMeal, changeCount }) {
   const [showFood, setShowFood] = useState(false);
+  const [showMeal, setShowMeal] = useState('appetizer');
 
-  const [showAppetizer, setShowAppetizer] = useState('');
+  const [showAppetizer, setShowAppetizer] = useState(true);
+
+
 
   const openAppetizer = () => {
-    setShowFood(true);
-    setShowAppetizer('appetizer');
+    setShowAppetizer(true);
+    setShowMeal('appetizer');
   };
 
   const openSalad = () => {
     setShowFood(true);
-    setShowAppetizer('salad');
+    setShowMeal('salad');
+    setShowAppetizer(false);
   };
 
   const openFirst = () => {
     setShowFood(true);
-    setShowAppetizer('first');
+    setShowMeal('first');
+    setShowAppetizer(false);
   };
 
   const openPaste = () => {
     setShowFood(true);
-    setShowAppetizer('paste');
+    setShowMeal('paste');
+    setShowAppetizer(false);
   };
 
   const openRavioli = () => {
     setShowFood(true);
-    setShowAppetizer('ravioli');
+    setShowMeal('ravioli');
+    setShowAppetizer(false);
   };
 
   const openPizza = () => {
     setShowFood(true);
-    setShowAppetizer('pizza');
+    setShowMeal('pizza');
+    setShowAppetizer(false);
   };
 
   const openDessert = () => {
     setShowFood(true);
-    setShowAppetizer('dessert');
+    setShowMeal('dessert');
+    setShowAppetizer(false);
   };
 
   const food = [
@@ -555,7 +564,7 @@ function MainMenu({ basketList, pushMeal }) {
     <tbody className='tbody__menu'>
       {food
         .filter((elem) => {
-          if (elem.type === showAppetizer) {
+          if (elem.type === showMeal) {
             return elem;
           }
         })
@@ -581,29 +590,9 @@ function MainMenu({ basketList, pushMeal }) {
               <span className='orderCounter'>{item.qty}</span>
               <svg
                 className='orderIcon'
-                onClick={() => {
-                  console.log('add' + item.meal);
-                  basketList.push(item);
-                  item.qty++;
-
-
-                  // for (let i = 0; i <= basketList.lenght; i++) {
-                  //   if (basketList[i].id !== item.id) {
-                  //     basketList.push(item);
-                  //   } else {
-                  //     item.qty++;
-                  //   }
-                  // }
-
-                  // for (const element of basketList) {
-                  //   console.log(basketList)
-                  //   if (element.id !== item.id) {
-                  //     basketList.push(item);
-                  //   } else {
-                  //     item.qty++;
-                  //   }
-                  // }
-                }}
+                onClick={() =>
+                  changeCount(item.id, 1)
+                }
               >
                 <use href={sprite + '#add'}></use>
               </svg>
@@ -620,10 +609,10 @@ function MainMenu({ basketList, pushMeal }) {
     <section className='menu' id='menu'>
       <div className='container'>
         <div className='row'>
-          <h1 className='offset-4 col-4 menu__title'>Меню</h1>
+          <h1 className='col-12 menu__title'>Меню</h1>
         </div>
         <div className='row menu__info'>
-          <div className='offset-5 col-8'>
+          <div className='col-12 offset-md-4 col-md-8'>
             <MenuNav
               showFood={showFood}
               openAppetizer={openAppetizer}
@@ -633,11 +622,12 @@ function MainMenu({ basketList, pushMeal }) {
               openRavioli={openRavioli}
               openPizza={openPizza}
               openDessert={openDessert}
-              ShowAppetizer={showAppetizer}
+              showMeal={showMeal}
+              showAppetizer={showAppetizer}
             />
             <table className='menu__list'>
               <MenuHeaderRow />
-              {showFood ? <Food food={food} /> : null}
+              <Food food={food} />
             </table>
           </div>
         </div>
@@ -656,9 +646,16 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  const { pushMeal } = bindActionCreators(actions, dispatch);
+  const { pushMeal, changeCount } = bindActionCreators(actions, dispatch);
   return {
     pushMeal,
+    changeCount: (sameMeal) => {
+      if (sameMeal.length > 0) {
+        pushMeal()
+      } else {
+        changeCount()
+      }
+    }
   };
 };
 
