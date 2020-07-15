@@ -8,6 +8,8 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   color: #2c2c11;
+  position: relative;
+  z-index: 6;
 }
 
 
@@ -30,6 +32,11 @@
     &:hover {
       text-shadow: 0 0 0.85px #747436, 0 0 0.85px #747436;
   }
+
+    @media (max-width: 993px) {
+    display: none;
+  }
+
 }
 
   &__link {
@@ -46,13 +53,14 @@
 &__burger {
   display: none;
   cursor: pointer;
+  transition: .3;
 
   @media (max-width: 993px) {
     display: block;
     position: relative;
     width: 30px;
     height: 20px;
-    margin: auto 0;
+    margin: 45px 0;
   }
 
   &-span {
@@ -83,49 +91,101 @@
   &::after {
     bottom: 0;
   }
+  
+}
+}
 
-  &.active::before {
+.active {
+  display: none;
+  cursor: pointer;
+  transition: .3;
+  position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0px;
+
+  @media (max-width: 993px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: 45px 0;
+  }
+
+  &-span {
+    background: #2C2C11;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all .3s ease 0s;
+  }
+
+  &::before, &::after {
+    content: '';
+    background: #2C2C11;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all .3s ease 0s;
+
+  }
+
+  &::before {
     transform: rotate(45deg);
     top: 9px;
   }
 
-  &.active::after {
+  &::after {
     transform: rotate(-45deg);
     bottom: 9px;
   }
-
-  &.active .navigation__burger-span {
+  
+  .manu__burger-span {
     transform: scale(0);
   }
 }
 
-&.active {
-  top: 0;
-  justify-content: center;
-  align-items: center;
+.line {
+  background: rgba(193, 202, 162, 0.9) no-repeat center;
+  background-size: cover;
+  height: 110px;
+  width: 100%;
+}
 
-  .nav-manu__item {
-    padding: 10px;
-  }
+.manu__adapt{
+  display: none;
 
-  .nav-manu__item::before {
-    display: none;
+  &--active {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background: #F8F8F8;
+    height: 800px;
+    width: 375px;
   }
 }
 
-
-
-
-}
 
 .logo {
   width: 145px;
   height: 110px;
   margin: 0 auto;
   position: absolute;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
+
+  @media (max-width: 993px) {
+    margin: 0;
+    margin-left: 8%;
+  }
 
   &__img {
     width: 145px;
@@ -133,11 +193,3 @@
   }
 }
 
-.basket {
-  margin: 30px auto;
-
-  &__svg {
-    width: 35px;
-    height: 40px;
-  }
-}

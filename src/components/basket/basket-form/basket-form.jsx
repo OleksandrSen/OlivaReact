@@ -60,7 +60,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
             <td className='basket-form__btn-delete'>
               <svg className='basket-form__cross-delete'
                 onClick={(basketList) => {
-                  const allMeal = [basketList.slice(0, item), basketList.slice(item + 1)]
+                  const allMeal = [...basketList.slice(0, item), ...basketList.slice(item + 1)]
                   return {
                     basketList: allMeal
                   }

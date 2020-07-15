@@ -8,6 +8,10 @@ function Nav() {
 
   const [active, setActive] = useState(false);
 
+  const toogle = () => {
+    setActive(!active)
+  }
+
   return (
     <div className='navigation'>
       <div className='container'>
@@ -43,8 +47,39 @@ function Nav() {
           </ul>
 
           <div className={active ? 'active' : "manu__burger"}
-            onClick={setActive}>
+            onClick={toogle}>
             <span className="manu__burger-span"></span>
+          </div>
+
+          <div className={active ? "manu__adapt--active" : "manu__adapt"}>
+            <div className="line"></div>
+            <ul className='manu__adapt__list'>
+              <li className='manu__item'>
+                <NavLink activeClassName='manu__link--active' className='manu__link' to='/main-header'>
+                  Головна
+              </NavLink>
+              </li>
+              <li className='manu__item'>
+                <NavLink activeClassName='manu__link--active' className='manu__link' to='/menu' >
+                  Меню
+              </NavLink>
+              </li>
+              <li className='manu__item'>
+                <NavLink to='/photo' activeClassName='manu__link--active' className='manu__link'>
+                  Фотогалерея
+              </NavLink>
+              </li>
+              <li className='manu__item'>
+                <NavLink to='/news' activeClassName='manu__link--active' className='manu__link'>
+                  Новини
+              </NavLink>
+              </li>
+              <li className='manu__item'>
+                <NavLink to='/contacts' activeClassName='manu__link--active' className='manu__link'>
+                  Контакти
+              </NavLink>
+              </li>
+            </ul>
           </div>
 
           <div className='logo'>

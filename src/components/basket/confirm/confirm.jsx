@@ -64,25 +64,25 @@ function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
               <div className="confirm__left-block col-12 col-md-7">
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Номер будинку</div>
-                  <input type="text" className="confirm__input col-md-6" placeholder="Номер будинку" />
+                  <input type="number" className="confirm__input col-md-6" placeholder="Номер будинку" />
                 </div>
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Дверний код</div>
-                  <input type="text" className="confirm__input col-md-6" placeholder="Дверний код" />
+                  <input type="number" className="confirm__input col-md-6" placeholder="Дверний код" />
                 </div>
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Під’їзд</div>
-                  <input type="text" className="confirm__input col-md-6" placeholder="Під’їзд" />
+                  <input type="number" className="confirm__input col-md-6" placeholder="Під’їзд" />
                 </div>
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Доставити в</div>
-                  <input type="text" className="confirm__input col-md-6" placeholder="15:30" />
+                  <input type="time" className="confirm__input col-md-6" placeholder="15:30" />
                 </div>
               </div>
               <div className="confirm__right-block col-12 col-md-5">
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Корпус</div>
-                  <input type="text" className="confirm__input col-md-6" placeholder="Корпус" />
+                  <input type="number" className="confirm__input col-md-6" placeholder="Корпус" />
                 </div>
                 <div className="confirm__input-block">
                   <div className="confirm__input-desc col-md-6">Квартира</div>

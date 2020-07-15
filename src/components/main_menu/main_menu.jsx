@@ -580,9 +580,10 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
               <svg
                 className='orderIcon'
                 onClick={() => {
-                  console.log('add' + item.meal);
-                  basketList.push(item);
-                  item.qty--;
+                  // console.log('add' + item.meal);
+                  // basketList.push(item);
+                  // item.qty--;
+                  changeCount(item.id, 1)
                 }}
               >
                 <use href={sprite + '#minus'}></use>
@@ -592,6 +593,7 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                 className='orderIcon'
                 onClick={() =>
                   changeCount(item.id, 1)
+                  // basketList.push(item)
                 }
               >
                 <use href={sprite + '#add'}></use>
@@ -649,13 +651,7 @@ const mapDispatchToProps = (dispatch) => {
   const { pushMeal, changeCount } = bindActionCreators(actions, dispatch);
   return {
     pushMeal,
-    changeCount: (sameMeal) => {
-      if (sameMeal.length > 0) {
-        pushMeal()
-      } else {
-        changeCount()
-      }
-    }
+    changeCount
   };
 };
 
