@@ -23,7 +23,7 @@ function Thank({
         }}
         style={{
           content: {
-            width: '940px',
+            maxWidth: '940px',
             height: '390px',
             margin: 'auto',
           },

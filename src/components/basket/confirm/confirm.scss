@@ -9,6 +9,7 @@
 
   &-block{
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   &__caption {
@@ -49,6 +50,7 @@
   &__radio {
     display: flex;
     margin-bottom: 75px;
+    flex-wrap: wrap;
 
     &-input {
       display: none;
@@ -60,6 +62,7 @@
       line-height: 27px;
       margin-left: 100px;
       position: relative;
+      padding: 10px 0;
 
       &::before {
         content: '';
@@ -70,6 +73,10 @@
         position: absolute;
         top: -1px;
         left: -50px;
+
+        @media (max-width:767px) {
+          top: 7px;
+        }
 
         &:hover {
         background: #DDE1CD;
