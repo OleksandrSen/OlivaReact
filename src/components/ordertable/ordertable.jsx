@@ -95,15 +95,15 @@ function Order() {
             </div>
             <div className='orderTable__main__table table20'>
               <div className='orderTable__main__table__num'>20</div>
-              <TableForTwo />
+              <MidTableMirror />
             </div>
             <div className='orderTable__main__table table21'>
               <div className='orderTable__main__table__num'>21</div>
-              <TableForTwo />
+              <MidTableMirror />
             </div>
             <div className='orderTable__main__table table22'>
               <div className='orderTable__main__table__num'>22</div>
-              <TableForTwo />
+              <MidTableMirror />
             </div>
             <div className='orderTable__main__table table23'>
               <div className='orderTable__main__table__num'>23</div>

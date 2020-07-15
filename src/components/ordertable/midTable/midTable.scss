@@ -8,14 +8,33 @@
   bottom: 20px;
   right: -20px;
   background: url(../../../img/cloud2.svg);
+  background-size: contain;
   z-index: 1;
   transform: rotate(180deg);
+
+  @media (max-width: 767px) {
+    bottom: 0px;
+    right: -60px;
+  }
+
+  @media (max-width: 375px) {
+    width: 200px;
+    height: 180px;
+    bottom: 0px;
+    right: -40px;
+  }
 
   &__title {
     font-weight: bold;
     font-size: 22px;
     line-height: 30px;
-    margin: -40px 0 5px;
+    margin: -40px 0 13px;
+
+    @media (max-width: 375px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin: -10px 0 5px;
+    }
   }
 
   &__info {
@@ -23,5 +42,10 @@
     line-height: 27px;
     color: #2c2c11;
     margin: 0 auto 10px;
+
+    @media (max-width: 375px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

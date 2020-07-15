@@ -5,6 +5,12 @@
   margin: 20px auto;
   padding-top: 10px;
   position: relative;
+
+  @media (max-width: 375px) {
+    width: 300px;
+    height: 295px;
+    margin: 0 -10px;
+  }
 }
 
 .date,
@@ -23,6 +29,11 @@
     font-size: 20px;
     line-height: 27px;
     color: #2c2c11;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 15px;
+    }
   }
 
   &__input {
@@ -33,6 +44,10 @@
     line-height: 32px;
     color: #e0e0e0;
     width: 192px;
+
+    @media (max-width: 375px) {
+      margin-bottom: -20px;
+    }
   }
 }
 
@@ -43,6 +58,11 @@
     font-size: 20px;
     line-height: 27px;
     color: #2c2c11;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 15px;
+    }
   }
 
   &__input {
@@ -63,6 +83,11 @@
     font-size: 20px;
     line-height: 27px;
     color: #2c2c11;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 15px;
+    }
   }
 
   &__input {
@@ -83,6 +108,11 @@
     font-size: 20px;
     line-height: 27px;
     color: #2c2c11;
+
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 15px;
+    }
   }
 
   &__input {
