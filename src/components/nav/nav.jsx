@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../img/logo.png';
 import './nav.scss';
 import Basket from '../basket/basket';
+import sprite from '../../img/icons-sprite.svg';
+
 
 function Nav() {
 
@@ -52,33 +54,67 @@ function Nav() {
           </div>
 
           <div className={active ? "manu__adapt--active" : "manu__adapt"}>
-            <ul className='manu__adapt--active__list'>
-              <li className='manu__item'>
+            <ul className="manu__adapt__list">
+              <li className='manu__adapt__item'>
                 <NavLink activeClassName='manu__link--active' className='manu__link' to='/main-header'>
                   Головна
               </NavLink>
               </li>
-              <li className='manu__item'>
+              <li className='manu__adapt__item'>
                 <NavLink activeClassName='manu__link--active' className='manu__link' to='/menu' >
                   Меню
               </NavLink>
               </li>
-              <li className='manu__item'>
+              <li className='manu__adapt__item'>
                 <NavLink to='/photo' activeClassName='manu__link--active' className='manu__link'>
                   Фотогалерея
               </NavLink>
               </li>
-              <li className='manu__item'>
+              <li className='manu__adapt__item'>
                 <NavLink to='/news' activeClassName='manu__link--active' className='manu__link'>
                   Новини
               </NavLink>
               </li>
-              <li className='manu__item'>
+              <li className='manu__adapt__item'>
                 <NavLink to='/contacts' activeClassName='manu__link--active' className='manu__link'>
                   Контакти
               </NavLink>
               </li>
             </ul>
+
+            {/* <div className='manu__adapt__social'> */}
+            <ul className='manu__adapt__social'>
+              <li className='social__item--adapt'>
+                <a href='#s' className='social__link'>
+                  <svg className='social__svg'>
+                    <use href={sprite + '#facebook'}></use>
+                  </svg>
+                </a>
+              </li>
+              <li className='social__item--adapt'>
+                <a href='#s' className='social__link'>
+                  <svg className='social__svg'>
+                    <use href={sprite + '#instagram'}></use>
+                  </svg>
+                </a>
+              </li>
+              <li className='social__item--adapt'>
+                <a href='#s' className='social__link'>
+                  <svg className='social__svg'>
+                    <use href={sprite + '#twitter'}></use>
+                  </svg>
+                </a>
+              </li>
+              <li className='social__item--adapt'>
+                <a href='#s' className='social__link'>
+                  <svg className='social__svg'>
+                    <use href={sprite + '#phone'}></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            {/* </div> */}
+
           </div>
 
           <div className='logo'>
