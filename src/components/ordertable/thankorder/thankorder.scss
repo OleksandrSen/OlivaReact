@@ -9,6 +9,11 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: 375px) {
+    width: 300px;
+    margin: 10px -10px;
+  }
+
   &__icon {
     margin: 44px 0 19px;
   }

@@ -1,26 +1,34 @@
 .orderTable {
   width: 100%;
-  height: 1260px;
-  margin-bottom: 170px;
+  height: 100%;
   position: relative;
   text-align: center;
-  // margin-top: 100px;
 
   &__title {
     text-align: center;
     padding-top: 25px;
     padding-left: 30px;
     background: url(../../img/tableshape.png) no-repeat center;
-    width: 515px;
+    // width: 515px;
     height: 157px;
     font-weight: 700;
     font-size: 46px;
     line-height: 52px;
     color: #f8f8f8;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
+
+    @media (max-width: 767px) {
+      margin-bottom: -140px;
+      font-size: 40px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 36px;
+    }
   }
   &__main {
     background: url(../../img/table.png) no-repeat center;
+    background-size: contain;
     width: 100%;
     height: 70%;
     min-height: 960px;
@@ -30,14 +38,33 @@
     &__table {
       position: absolute;
       padding-top: 1px;
-      bottom: 9%;
-      right: 1.3%;
+      bottom: 13%;
+      right: 6.5%;
       width: 55px;
       height: 55px;
       border-radius: 50%;
       background-color: #d34606;
       text-align: center;
       cursor: pointer;
+
+      @media (max-width: 991px) {
+        bottom: 27%;
+        width: 35px;
+        height: 35px;
+      }
+
+      @media (max-width: 767px) {
+        bottom: 32.5%;
+        width: 25px;
+        height: 25px;
+      }
+
+      @media (max-width: 375px) {
+        bottom: 38%;
+        right: 6.5%;
+        width: 20px;
+        height: 20px;
+      }
 
       &__button {
         width: 186px;
@@ -52,6 +79,13 @@
         border-radius: 5px;
         text-transform: uppercase;
         cursor: pointer;
+
+        @media (max-width: 375px) {
+          width: 140px;
+          height: 30px;
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
 
         &:hover {
           color: #f8f8f8;
@@ -76,6 +110,18 @@
       &__num {
         color: white;
         font-size: 46px;
+
+        @media (max-width: 991px) {
+          font-size: 32px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 22px;
+        }
+
+        @media (max-width: 375px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -83,156 +129,457 @@
 
 .table2 {
   position: absolute;
-  bottom: 32%;
-  right: 1.3%;
+  bottom: 33%;
+  right: 6.5%;
+
+  @media (max-width: 991px) {
+    bottom: 39%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 42%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 44.5%;
+    right: 6.5%;
+  }
 }
 
 .table3 {
   position: absolute;
-  bottom: 9%;
-  right: 29.5%;
+  bottom: 13%;
+  right: 31.5%;
+
+  @media (max-width: 991px) {
+    bottom: 27%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 32.5%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 37.8%;
+    right: 31.3%;
+  }
 }
 
 .table4 {
   position: absolute;
-  bottom: 32%;
-  right: 29.5%;
+  bottom: 34%;
+  right: 31.5%;
+
+  @media (max-width: 991px) {
+    bottom: 40%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 42.5%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 45%;
+  }
 }
 
 .table5 {
   position: absolute;
   bottom: 51%;
-  right: 27%;
+  right: 29.5%;
+
+  @media (max-width: 991px) {
+    bottom: 50.5%;
+  }
 }
 
 .table6 {
   position: absolute;
   bottom: 51%;
-  right: 3.2%;
+  right: 8.5%;
+
+  @media (max-width: 991px) {
+    bottom: 50.5%;
+  }
 }
 
 .table7 {
   position: absolute;
-  bottom: 65%;
-  right: 1.3%;
+  bottom: 63%;
+  right: 6.5%;
+
+  @media (max-width: 991px) {
+    bottom: 58%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 54%;
+  }
 }
 
 .table8 {
   position: absolute;
-  bottom: 84%;
-  right: 1.3%;
+  bottom: 80%;
+  right: 6.5%;
+
+  @media (max-width: 991px) {
+    bottom: 69%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 64.3%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 60%;
+  }
 }
 
 .table9 {
   position: absolute;
-  bottom: 12.5%;
-  right: 44%;
+  bottom: 16.5%;
+  right: 44.4%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+    right: 43.8%;
+  }
 }
 
 .table10 {
   position: absolute;
-  bottom: 12.5%;
-  right: 52.7%;
+  bottom: 16.5%;
+  right: 52.3%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+    right: 51.7%;
+  }
 }
 
 .table11 {
   position: absolute;
-  bottom: 12.5%;
-  right: 61.5%;
+  bottom: 16.5%;
+  right: 60%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+    right: 60%;
+  }
 }
 
 .table12 {
   position: absolute;
-  bottom: 12.5%;
-  right: 75%;
+  bottom: 16.5%;
+  right: 71.8%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+  }
 }
 
 .table13 {
   position: absolute;
-  bottom: 12.5%;
-  right: 83.5%;
+  bottom: 16.5%;
+  right: 79.8%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+  }
 }
 
 .table14 {
   position: absolute;
-  bottom: 12.5%;
-  right: 92.5%;
+  bottom: 16.5%;
+  right: 87.6%;
+
+  @media (max-width: 991px) {
+    bottom: 28.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 34%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 38.7%;
+  }
 }
 
 .table15 {
   position: absolute;
-  bottom: 35%;
-  right: 92.5%;
+  bottom: 36.5%;
+  right: 87.5%;
+
+  @media (max-width: 991px) {
+    bottom: 41.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 43.5%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 45.5%;
+  }
 }
 
 .table16 {
   position: absolute;
-  bottom: 57%;
-  right: 92.5%;
+  bottom: 56.5%;
+  right: 87.5%;
+
+  @media (max-width: 991px) {
+    bottom: 54%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 53%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 52%;
+  }
 }
 
 .table17 {
   position: absolute;
-  bottom: 32%;
+  bottom: 33%;
   right: 47.5%;
+
+  @media (max-width: 991px) {
+    bottom: 39.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 42%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 44.5%;
+  }
 }
 
 .table18 {
   position: absolute;
-  bottom: 32%;
-  right: 56.5%;
+  bottom: 33%;
+  right: 55.5%;
+
+  @media (max-width: 991px) {
+    bottom: 39.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 42%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 44.5%;
+  }
 }
 
 .table19 {
   position: absolute;
-  bottom: 37%;
-  right: 65.5%;
+  bottom: 38.5%;
+  right: 63.5%;
+
+  @media (max-width: 991px) {
+    bottom: 42.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 44%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 46%;
+  }
 }
 
 .table20 {
   position: absolute;
-  bottom: 32%;
-  right: 75%;
+  bottom: 33%;
+  right: 72%;
+
+  @media (max-width: 991px) {
+    bottom: 39.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 42%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 44.5%;
+  }
 }
 
 .table21 {
   position: absolute;
   bottom: 46%;
-  right: 75%;
+  right: 72%;
+
+  @media (max-width: 991px) {
+    bottom: 47.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 48%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 49%;
+  }
 }
 
 .table22 {
   position: absolute;
-  bottom: 61%;
-  right: 75%;
+  bottom: 59.5%;
+  right: 71.8%;
+
+  @media (max-width: 991px) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 55%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 53.5%;
+  }
 }
 
 .table23 {
   position: absolute;
-  bottom: 61%;
-  right: 64%;
+  bottom: 59.5%;
+  right: 62%;
+
+  @media (max-width: 991px) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 55%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 53.5%;
+  }
 }
 
 .table24 {
   position: absolute;
-  bottom: 61%;
-  right: 53%;
+  bottom: 59.5%;
+  right: 52.3%;
+
+  @media (max-width: 991px) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 55%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 53.5%;
+  }
 }
 
 .table25 {
   position: absolute;
-  bottom: 61%;
-  right: 44%;
+  bottom: 59.5%;
+  right: 44.5%;
+
+  @media (max-width: 991px) {
+    bottom: 56%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 55%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 53.5%;
+  }
 }
 
 .table26 {
   position: absolute;
   bottom: 47%;
-  right: 56.5%;
+  right: 55.5%;
+
+  @media (max-width: 991px) {
+    bottom: 47.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 48%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 49%;
+  }
 }
 
 .table27 {
   position: absolute;
   bottom: 47%;
   right: 47.5%;
+
+  @media (max-width: 991px) {
+    bottom: 47.5%;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 48%;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 49%;
+  }
 }
