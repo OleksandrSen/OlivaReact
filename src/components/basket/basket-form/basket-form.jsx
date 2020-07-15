@@ -104,7 +104,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
             maxWidth: '940px',
             minHeight: '555px',
             margin: 'auto',
-
+            zIndex: 30,
           },
         }}
       >

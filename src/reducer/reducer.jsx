@@ -5,20 +5,10 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'PUSH_MEAL':
-      return {
-        ...state,
-
-        basketList: [...state.basketList, action.product]
-      }
-    case 'CHENGE_COUNT':
-      console.log(action.payload.mealId)
 
       const deleteItem = (basketList) => {
         const sameElem = basketList.findIndex((item) => item.id === action.payload.mealId)
         const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
-
-        console.log(sameElem)
-
         return {
           basketList: allMeal
         }
@@ -27,8 +17,27 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
 
-        basketList: [deleteItem]
+        basketList: [deleteItem, action.product]
       }
+    // case 'CHENGE_COUNT':
+    //   console.log(action.payload.mealId)
+
+    //   const deleteItem = (basketList) => {
+    //     const sameElem = basketList.findIndex((item) => item.id === action.payload.mealId)
+    //     const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
+
+    //     console.log(sameElem)
+
+    //     return {
+    //       basketList: allMeal
+    //     }
+    //   }
+
+    //   return {
+    //     ...state,
+
+    //     basketList: [deleteItem]
+    //   }
 
     // case 'DELETE_ITEM':
     // console.log(action.payload.mealId)
