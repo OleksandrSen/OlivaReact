@@ -580,17 +580,21 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                   // console.log('add' + item.meal);
                   // basketList.push(item);
                   // item.qty--;
-                  changeCount(item.id, 1)
+                  pushMeal(item, -1);
+
                 }}
               >
                 <use href={sprite + '#minus'}></use>
               </svg>
-              <span className='orderCounter'>{basketList[item].qty}</span>
+              <span className='orderCounter'>{item.qty}</span>
               <svg
                 className='orderIcon'
-                onClick={() =>
+                onClick={() => {
                   // changeCount(item.id, 1)
-                  pushMeal(item, item.id, 1)
+                  pushMeal(item, 1)
+                  console.log('basket list after pushMeal', basketList);
+
+                }
                 }
               >
                 <use href={sprite + '#add'}></use>
@@ -647,7 +651,7 @@ const mapDispatchToProps = (dispatch) => {
   const { pushMeal, changeCount } = bindActionCreators(actions, dispatch);
   return {
     pushMeal,
-    changeCount
+    changeCount,
   };
 };
 

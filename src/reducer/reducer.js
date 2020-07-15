@@ -1,57 +1,55 @@
 const initialState = {
   basketList: [],
-}
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'PUSH_MEAL':
-
-      const detachItem = (basketList) => {
-        const sameElem = basketList.findIndex((item) => item.id === action.payload.mealId)
-        const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
-        return {
-          basketList: allMeal
-        }
-      }
+      const sameElem = state.basketList.findIndex(
+        (item) => item.id === action.payload.product.id
+      );
+      const allMeal = [
+        ...state.basketList.slice(0, sameElem),
+        ...state.basketList.slice(sameElem + 1),
+      ];
 
       return {
-        ...state,
+        basketList: [...allMeal, action.payload.product],
+      };
 
-        basketList: [detachItem, action.product]
-      }
     case 'CHENGE_COUNT':
 
-
-  }
-
-  return {
-    ...state,
-
-    basketList: [...basketList]
-  }
+      return {
+        qty: state.basketList.qty + action.payload.number
+      }
 
     case 'DELETE_ITEM':
-console.log(action.payload.mealId)
+      const elem = state.basketList.findIndex(
+        (item) => item.id === action.payload.mealId
+      );
+      const restMeal = [
+        ...state.basketList.slice(0, elem),
+        ...state.basketList.slice(elem + 1),
+      ];
 
-const deleteItem = (basketList) => {
-  const sameElem = basketList.find((item) => item.id === action.payload.mealId)
-  const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
+      return {
+        basketList: restMeal,
+      };
 
-  return {
-    basketList: allMeal
-  }
-}
+    case 'COUNT_MONEY':
 
-return {
-  ...state,
+      const allMoney = state.basketList.reduce(function (accumulator, currentValue) {
+        return [...accumulator, ...currentValue.mealCost];
+      });
 
-  basketList: [deleteItem]
-}
+      return {
+        basketList: allMoney,
+      };
+
 
     default:
-return state
+      return state;
   }
-}
-}
+};
 
-export default reducer
+export default reducer;
