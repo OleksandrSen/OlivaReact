@@ -13,13 +13,20 @@ const reducer = (state = initialState, action) => {
     case 'CHENGE_COUNT':
       console.log(action.payload.mealId)
 
-      // const sameMeal = { state.basketList.find((item) => item.id === action.payload.mealId) }
-      const sameMeal = {}
+      const deleteItem = (basketList) => {
+        const sameElem = basketList.find((item) => item.id === action.payload.mealId)
+
+        const allMeal = [basketList.slice(0, sameElem), basketList.slice(sameElem + 1)]
+
+        return {
+          basketList: allMeal
+        }
+      }
 
       return {
         ...state,
 
-        basketList: [...state.basketList, sameMeal]
+        basketList: [deleteItem]
       }
     default:
       return state

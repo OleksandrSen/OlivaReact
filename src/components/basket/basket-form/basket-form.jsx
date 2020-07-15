@@ -18,18 +18,13 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
 
   console.log(basketList)
 
-  const newBasketList = basketList
-  // .filter((elem) => {
-  //   if (elem === null) {
-  //     return null;
-  //   }
-  // })
+  // const newBasketList = basketList
 
-  console.log({ newBasketList })
+  // console.log({ newBasketList })
 
 
 
-  const ShowMeals = ({ newBasketList }) => (
+  const ShowMeals = ({ basketList }) => (
     <table className='basket-form__table col-10'>
       <tbody>
         <tr>
@@ -45,7 +40,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
           <td className='basket-form__title--delete'></td>
         </tr>
 
-        {newBasketList.map((item, index) => (
+        {basketList.map((item, index) => (
           <tr className='basket-form__line' key={item.id}>
             <td className='basket-form__meal'>
               {item.meal}
@@ -64,7 +59,12 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
             <td className='basket-form__cost'>{item.cost} грн.</td>
             <td className='basket-form__btn-delete'>
               <svg className='basket-form__cross-delete'
-                onClick={() => newBasketList.splice(index)}>
+                onClick={(basketList) => {
+                  const allMeal = [basketList.slice(0, item), basketList.slice(item + 1)]
+                  return {
+                    basketList: allMeal
+                  }
+                }}>
                 <use href={sprite + '#cross'}></use>
               </svg>
             </td>
@@ -112,7 +112,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
           <div className='row'>
             <h3 className='basket-form__caption col-12'>Кошик</h3>
 
-            {newBasketList.length < 1 ? <NoMeal /> : <ShowMeals newBasketList={newBasketList} />}
+            {basketList.length < 1 ? <NoMeal /> : <ShowMeals basketList={basketList} />}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 
