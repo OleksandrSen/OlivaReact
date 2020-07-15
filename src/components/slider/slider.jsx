@@ -12,28 +12,31 @@ export default class SomeSlider extends Component {
   render() {
     const settings = {
       centerMode: true,
-      centerPadding: '250px',
+      centerPadding: '150px',
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       speed: 1000,
+      autoplay: true,
     };
     return (
-      <div className='slider'>
-        <Slider {...settings}>
-          <div className='slider__block'>
-            <img className='slider__item' src={slider1} alt='foto_slider' />
-          </div>
-          <div>
-            <img className='slider__item' src={slider2} alt='foto_slider' />
-          </div>
-          <div>
-            <img className='slider__item' src={slider3} alt='foto_slider' />
-          </div>
-          <div>
-            <img className='slider__item' src={slider4} alt='foto_slider' />
-          </div>
-        </Slider>
+      <div className='container'>
+        <div className='slider'>
+          <Slider {...settings}>
+            <div className='slider__block'>
+              <img className='slider__item' src={slider1} alt='foto_slider' />
+            </div>
+            <div>
+              <img className='slider__item' src={slider2} alt='foto_slider' />
+            </div>
+            <div>
+              <img className='slider__item' src={slider3} alt='foto_slider' />
+            </div>
+            <div>
+              <img className='slider__item' src={slider4} alt='foto_slider' />
+            </div>
+          </Slider>
+        </div>
       </div>
     );
   }
