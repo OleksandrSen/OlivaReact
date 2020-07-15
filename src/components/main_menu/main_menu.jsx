@@ -580,7 +580,7 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                   // console.log('add' + item.meal);
                   // basketList.push(item);
                   // item.qty--;
-                  changeCount(item.id, 1)
+                  changeCount(item.id, 1);
                 }}
               >
                 <use href={sprite + '#minus'}></use>
@@ -647,7 +647,7 @@ const mapDispatchToProps = (dispatch) => {
   const { pushMeal, changeCount } = bindActionCreators(actions, dispatch);
   return {
     pushMeal,
-    changeCount
+    changeCount,
   };
 };
 

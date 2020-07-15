@@ -1,24 +1,21 @@
 const initialState = {
   basketList: [],
-}
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'PUSH_MEAL':
-
-      const detachItem = (basketList) => {
-        const sameElem = basketList.findIndex((item) => item.id === action.payload.mealId)
-        const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
-        return {
-          basketList: allMeal
-        }
-      }
+      const sameElem = state.basketList.findIndex(
+        (item) => item.id === action.payload.mealId
+      );
+      const allMeal = [
+        ...state.basketList.slice(0, sameElem),
+        ...state.basketList.slice(sameElem + 1),
+      ];
 
       return {
-        ...state,
-
-        basketList: [detachItem, action.product]
-      }
+        basketList: [allMeal, action.product],
+      };
     // case 'CHENGE_COUNT':
     //   console.log(action.payload.mealId)
 
@@ -40,26 +37,31 @@ const reducer = (state = initialState, action) => {
     //   }
 
     case 'DELETE_ITEM':
-      console.log(action.payload.mealId)
+      console.log(action.payload.mealId);
 
       const deleteItem = (basketList) => {
-        const sameElem = basketList.find((item) => item.id === action.payload.mealId)
-        const allMeal = [...basketList.slice(0, sameElem), ...basketList.slice(sameElem + 1)]
+        const sameElem = basketList.find(
+          (item) => item.id === action.payload.mealId
+        );
+        const allMeal = [
+          ...basketList.slice(0, sameElem),
+          ...basketList.slice(sameElem + 1),
+        ];
 
         return {
-          basketList: allMeal
-        }
-      }
+          basketList: allMeal,
+        };
+      };
 
       return {
         ...state,
 
-        basketList: [deleteItem]
-      }
+        basketList: [deleteItem],
+      };
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default reducer
+export default reducer;
