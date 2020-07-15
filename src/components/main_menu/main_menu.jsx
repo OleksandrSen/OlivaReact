@@ -589,10 +589,9 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
               <svg
                 className='orderIcon'
                 onClick={() =>
-                  changeCount(item.id, 1)
-                  // basketList.push(item)
+                  // changeCount(item.id, 1)
+                  pushMeal(item, item.id, 1)
                 }
-              // onClick={() => changeCount(item.id, 1)}
               >
                 <use href={sprite + '#add'}></use>
               </svg>
