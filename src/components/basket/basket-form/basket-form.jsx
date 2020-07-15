@@ -16,7 +16,7 @@ Modal.setAppElement('#root');
 function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount, deleteMeal }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
-  console.log(basketList)
+  console.log('check >>>>', basketList)
 
   // const newBasketList = basketList
 
@@ -24,66 +24,70 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
 
 
 
-  const ShowMeals = ({ basketList }) => (
-    <table className='basket-form__table col-10'>
-      <tbody>
-        <tr>
-          <th className='basket-form__title basket-form__title--meal'>
-            Страва
-                  </th>
-          <th className='basket-form__title basket-form__title--amount'>
-            Кількість
-                  </th>
-          <th className='basket-form__title basket-form__title--cost'>
-            Ціна
-                  </th>
-          <td className='basket-form__title--delete'></td>
-        </tr>
-
-        {basketList.map((item, index) => (
-          <tr className='basket-form__line' key={item.id}>
-            <td className='basket-form__meal'>
-              {item.meal}
-            </td>
-            <td className='basket-form__amount'>
-              <svg className='orderIcon'
-                onClick={() => changeCount(item.id, -1)}>
-                <use href={sprite + '#minus'}></use>
-              </svg>
-              <span className='basket-form__number'>{item.qty}</span>
-              <svg className='orderIcon'
-                onClick={() => changeCount(item.id, 1)}>
-                <use href={sprite + '#add'}></use>
-              </svg>
-            </td>
-            <td className='basket-form__cost'>{item.cost} грн.</td>
-            <td className='basket-form__btn-delete'>
-              <svg className='basket-form__cross-delete'
-                onClick={() => deleteMeal(item.id)}>
-                <use href={sprite + '#cross'}></use>
-              </svg>
-            </td>
+  
+  const ShowMeals = ({ basketList }) => {
+    console.log('test func ',basketList)
+    return (
+      <table className='basket-form__table col-10'>
+        <tbody>
+          <tr>
+            <th className='basket-form__title basket-form__title--meal'>
+              Страва
+                    </th>
+            <th className='basket-form__title basket-form__title--amount'>
+              Кількість
+                    </th>
+            <th className='basket-form__title basket-form__title--cost'>
+              Ціна
+                    </th>
+            <td className='basket-form__title--delete'></td>
           </tr>
-        ))
-        }
-
-        < tr className='basket-form__bottom' >
-          <td colspan='2' className='basket-form__sum'>
-            Сума замовлення:
-                    <span className='basket-form__sum--bold'>170грн</span>
-          </td>
-          <td colspan='2'>
-            <button
-              className='basket-form__button'
-              onClick={() => setConfirmIsOpen(true)}
-            >
-              Замовити
-                    </button>
-          </td>
-        </ tr>
-      </tbody >
-    </table >
-  )
+  
+          {basketList.map((item, index) => (
+            <tr className='basket-form__line' key={item.id}>
+              <td className='basket-form__meal'>
+                {item.meal}
+              </td>
+              <td className='basket-form__amount'>
+                <svg className='orderIcon'
+                  onClick={() => changeCount(item.id, -1)}>
+                  <use href={sprite + '#minus'}></use>
+                </svg>
+                <span className='basket-form__number'>{item.qty}</span>
+                <svg className='orderIcon'
+                  onClick={() => changeCount(item.id, 1)}>
+                  <use href={sprite + '#add'}></use>
+                </svg>
+              </td>
+              <td className='basket-form__cost'>{item.cost} грн.</td>
+              <td className='basket-form__btn-delete'>
+                <svg className='basket-form__cross-delete'
+                  onClick={() => deleteMeal(item.id)}>
+                  <use href={sprite + '#cross'}></use>
+                </svg>
+              </td>
+            </tr>
+          ))
+          }
+  
+          < tr className='basket-form__bottom' >
+            <td colspan='2' className='basket-form__sum'>
+              Сума замовлення:
+                      <span className='basket-form__sum--bold'>170грн</span>
+            </td>
+            <td colspan='2'>
+              <button
+                className='basket-form__button'
+                onClick={() => setConfirmIsOpen(true)}
+              >
+                Замовити
+                      </button>
+            </td>
+          </ tr>
+        </tbody >
+      </table >
+    )
+  }
 
   const NoMeal = () => (
     <div className="noMeal">На жаль, ви ще нічого не замовили.</div>

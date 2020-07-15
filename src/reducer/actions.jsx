@@ -1,4 +1,4 @@
-export const pushMeal = (product, mealId, number) => ({ type: 'PUSH_MEAL', product, payload: { mealId, number } })
+export const pushMeal = (product, number) => ({ type: 'PUSH_MEAL', payload: { product, number } })
 
 export const changeCount = (mealId, number) => ({ type: 'CHENGE_COUNT', payload: { mealId, number } })
 

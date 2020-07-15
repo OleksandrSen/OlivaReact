@@ -6,7 +6,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'PUSH_MEAL':
       const sameElem = state.basketList.findIndex(
-        (item) => item.id === action.payload.mealId
+        (item) => item.id === action.payload.product.id
       );
       const allMeal = [
         ...state.basketList.slice(0, sameElem),
@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
       ];
 
       return {
-        basketList: [allMeal, action.product],
+        basketList: [...allMeal, action.payload.product],
       };
     // case 'CHENGE_COUNT':
     //   console.log(action.payload.mealId)
