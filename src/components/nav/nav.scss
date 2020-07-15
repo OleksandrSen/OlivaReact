@@ -148,13 +148,6 @@
   }
 }
 
-.line {
-  background: rgba(193, 202, 162, 0.9) no-repeat center;
-  background-size: cover;
-  height: 110px;
-  width: 100%;
-}
-
 .manu__adapt{
   display: none;
 
@@ -162,12 +155,18 @@
     display: block;
     position: absolute;
     z-index: 4;
-    top: 0;
+    top: 110px;
     right: 0;
     background: #F8F8F8;
     height: 800px;
     width: 375px;
+
+    &__list {
+      display: block;
+    }
   }
+
+
 }
 
 

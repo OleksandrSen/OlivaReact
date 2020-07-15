@@ -52,8 +52,7 @@ function Nav() {
           </div>
 
           <div className={active ? "manu__adapt--active" : "manu__adapt"}>
-            <div className="line"></div>
-            <ul className='manu__adapt__list'>
+            <ul className='manu__adapt--active__list'>
               <li className='manu__item'>
                 <NavLink activeClassName='manu__link--active' className='manu__link' to='/main-header'>
                   Головна

@@ -13,7 +13,7 @@ import * as actions from '../../../reducer/actions'
 Modal.setAppElement('#root');
 
 
-function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount }) {
+function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount, deleteMeal }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
   console.log(basketList)
@@ -59,12 +59,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
             <td className='basket-form__cost'>{item.cost} грн.</td>
             <td className='basket-form__btn-delete'>
               <svg className='basket-form__cross-delete'
-                onClick={(basketList) => {
-                  const allMeal = [...basketList.slice(0, item), ...basketList.slice(item + 1)]
-                  return {
-                    basketList: allMeal
-                  }
-                }}>
+                onClick={() => deleteMeal(item.id)}>
                 <use href={sprite + '#cross'}></use>
               </svg>
             </td>
@@ -136,10 +131,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 
-  const { pushMeal, changeCount } = bindActionCreators(actions, dispatch)
+  const { pushMeal, changeCount, deleteMeal } = bindActionCreators(actions, dispatch)
   return {
     pushMeal,
-    changeCount
+    changeCount,
+    deleteMeal
   }
 }
 
