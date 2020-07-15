@@ -585,7 +585,7 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
               >
                 <use href={sprite + '#minus'}></use>
               </svg>
-              <span className='orderCounter'>{item.qty}</span>
+              <span className='orderCounter'>{basketList[item].qty}</span>
               <svg
                 className='orderIcon'
                 onClick={() =>
