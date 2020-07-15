@@ -60,6 +60,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 71,
       type: 'appetizer',
       qty: 0,
+      id: 1,
     },
     {
       meal: "Італійські м'ясні делікатеси",
@@ -68,6 +69,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 119,
       type: 'appetizer',
       qty: 0,
+      id: 2,
     },
     {
       meal: 'Сирна палітра',
@@ -76,6 +78,7 @@ function MainMenu({ basketList, pushMeal }) {
       cost: 121,
       type: 'appetizer',
       qty: 0,
+      id: 3,
     },
     {
       meal: 'Карпаччо із лосося',
@@ -501,7 +504,7 @@ function MainMenu({ basketList, pushMeal }) {
   //   console.log('add' + item)
   // }
 
-  // const basketList = []
+  // const basketList = [];
 
   const Food = ({ food }) => (
     <tbody className='tbody__menu'>
@@ -535,8 +538,22 @@ function MainMenu({ basketList, pushMeal }) {
                 className='orderIcon'
                 onClick={() => {
                   console.log('add' + item.meal);
-                  basketList.push(item);
-                  item.qty++;
+                  // food.forEach((e) => {
+                  //   if (e.id !== item.id) {
+                  //     basketList.push(item);
+                  //   } else {
+                  //     item.qty++;
+                  //   }
+                  // });
+                  // for (let i = 0; i <= basketList.lenght; i++) {
+                  //   if (i.id !== item.id) {
+                  //     basketList.push(item);
+                  //   } else {
+                  //     item.qty++;
+                  //   }
+                  // }
+                  // basketList.push(item);
+                  // item.qty++;
                 }}
               >
                 <use href={sprite + '#add'}></use>
