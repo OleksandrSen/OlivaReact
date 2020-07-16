@@ -33,7 +33,7 @@ function Footer() {
               <div className='svgBg'>
                 <a
                   href='https://www.instagram.com/viv.live.trattoria/'
-                  target='_blanc'
+                  target='_blank'
                 >
                   <svg className='socialIcon'>
                     <use href={sprite + '#instagram'}></use>
@@ -43,7 +43,7 @@ function Footer() {
               <div className='svgBg'>
                 <a
                   href='https://www.facebook.com/viv.live.trattoria/'
-                  target='_blanc'
+                  target='_blank'
                 >
                   <svg className='socialIcon'>
                     <use href={sprite + '#vk'}></use>
