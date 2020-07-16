@@ -565,36 +565,43 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
             return elem;
           }
         })
-        .map((item) => (
-          <tr className='listRow' key={item.id}>
-            <td className='firstCol'>
-              <h4 className='food__name'>{item.meal}</h4>
-              {item.desk}
-            </td>
-            <td className='secondCol'>{item.weight} г</td>
-            <td className='thirdCol'>{item.cost} грн.</td>
-            <td className='fourthCol'>
-              <svg
-                className='orderIcon'
-                onClick={() => {
-                  pushMeal(item, -1);
-                }}
-              >
-                <use href={sprite + '#minus'}></use>
-              </svg>
-              <span className='orderCounter'>{item.qty}</span>
-              <svg
-                className='orderIcon'
-                onClick={() => {
-                  pushMeal(item, 1)
-                }
-                }
-              >
-                <use href={sprite + '#add'}></use>
-              </svg>
-            </td>
-          </tr>
-        ))}
+        .map((item) => {
+          let qty = 0
+          let existInBl = basketList.find((elem) => elem.id == item.id)
+          if (existInBl) {
+            qty = existInBl.qty
+          }
+          return (
+            <tr className='listRow' key={item.id}>
+              <td className='firstCol'>
+                <h4 className='food__name'>{item.meal}</h4>
+                {item.desk}
+              </td>
+              <td className='secondCol'>{item.weight} г</td>
+              <td className='thirdCol'>{item.cost} грн.</td>
+              <td className='fourthCol'>
+                <svg
+                  className='orderIcon'
+                  onClick={() => {
+                    pushMeal(item, -1);
+                  }}
+                >
+                  <use href={sprite + '#minus'}></use>
+                </svg>
+                <span className='orderCounter'>{qty}</span>
+                <svg
+                  className='orderIcon'
+                  onClick={() => {
+                    pushMeal(item, 1)
+                  }
+                  }
+                >
+                  <use href={sprite + '#add'}></use>
+                </svg>
+              </td>
+            </tr>
+          )
+        })}
     </tbody>
   );
 
