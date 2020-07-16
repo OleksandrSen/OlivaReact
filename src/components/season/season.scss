@@ -17,12 +17,24 @@
     font-size: 46px;
     line-height: 52px;
     color: #f8f8f8;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 30px;
+    }
   }
 
   &__main-img {
     margin: 90px auto;
     z-index: 2;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: 450px;
+    }
 
     &--small {
       display: none;
@@ -34,7 +46,7 @@
 
     // @media (max-width: 730px) {
     //   display: none;
-      
+
     //   &--small {
     //     display: block;
     //   }
