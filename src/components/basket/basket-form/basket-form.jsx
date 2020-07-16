@@ -23,9 +23,7 @@ function BasketForm({
 }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
-
   const ShowMeals = ({ basketList, amountToPay }) => {
-
     return (
       <table className='basket-form__table col-10'>
         <tbody>
@@ -46,11 +44,17 @@ function BasketForm({
             <tr className='basket-form__line' key={item.id}>
               <td className='basket-form__meal'>{item.meal}</td>
               <td className='basket-form__amount'>
-                <svg className='orderIcon' onClick={() => changeCount(-1)}>
+                <svg
+                  className='orderIcon basketOrderIcon'
+                  onClick={() => changeCount(-1)}
+                >
                   <use href={sprite + '#minus'}></use>
                 </svg>
                 <span className='basket-form__number'>{item.qty}</span>
-                <svg className='orderIcon' onClick={() => changeCount(1)}>
+                <svg
+                  className='orderIcon basketOrderIcon'
+                  onClick={() => changeCount(1)}
+                >
                   <use href={sprite + '#add'}></use>
                 </svg>
               </td>
@@ -67,15 +71,10 @@ function BasketForm({
           ))}
 
           <tr className='basket-form__bottom'>
-
             <td colspan='2' className='basket-form__sum'>
               Сума замовлення:
-                <span className='basket-form__sum--bold'>
-                {' '}
-                {amountToPay}грн
-                </span>
+              <span className='basket-form__sum--bold'> {amountToPay}грн</span>
             </td>
-
 
             <td colspan='2'>
               <button
@@ -115,8 +114,8 @@ function BasketForm({
             {basketList.length < 1 ? (
               <NoMeal />
             ) : (
-                <ShowMeals basketList={basketList} amountToPay={amountToPay} />
-              )}
+              <ShowMeals basketList={basketList} amountToPay={amountToPay} />
+            )}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 
@@ -136,7 +135,7 @@ function BasketForm({
 const mapStateToProps = (state) => {
   return {
     basketList: state.basketList,
-    amountToPay: state.amountToPay
+    amountToPay: state.amountToPay,
   };
 };
 

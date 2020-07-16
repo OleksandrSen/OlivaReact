@@ -566,10 +566,10 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
           }
         })
         .map((item) => {
-          let qty = 0
-          let existInBl = basketList.find((elem) => elem.id == item.id)
+          let qty = 0;
+          let existInBl = basketList.find((elem) => elem.id === item.id);
           if (existInBl) {
-            qty = existInBl.qty
+            qty = existInBl.qty;
           }
           return (
             <tr className='listRow' key={item.id}>
@@ -592,19 +592,17 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                 <svg
                   className='orderIcon'
                   onClick={() => {
-                    pushMeal(item, 1)
-                  }
-                  }
+                    pushMeal(item, 1);
+                  }}
                 >
                   <use href={sprite + '#add'}></use>
                 </svg>
               </td>
             </tr>
-          )
+          );
         })}
     </tbody>
   );
-
 
   return (
     <section className='menu' id='menu'>
