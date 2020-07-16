@@ -13,7 +13,11 @@ function Footer() {
             <br /> з сайту посилання на ресурс
             <br />
             обов'язкове
-            <a href='http://viv-live.com.ua/poltava/' className='webSite'>
+            <a
+              href='http://viv-live.com.ua/poltava/'
+              target='_blank'
+              className='webSite'
+            >
               www.viv-live.com.ua
             </a>
           </div>
@@ -27,29 +31,54 @@ function Footer() {
           <div className='col-12 order-4 order-md-4 offset-md-3 col-md-6 footer__social'>
             <div className='row footer__social__icons'>
               <div className='svgBg'>
-                <svg className='socialIcon'>
-                  <use href={sprite + '#instagram'}></use>
-                </svg>
+                <a
+                  href='https://www.instagram.com/viv.live.trattoria/'
+                  target='_blanc'
+                >
+                  <svg className='socialIcon'>
+                    <use href={sprite + '#instagram'}></use>
+                  </svg>
+                </a>
               </div>
               <div className='svgBg'>
-                <svg className='socialIcon'>
-                  <use href={sprite + '#vk'}></use>
-                </svg>
+                <a
+                  href='https://www.facebook.com/viv.live.trattoria/'
+                  target='_blanc'
+                >
+                  <svg className='socialIcon'>
+                    <use href={sprite + '#vk'}></use>
+                  </svg>
+                </a>
               </div>
               <div className='svgBg'>
-                <svg className='socialIcon'>
-                  <use href={sprite + '#twitter'}></use>
-                </svg>
+                <a
+                  href='https://www.facebook.com/viv.live.trattoria/'
+                  target='_blank'
+                >
+                  <svg className='socialIcon'>
+                    <use href={sprite + '#twitter'}></use>
+                  </svg>
+                </a>
               </div>
               <div className='svgBg'>
-                <svg className='socialIcon'>
-                  <use href={sprite + '#facebook'}></use>
-                </svg>
+                <a
+                  href='https://www.facebook.com/viv.live.trattoria/'
+                  target='_blank'
+                >
+                  <svg className='socialIcon'>
+                    <use href={sprite + '#facebook'}></use>
+                  </svg>
+                </a>
               </div>
               <div className='svgBg'>
-                <svg className='socialIcon'>
-                  <use href={sprite + '#odnoklassniki'}></use>
-                </svg>
+                <a
+                  href='https://www.facebook.com/viv.live.trattoria/'
+                  target='_blanc'
+                >
+                  <svg className='socialIcon'>
+                    <use href={sprite + '#odnoklassniki'}></use>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

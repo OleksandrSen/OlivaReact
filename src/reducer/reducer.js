@@ -17,11 +17,10 @@ const reducer = (state = initialState, action) => {
         basketList: [...allMeal, action.payload.product],
       };
 
-    case 'CHENGE_COUNT':
-
-      return {
-        qty: state.basketList.qty + action.payload.number
-      }
+    // case 'CHENGE_COUNT':
+    //   return {
+    //     qty: state.basketList.qty + action.payload.number,
+    //   };
 
     case 'DELETE_ITEM':
       const elem = state.basketList.findIndex(
@@ -36,16 +35,17 @@ const reducer = (state = initialState, action) => {
         basketList: restMeal,
       };
 
-    case 'COUNT_MONEY':
+    // case 'COUNT_MONEY':
+    //   const allMoney = state.basketList.reduce(function (
+    //     accumulator,
+    //     currentValue
+    //   ) {
+    //     return [...accumulator, ...currentValue.mealCost];
+    //   });
 
-      const allMoney = state.basketList.reduce(function (accumulator, currentValue) {
-        return [...accumulator, ...currentValue.mealCost];
-      });
-
-      return {
-        basketList: allMoney,
-      };
-
+    //   return {
+    //     basketList: allMoney,
+    //   };
 
     default:
       return state;

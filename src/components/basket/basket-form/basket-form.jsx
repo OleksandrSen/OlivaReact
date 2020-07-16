@@ -5,70 +5,75 @@ import Confirm from '../confirm/confirm';
 import sprite from '../../../img/icons-sprite.svg';
 import Cross from '../../cross/cross';
 
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-import * as actions from '../../../reducer/actions'
+import * as actions from '../../../reducer/actions';
 
 Modal.setAppElement('#root');
 
-
-function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount, deleteMeal, countMoney }) {
+function BasketForm({
+  BasketFormIsOpen,
+  setBasketFormIsOpen,
+  basketList,
+  changeCount,
+  deleteMeal,
+  countMoney,
+}) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
-  console.log('check >>>>', basketList)
-
+  console.log('check >>>>', basketList);
 
   const ShowMeals = ({ basketList }) => {
-    console.log('test func ', basketList)
+    console.log('test func ', basketList);
     return (
       <table className='basket-form__table col-10'>
         <tbody>
           <tr>
             <th className='basket-form__title basket-form__title--meal'>
               Страва
-                    </th>
+            </th>
             <th className='basket-form__title basket-form__title--amount'>
               Кількість
-                    </th>
+            </th>
             <th className='basket-form__title basket-form__title--cost'>
               Ціна
-                    </th>
+            </th>
             <td className='basket-form__title--delete'></td>
           </tr>
 
           {basketList.map((item, index) => (
             <tr className='basket-form__line' key={item.id}>
-              <td className='basket-form__meal'>
-                {item.meal}
-              </td>
+              <td className='basket-form__meal'>{item.meal}</td>
               <td className='basket-form__amount'>
-                <svg className='orderIcon'
-                  onClick={() => changeCount(-1)}>
+                <svg className='orderIcon' onClick={() => changeCount(-1)}>
                   <use href={sprite + '#minus'}></use>
                 </svg>
                 <span className='basket-form__number'>{item.qty}</span>
-                <svg className='orderIcon'
-                  onClick={() => changeCount(1)}>
+                <svg className='orderIcon' onClick={() => changeCount(1)}>
                   <use href={sprite + '#add'}></use>
                 </svg>
               </td>
               <td className='basket-form__cost'>{item.cost} грн.</td>
               <td className='basket-form__btn-delete'>
-                <svg className='basket-form__cross-delete'
-                  onClick={() => deleteMeal(item.id)}>
+                <svg
+                  className='basket-form__cross-delete'
+                  onClick={() => deleteMeal(item.id)}
+                >
                   <use href={sprite + '#cross'}></use>
                 </svg>
               </td>
             </tr>
-          ))
-          }
+          ))}
 
-          <tr className='basket-form__bottom' >
+          <tr className='basket-form__bottom'>
             {basketList.map((item) => (
               <td colspan='2' className='basket-form__sum'>
                 Сума замовлення:
-                <span className='basket-form__sum--bold'> {countMoney(item.cost)}грн</span>
+                <span className='basket-form__sum--bold'>
+                  {' '}
+                  {countMoney(item.cost)}грн
+                </span>
               </td>
             ))}
 
@@ -78,17 +83,17 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
                 onClick={() => setConfirmIsOpen(true)}
               >
                 Замовити
-                      </button>
+              </button>
             </td>
-          </ tr>
-        </tbody >
-      </table >
-    )
-  }
+          </tr>
+        </tbody>
+      </table>
+    );
+  };
 
   const NoMeal = () => (
-    <div className="noMeal">На жаль, ви ще нічого не замовили.</div>
-  )
+    <div className='noMeal'>На жаль, ви ще нічого не замовили.</div>
+  );
 
   return (
     <div className='basket-form__modal'>
@@ -108,7 +113,11 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
           <div className='row'>
             <h3 className='basket-form__caption col-12'>Кошик</h3>
 
-            {basketList.length < 1 ? <NoMeal /> : <ShowMeals basketList={basketList} />}
+            {basketList.length < 1 ? (
+              <NoMeal />
+            ) : (
+              <ShowMeals basketList={basketList} />
+            )}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 
@@ -120,25 +129,27 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
           </div>
         </section>
       </Modal>
-    </div >
+    </div>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    basketList: state.basketList
-  }
-}
+    basketList: state.basketList,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
-
-  const { pushMeal, changeCount, deleteMeal, countMoney } = bindActionCreators(actions, dispatch)
+  const { pushMeal, changeCount, deleteMeal, countMoney } = bindActionCreators(
+    actions,
+    dispatch
+  );
   return {
     pushMeal,
     changeCount,
     deleteMeal,
-    countMoney
-  }
-}
+    countMoney,
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasketForm)
+export default connect(mapStateToProps, mapDispatchToProps)(BasketForm);
