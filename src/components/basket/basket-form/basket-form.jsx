@@ -23,12 +23,8 @@ function BasketForm({
 }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
-  console.log('check >>>>', basketList);
-  console.log('cost ' + amountToPay)
 
   const ShowMeals = ({ basketList, amountToPay }) => {
-    console.log('test func ', basketList);
-    console.log('again cost' + amountToPay)
 
     return (
       <table className='basket-form__table col-10'>
@@ -94,7 +90,6 @@ function BasketForm({
       </table>
     );
   };
-  console.log('again cost' + amountToPay)
   const NoMeal = () => (
     <div className='noMeal'>На жаль, ви ще нічого не замовили.</div>
   );
@@ -120,7 +115,7 @@ function BasketForm({
             {basketList.length < 1 ? (
               <NoMeal />
             ) : (
-                <ShowMeals basketList={basketList} />
+                <ShowMeals basketList={basketList} amountToPay={amountToPay} />
               )}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />

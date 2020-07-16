@@ -587,8 +587,6 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                 className='orderIcon'
                 onClick={() => {
                   pushMeal(item, 1)
-                  console.log('basket list after pushMeal', basketList);
-
                 }
                 }
               >
@@ -600,7 +598,6 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
     </tbody>
   );
 
-  console.log(basketList);
 
   return (
     <section className='menu' id='menu'>
