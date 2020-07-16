@@ -3,9 +3,9 @@
 .basket-form {
   width: 100%;
   font-family: Montserrat;
-  color: #2C2C11;
+  color: #2c2c11;
   position: relative;
-  transition: .3s;
+  transition: 0.3s;
 
   &__modal {
     display: flex;
@@ -57,7 +57,6 @@
     line-height: 27px;
     vertical-align: middle;
     padding-right: 40px;
-
   }
 
   &__cost {
@@ -65,13 +64,11 @@
   }
 
   &__amount {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     width: 130px;
     align-items: center;
     padding: 40px 0;
-
-
   }
 
   &__btn {
@@ -91,10 +88,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    
-
   }
-
 
   &__sum {
     font-size: 20px;
@@ -108,9 +102,9 @@
     font-size: 22px;
     line-height: 27px;
     text-transform: uppercase;
-    color: #A2A88F;
+    color: #a2a88f;
     background: transparent;
-    border: 1px solid #A2A88F;
+    border: 1px solid #a2a88f;
     padding: 5px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -118,8 +112,8 @@
     max-width: 170px;
 
     &:hover {
-      color: #F8F8F8;
-      background: #C4CCA8;
+      color: #f8f8f8;
+      background: #c4cca8;
     }
   }
 
@@ -141,7 +135,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
-  color: #2C2C11;
+  color: #2c2c11;
   text-align: center;
   vertical-align: middle;
   margin: 0 auto;

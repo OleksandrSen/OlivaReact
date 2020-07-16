@@ -21,6 +21,22 @@ export default class SomeSlider extends Component {
     };
     return (
       <div className='container'>
+        <div className='gallery row'>
+          <div className='col-12 col-md-6 gallery__item'>
+            <img className='gallery__itemRes' src={slider1} alt='foto_slider' />
+          </div>
+          <div className='col-12 col-md-6 gallery__item'>
+            <img className='gallery__itemRes' src={slider2} alt='foto_slider' />
+          </div>
+        </div>
+        <div className='gallery row'>
+          <div className='col-12 col-md-6 gallery__item'>
+            <img className='gallery__itemRes' src={slider3} alt='foto_slider' />
+          </div>
+          <div className='col-12 col-md-6 gallery__item'>
+            <img className='gallery__itemRes' src={slider4} alt='foto_slider' />
+          </div>
+        </div>
         <div className='slider'>
           <Slider {...settings}>
             <div className='slider__block'>
