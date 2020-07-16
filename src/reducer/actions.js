@@ -3,10 +3,10 @@ export const pushMeal = (product, number) => ({
   payload: { product, number },
 });
 
-// export const changeCount = (number) => ({
-//   type: 'CHENGE_COUNT',
-//   payload: { number },
-// });
+export const changeCount = (number) => ({
+  type: 'CHENGE_COUNT',
+  payload: { number },
+});
 
 export const deleteMeal = (mealId) => ({
   type: 'DELETE_ITEM',

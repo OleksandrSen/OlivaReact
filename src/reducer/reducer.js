@@ -16,13 +16,14 @@ const reducer = (state = initialState, action) => {
 
       return {
         basketList: [...allMeal, action.payload.product],
-        amountToPay: state.amountToPay + action.payload.product.cost
+        amountToPay: state.amountToPay + action.payload.product.cost,
+        qty: state.basketList.qty + action.payload.number
       };
 
-    // case 'CHENGE_COUNT':
-    //   return {
-    //     qty: state.basketList.qty + action.payload.number,
-    //   };
+    case 'CHENGE_COUNT':
+      return {
+        qty: state.basketList.qty + action.payload.number,
+      };
 
     case 'DELETE_ITEM':
       const elem = state.basketList.findIndex(

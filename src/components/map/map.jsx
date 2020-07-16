@@ -2,14 +2,9 @@ import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import googleMapStyles from './GoogleMapStyles';
 import './map.scss';
-// import Content from './content';
 
 export class Maps extends React.Component {
   render() {
-    // const mapStyles = {
-    //   width: '100%',
-    //   height: '500px',
-    // };
     return (
       <div className='map'>
         <Map

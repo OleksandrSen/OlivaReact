@@ -53,7 +53,8 @@ function Nav() {
             <span className="manu__burger-span"></span>
           </div>
 
-          <div className={active ? "manu__adapt--active" : "manu__adapt"}>
+          <div className={active ? "manu__adapt--active" : "manu__adapt"}
+            onRequestClose={() => setActive(false)}>
             <ul className="manu__adapt__list">
               <li className='manu__adapt__item'>
                 <NavLink activeClassName='manu__link--active' className='manu__link' to='/main-header'>

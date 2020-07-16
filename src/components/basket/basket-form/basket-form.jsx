@@ -28,6 +28,8 @@ function BasketForm({
 
   const ShowMeals = ({ basketList, amountToPay }) => {
     console.log('test func ', basketList);
+    console.log('again cost' + amountToPay)
+
     return (
       <table className='basket-form__table col-10'>
         <tbody>
@@ -92,7 +94,7 @@ function BasketForm({
       </table>
     );
   };
-
+  console.log('again cost' + amountToPay)
   const NoMeal = () => (
     <div className='noMeal'>На жаль, ви ще нічого не замовили.</div>
   );
