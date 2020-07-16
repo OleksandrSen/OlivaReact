@@ -38,6 +38,10 @@
   margin: 0 20px;
   position: relative;
   bottom: 10px;
+
+  @media (max-width: 465px){
+    margin: 10px 0;
+  }
 }
 
 .listRow {
@@ -58,7 +62,7 @@
 }
 
 .firstCol {
-  width: 400px;
+  // width: 400px;
   text-align: left;
 }
 
@@ -72,6 +76,10 @@
   font-size: 22px;
   line-height: 27px;
   text-transform: uppercase;
+
+  @media (max-width: 528px){
+    font-size: 16px;
+  }
 }
 
 .menu__button {
