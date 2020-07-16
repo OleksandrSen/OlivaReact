@@ -13,20 +13,14 @@ import * as actions from '../../../reducer/actions'
 Modal.setAppElement('#root');
 
 
-function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount, deleteMeal }) {
+function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeCount, deleteMeal, countMoney }) {
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
   console.log('check >>>>', basketList)
 
-  // const newBasketList = basketList
 
-  // console.log({ newBasketList })
-
-
-
-  
   const ShowMeals = ({ basketList }) => {
-    console.log('test func ',basketList)
+    console.log('test func ', basketList)
     return (
       <table className='basket-form__table col-10'>
         <tbody>
@@ -42,7 +36,7 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
                     </th>
             <td className='basket-form__title--delete'></td>
           </tr>
-  
+
           {basketList.map((item, index) => (
             <tr className='basket-form__line' key={item.id}>
               <td className='basket-form__meal'>
@@ -50,12 +44,12 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
               </td>
               <td className='basket-form__amount'>
                 <svg className='orderIcon'
-                  onClick={() => changeCount(item.id, -1)}>
+                  onClick={() => changeCount(-1)}>
                   <use href={sprite + '#minus'}></use>
                 </svg>
                 <span className='basket-form__number'>{item.qty}</span>
                 <svg className='orderIcon'
-                  onClick={() => changeCount(item.id, 1)}>
+                  onClick={() => changeCount(1)}>
                   <use href={sprite + '#add'}></use>
                 </svg>
               </td>
@@ -69,12 +63,15 @@ function BasketForm({ BasketFormIsOpen, setBasketFormIsOpen, basketList, changeC
             </tr>
           ))
           }
-  
-          < tr className='basket-form__bottom' >
-            <td colspan='2' className='basket-form__sum'>
-              Сума замовлення:
-                      <span className='basket-form__sum--bold'>170грн</span>
-            </td>
+
+          <tr className='basket-form__bottom' >
+            {basketList.map((item) => (
+              <td colspan='2' className='basket-form__sum'>
+                Сума замовлення:
+                <span className='basket-form__sum--bold'> {countMoney(item.cost)}грн</span>
+              </td>
+            ))}
+
             <td colspan='2'>
               <button
                 className='basket-form__button'
@@ -135,11 +132,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 
-  const { pushMeal, changeCount, deleteMeal } = bindActionCreators(actions, dispatch)
+  const { pushMeal, changeCount, deleteMeal, countMoney } = bindActionCreators(actions, dispatch)
   return {
     pushMeal,
     changeCount,
-    deleteMeal
+    deleteMeal,
+    countMoney
   }
 }
 

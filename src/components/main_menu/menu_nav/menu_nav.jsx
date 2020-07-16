@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './menu_nav.scss';
 
 
-export default function MenuNav({ openAppetizer, showMeal, openSalad, showSalad,
-  showFood, openFood, openFirst, openPaste, openRavioli,
-  openPizza, openDessert, setShowMeal, showFirst, showAppetizer }) {
+export default function MenuNav({ openAppetizer, showMeal, openSalad,
+  openFirst, openPaste, openRavioli,
+  openPizza, openDessert, showAppetizer }) {
 
   // const [activeAp, setActiveAp] = useState(true);
 

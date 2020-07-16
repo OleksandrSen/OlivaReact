@@ -581,9 +581,9 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
                   // basketList.push(item);
                   // item.qty--;
                   pushMeal(item, -1);
-                  
+
                 }}
-                >
+              >
                 <use href={sprite + '#minus'}></use>
               </svg>
               <span className='orderCounter'>{item.qty}</span>
