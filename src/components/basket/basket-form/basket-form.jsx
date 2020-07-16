@@ -44,7 +44,7 @@ function BasketForm({
             <td className='basket-form__title--delete'></td>
           </tr>
 
-          {basketList.map((item, index) => (
+          {basketList.map((item) => (
             <tr className='basket-form__line' key={item.id}>
               <td className='basket-form__meal'>{item.meal}</td>
               <td className='basket-form__amount'>
@@ -138,6 +138,7 @@ function BasketForm({
 const mapStateToProps = (state) => {
   return {
     basketList: state.basketList,
+    amountToPay: state.amountToPay
   };
 };
 
