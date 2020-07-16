@@ -124,6 +124,7 @@ function BasketForm({
               ConfirmIsOpen={ConfirmIsOpen}
               setConfirmIsOpen={setConfirmIsOpen}
               setBasketFormIsOpen={setBasketFormIsOpen}
+              amountToPay={amountToPay}
             />
           </div>
         </section>

@@ -7,7 +7,7 @@ import Cross from '../../cross/cross'
 
 Modal.setAppElement('#root')
 
-function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
+function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen, amountToPay }) {
   const [ThankIsOpen, setThankIsOpen] = useState(false)
 
   return (
@@ -105,7 +105,7 @@ function Confirm({ ConfirmIsOpen, setConfirmIsOpen, setBasketFormIsOpen }) {
               </div>
 
               <div className="confirm__sum col-12">До сплати:
-				<span className="confirm__sum--bold"> 170грн</span></div>
+      <span className="confirm__sum--bold">{' '}{amountToPay}грн</span></div>
 
               <button className="confirm__button"
                 onClick={() => setThankIsOpen(true)}>Підтвердити</button>
