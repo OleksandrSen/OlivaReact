@@ -16,6 +16,7 @@ function BasketForm({
   BasketFormIsOpen,
   setBasketFormIsOpen,
   basketList,
+  amountToPay,
   changeCount,
   deleteMeal,
   countMoney,
@@ -23,8 +24,9 @@ function BasketForm({
   const [ConfirmIsOpen, setConfirmIsOpen] = useState(false);
 
   console.log('check >>>>', basketList);
+  console.log('cost ' + amountToPay)
 
-  const ShowMeals = ({ basketList }) => {
+  const ShowMeals = ({ basketList, amountToPay }) => {
     console.log('test func ', basketList);
     return (
       <table className='basket-form__table col-10'>
@@ -67,15 +69,15 @@ function BasketForm({
           ))}
 
           <tr className='basket-form__bottom'>
-            {basketList.map((item) => (
-              <td colspan='2' className='basket-form__sum'>
-                Сума замовлення:
+
+            <td colspan='2' className='basket-form__sum'>
+              Сума замовлення:
                 <span className='basket-form__sum--bold'>
-                  {' '}
-                  {countMoney(item.cost)}грн
+                {' '}
+                {amountToPay}грн
                 </span>
-              </td>
-            ))}
+            </td>
+
 
             <td colspan='2'>
               <button
@@ -116,8 +118,8 @@ function BasketForm({
             {basketList.length < 1 ? (
               <NoMeal />
             ) : (
-              <ShowMeals basketList={basketList} />
-            )}
+                <ShowMeals basketList={basketList} />
+              )}
 
             <Cross onClick={() => setBasketFormIsOpen(false)} />
 

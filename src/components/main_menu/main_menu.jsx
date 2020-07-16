@@ -577,11 +577,7 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
               <svg
                 className='orderIcon'
                 onClick={() => {
-                  // console.log('add' + item.meal);
-                  // basketList.push(item);
-                  // item.qty--;
                   pushMeal(item, -1);
-
                 }}
               >
                 <use href={sprite + '#minus'}></use>
@@ -590,7 +586,6 @@ function MainMenu({ basketList, pushMeal, changeCount }) {
               <svg
                 className='orderIcon'
                 onClick={() => {
-                  // changeCount(item.id, 1)
                   pushMeal(item, 1)
                   console.log('basket list after pushMeal', basketList);
 

@@ -1,5 +1,6 @@
 const initialState = {
   basketList: [],
+  amountToPay: 0,
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,6 +16,7 @@ const reducer = (state = initialState, action) => {
 
       return {
         basketList: [...allMeal, action.payload.product],
+        amountToPay: state.amountToPay + action.payload.product.cost
       };
 
     // case 'CHENGE_COUNT':
